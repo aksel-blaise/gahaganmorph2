@@ -86,7 +86,7 @@
 \address[3]{ORCID ID \href{http://orcid.org/0000-0002-1789-8449}{0000-0002-1789-8449}}
 \address[4]{Prewitt and Associates, Inc., United States}
 \address[5]{ORCID ID \href{http://orcid.org/0000-0002-0940-7144}{0000-0002-0940-7144}}
-\address[6]{Laboratoire Biogéosciences, Université de Bourgogne, France}
+\address[6]{UMR 6282, Laboratoire Biogéosciences, Université de Bourgogne, France}
 \cortext[cor1]{Corresponding author, Robert Z. Selden, Jr. (zselden@sfasu.edu)}
 
 \begin{abstract}
@@ -181,7 +181,7 @@ The \textit{auto3dgm} library \citep{RN20822} was used in in R 3.6.1 \citep{R} t
 \label{fig:fig4}
 \end{figure}
 
-The \textit{digit3DLand} library (\href{https://github.com/morphOptics/digit3DLand}{https://github.com/morphOptics/digit3DLand}) was used in R 3.6.1 \citep{R} to apply the landmarks and sliding semilandmarks. The shift to a 3D analysis was made due to the amount of beveling that occurs in the sample of Gahagan bifaces. The same basic configuration of landmarks and semilandmarks used in the previous study \citep[Figure 3]{RN11783} was repurposed for this iteration; however, these landmarks and semilandmarks were placed directly on the mesh, providing a means of capitalising on the curvature that occurs along the lateral edges associated with beveling. The iterative development of landmarking protocols is a component of the larger research program, where 3D landmark configurations are being further refined based upon their association with meaningful and analytically valuable attributes. The 3D configuration of landmarks used in this analysis will be tested to identify whether it captures a greater range of morphological variation than the previous 2D configuration \citep[Figure 3]{RN11783}. In this case, any changes to the previously-reported results would likely be attributable to beveling, and will be expanded in subsequent iterations to capitalise on morphological characteristics associated with cross-sections and other important morphological features.
+The \textit{digit3DLand} library (\href{https://github.com/morphOptics/digit3DLand}{https://github.com/morphOptics/digit3DLand}) was used in R 3.6.1 \citep{R} to apply the landmarks and sliding semilandmarks (Table ~\ref{tab:Tbl1} and Figure ~\ref{fig:fig5}). The shift to a 3D analysis was made due to the amount of beveling that occurs in the sample of Gahagan bifaces. The same basic configuration of landmarks and semilandmarks used in the previous study \citep[Figure 3]{RN11783} was repurposed for this iteration; however, these landmarks and semilandmarks were placed directly on the mesh, providing a means of capitalising on the curvature that occurs along the lateral edges associated with beveling. The iterative development of landmarking protocols is a component of the larger research program, where 3D landmark configurations are being further refined based upon their association with meaningful and analytically valuable attributes. The 3D configuration of landmarks used in this analysis will be tested to identify whether it captures a greater range of morphological variation than the previous 2D configuration \citep[Figure 3]{RN11783}. In this case, any changes to the previously-reported results would likely be attributable to beveling, and will be expanded in subsequent iterations to capitalise on morphological characteristics associated with cross-sections and other important morphological features.
 
 \begin{table}[tbh]\centering
 \footnotesize
@@ -199,6 +199,12 @@ Point4 & CentreBase & Equidistant between Points 2 and 3\\
 \end{tabular}
 \label{tab:Tbl1}
 \end{table}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figlm}
+\caption{Landmark (blue) and semilandmark (white) placement.}
+\label{fig:fig5}
+\end{figure}
 
 \subsection*{Analysis}
 
