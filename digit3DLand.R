@@ -23,15 +23,15 @@ grOpt <- setGraphicOptions(zoomSeeLm = TRUE, zoomPercDist = 0.75)
 FiOpt <- setFileOptions(foldMesh) #saveTPS = "coords.tps", append=TRUE)
 
 #digitize landmarks and semilandmarks
-TeOpt <- setTemplOptions(32, template = TRUE, idxTemplate = 1:4, full.files = FALSE)
-out <- digitMesh(foldMesh, fixed = 32, GrOpt = grOpt, DeOpt = deciOpt, TeOpt=TeOpt)
+TeOpt <- setTemplOptions(54, template = TRUE, idxTemplate = 1:4, full.files = FALSE)
+out <- digitMesh(foldMesh, fixed = 54, GrOpt = grOpt, DeOpt = deciOpt, TeOpt=TeOpt)
 
 #get names to match ply file
 nms <- dimnames(out)[[3]]
 
 #defining curves
 fix <- c(1:4)
- curves <- list(c(1, 5:24, 2),
+ curves <- list(c(1,5:24,2),
                 c(3,26:29,4),
                 c(4,30:34,3),
                 c(3,35:54,1)) #more here as needed - one list for each curve
