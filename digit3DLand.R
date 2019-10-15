@@ -1,8 +1,7 @@
 #digitizing landmarks and semilandmarks on Gahagan bifaces
 
 #import most recent library
-require(devtools)
-install_github("morphOptics/digit3DLand", local=FALSE)
+devtools::install_github("morphOptics/digit3DLand")
 #load library, dependencies, and utils.r
 library(digit3DLand)
 library(magrittr)

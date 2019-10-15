@@ -1,8 +1,6 @@
 #mesh processing (uniform remesh and decimation)
 #all meshes pre-processed in ScanStudioHD to remove errors and texture
-if(!require('devtools')) install.packages('devtools')
-library(devtools)
-install_github("zarquon42b/Rvcg")
+devtools::install_github("zarquon42b/Rvcg")
 library(Rvcg)
 library(rgl)
 #set working directory

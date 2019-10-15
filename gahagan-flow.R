@@ -1,3 +1,5 @@
+#load DiagrammeR
+devtools::install_github("rich-iannone/DiagrammeR")
 library(DiagrammeR)
 
 #diagram of flowchart for gahagan biface study
