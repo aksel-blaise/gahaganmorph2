@@ -8,5 +8,4 @@ While true that many biface types may not warrant the time and labour investment
 
 ![](./images/gahagan-beveling-rev1.png)
 
-An additional avenue of inquiry worthy of mention is retouch. While not a component of the current analysis, attributes associated with retouch may articulate with beveling. Previously published methods of codifying and analysing retouch are being integrated into this analytical program, and another measure is under active development. Further work is needed to refine the latter approach; however, the measure is introduced here as it may hold value for studies that are currently planned or underway.
-
+While not a component of the current analysis, attributes associated with retouch may articulate with beveling. Previously published methods of codifying and analysing retouch are being integrated into this analytical program, and another measure is under active development. Further work is needed to refine the latter approach; however, the measure is introduced here as it may hold value for studies that are currently planned or underway.
