@@ -8,9 +8,9 @@ library(magrittr)
 library(abind)
 source('utils.r')
 
-#folder with meshes
+#set working directory
 setwd(getwd())
-
+#folder with meshes - subset sample via data folder
 foldMesh <- "data"
 
 #decimated all meshes 
