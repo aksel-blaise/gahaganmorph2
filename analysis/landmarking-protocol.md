@@ -81,13 +81,11 @@ and LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
 Superficially, this constellation of landmarks and semilandmarks appears
 similar to those used in recent 2D studies. However, these landmarks and
 semilandmarks capture the morphological variation that articulates with
-axial twisting introduced by the practice of beveling. Thus, this
-constellation of landmarks and semilandmarks provides for greater
-precision in the geometric morphometric analysis, marking a substantive
-advancement in the analytical protocols used to analyse Gahagan biface
-morphology.
-
-### Variation in landmark placement
+axial twisting introduced by the practice of beveling (see image at the
+top of this document). Thus, this constellation of landmarks and
+semilandmarks provides for greater precision in the geometric
+morphometric analysis, marking a substantive advancement in the
+analytical protocols used to analyse Gahagan biface morphology.
 
 ### References cited
 
