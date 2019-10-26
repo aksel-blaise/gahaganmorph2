@@ -1,5 +1,5 @@
 ---
-title: "3D Landmarking Protocol for Gahagan Bifaces - DRAFT"
+title: "3D Landmarking Protocol for Gahagan Bifaces"
 author: "Robert Z. Selden, Jr."
 date: "October 26, 2019"
 output: github_document

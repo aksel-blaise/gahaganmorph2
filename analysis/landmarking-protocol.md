@@ -1,4 +1,4 @@
-3D Landmarking Protocol for Gahagan Bifaces - DRAFT
+3D Landmarking Protocol for Gahagan Bifaces
 ================
 Robert Z. Selden, Jr.
 October 26, 2019
