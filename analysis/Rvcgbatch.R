@@ -19,8 +19,6 @@ processmesh <- function(x) {
     mres<-vcgMeshres(mesh)
     #uniform remesh
     remesh<-vcgUniformRemesh(mesh, voxelSize = mres$res, offset = 0)
-    #number of vertices and triangular faces after remesh
-    meshInfo(remesh)
     #export as OFF to data3d file
     vcgOffWrite(mesh, filename = paste0("data3d/",meshname))
     #export as PLY to rePLY folder
