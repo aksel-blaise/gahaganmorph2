@@ -34,7 +34,8 @@ projectile.](./images/extractspline.png)
 
 ### Splitting the spline
 
-The characteristic points and tangents developed for this protocol were
+The spline is split in four mathematically-defined locations. The
+characteristic points and tangents developed for this protocol were
 inspired by the work of Birkhoff (Birkhoff 1933). The first is the
 horizontal tangent at the tip of each Gahagan biface. The horizontal
 tangent is calculated by drawing a horizontal line above the tip of the
@@ -86,13 +87,15 @@ semilandmarks provides for greater precision in the geometric
 morphometric analysis, marking a substantive advancement in the
 analytical protocols used to analyse Gahagan biface morphology.
 
+![](./images/figbevlm.png)
+
 ### References cited
 
 <div id="refs" class="references">
 
 <div id="ref-RN11786">
 
-Birkhoff, George D. 1933. *Aesthetic Measure*. Book. Cambridge: Harvard
+Birkhoff, George D. 1933. *Aesthetic Measure*. Cambridge: Harvard
 University Press.
 
 </div>
@@ -101,8 +104,8 @@ University Press.
 
 Buchanan, Briggs, and Mark Collard. 2010. “A Geometric
 Morphometrics-Based Assessment of Blade Shape Differences among
-Paleoindian Projectile Point Types from Western North America.” Journal
-Article. *Journal of Archaeological Science* 37 (2): 350–59.
+Paleoindian Projectile Point Types from Western North America.” *Journal
+of Archaeological Science* 37 (2): 350–59.
 <https://doi.org/10.1016/j.jas.2009.09.047>.
 
 </div>
@@ -112,7 +115,7 @@ Article. *Journal of Archaeological Science* 37 (2): 350–59.
 Buchanan, Briggs, Mark Collard, Marcus J. Hamilton, and Michael J.
 O’Brien. 2011. “Points and Prey: A Quantitative Test of the Hypothesis
 that Prey Size Influences early Paleoindian Projectile Point Form.”
-Journal Article. *Journal of Archaeological Science* 38 (4): 852–64.
+*Journal of Archaeological Science* 38 (4): 852–64.
 <https://doi.org/10.1016/j.jas.2010.11.007>.
 
 </div>
@@ -121,9 +124,8 @@ Journal Article. *Journal of Archaeological Science* 38 (4): 852–64.
 
 Ragan, Kathryn, and Briggs Buchanan. 2018. “Assessing Collector Bias: A
 Geometric Morphometric Analysis of a Collection of Isolated Clovis
-Points from the Midcontinent.” Journal Article. *Midcontinental Journal
-of Archaeology* 43 (2): 91–111.
-<https://doi.org/10.1080/01461109.2018.1426430>.
+Points from the Midcontinent.” *Midcontinental Journal of Archaeology*
+43 (2): 91–111. <https://doi.org/10.1080/01461109.2018.1426430>.
 
 </div>
 
@@ -131,9 +133,8 @@ of Archaeology* 43 (2): 91–111.
 
 Selden Jr., Robert Z., John E. Dockall, and Harry J. Shafer. 2018.
 “Lithic Morphological Organisation: Gahagan Bifaces from the Southern
-Caddo Area.” Journal Article. *Digital Applications in Archaeology and
-Cultural Heritage* 10: e00080.
-<https://doi.org/10.1016/j.daach.2018.e00080>.
+Caddo Area.” *Digital Applications in Archaeology and Cultural Heritage*
+10: e00080. <https://doi.org/10.1016/j.daach.2018.e00080>.
 
 </div>
 
