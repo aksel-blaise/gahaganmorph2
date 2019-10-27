@@ -1,7 +1,7 @@
 ---
 title: "Temporal dynamics of Gahagan bifaces"
 author: "Robert Z. Selden, Jr."
-date: "September 21, 2019"
+date: "October 27, 2019"
 output: github_document
 ---
 
@@ -24,7 +24,7 @@ quickSetupOxcal()
 
 ## Calibration
 
-### Calibration and plots for dates from Butial Pit 2 at the Gahagan Mound site
+### Calibration and plots for dates from Burial Pit 2 at the Gahagan Mound site
 
 Three AMS dates (UGA12296, ISGS A0465, and ISGS A0466) were reported from Burial Pit 2 at the Gahagan Mound site. More information about these dates can be found in the text, and in those works cited in the text of the article.
 
