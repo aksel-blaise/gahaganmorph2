@@ -209,7 +209,7 @@ The same basic constellation of landmarks was employed for this undertaking; how
 
 \subsection*{Alignment and Landmarks}
 
-The \textit{auto3dgm} library \citep{RN20822} was used in in R 3.6.1 \citep{R} to align the meshes using principal alignments and through minimising Procrustes distance between pseudolandmarks. Subjective parameters used in the alignment included 250 initial points, and 500 final points. The algorithm exported the aligned scans and a 3D image associated with the alignment and minimum spanning tree (MST) (Figure ~\ref{fig:fig4}). The output from \textit{auto3dgm} includes the aligned meshes, an image of the resized and aligned meshes, and the MST. The image of the aligned bifaces produced by \textit{auto3dgm} (Figure ~\ref{fig:fig4}a) was used as the basis for orienting the scans in 3D space throughout the landmarking process. The addition of \textit{auto3dgm} into this workflow aids in reducing investigator bias---although algorithmic bias is still introduced---through providing a method of selecting which face of each Gahagan biface faces toward the investigator during the landmarking process. The MST (Figure ~\ref{fig:fig4}b) has utility in generating hypotheses that can be tested in subsequent analyses.
+The \textit{auto3dgm} library \citep{RN20822} was used in in R 3.6.1 \citep{R} to align the meshes using principal alignments and through minimising Procrustes distance between pseudolandmarks. Subjective parameters used in the alignment included 250 initial points, and 1000 final points. The algorithm exported the aligned scans and a 3D image associated with the alignment and minimum spanning tree (MST) (Figure ~\ref{fig:fig4}). The output from \textit{auto3dgm} includes the aligned meshes, an image of the resized and aligned meshes, and the MST. The image of the aligned bifaces produced by \textit{auto3dgm} (Figure ~\ref{fig:fig4}a) was used as the basis for orienting the scans in 3D space throughout the landmarking process. The addition of \textit{auto3dgm} into this workflow aids in reducing investigator bias---although algorithmic bias is still introduced---through providing a method of selecting which face of each Gahagan biface faces toward the investigator during the landmarking process. The MST (Figure ~\ref{fig:fig4}b) has utility in generating hypotheses that can be tested in subsequent analyses. The alignment using \textit{auto3dgm} was initially run in R; however, the final alignment was run in MATLAB where mirroring could be turned off.
 
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{figalign.pdf}
@@ -256,7 +256,7 @@ The mean consensus configuration and Procrustes residuals were calculated for ea
 
 
 
-\subsection*{Size discrepancy}
+\subsection*{A theoretical discrepancy in biface size}
 
 
 
