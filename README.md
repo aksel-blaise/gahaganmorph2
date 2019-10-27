@@ -18,7 +18,7 @@ Enlisting the reference geometry used in the development of the current landmark
 
 ### Foundations and Development
 
-The draft manuscript associated with this project can be viewed on [Overleaf](https://www.overleaf.com/read/xkmbhpyfjvvk) (comments and constructive criticisms welcomed), and this repository is digitally curated on the [Open Science Framework](https://osf.io/hm3q7/). This project builds upon a [recent geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080) that was published in _Digital Applications in Archaeology and Cultural Heritage_. The preprint for that study is available on [SocArXiv](https://doi.org/10.31235/osf.io/u7qfr), and the supplementary materials are curated on the [Open Science Framework](https://osf.io/jkxe3/).
+The draft manuscript associated with this project can be viewed on [Overleaf](https://www.overleaf.com/read/xkmbhpyfjvvk) (comments and constructive criticisms welcomed), and this repository is digitally curated in the [Open Science Framework](https://osf.io/hm3q7/). This project builds upon a [recent geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080) that was published in _Digital Applications in Archaeology and Cultural Heritage_. The preprint for that study is available on [SocArXiv](https://doi.org/10.31235/osf.io/u7qfr), and the supplementary materials are curated in the [Open Science Framework](https://osf.io/jkxe3/).
 
 ### Acknowledgments
 
