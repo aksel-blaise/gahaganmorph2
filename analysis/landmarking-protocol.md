@@ -34,8 +34,7 @@ projectile.](./images/extractspline.png)
 
 ### Splitting the spline
 
-The spline is split in four mathematically-defined locations. The
-characteristic points and tangents developed for this protocol were
+The characteristic points and tangents developed for this protocol were
 inspired by the work of Birkhoff (Birkhoff 1933). The first is the
 horizontal tangent at the tip of each Gahagan biface. The horizontal
 tangent is calculated by drawing a horizontal line above the tip of the
