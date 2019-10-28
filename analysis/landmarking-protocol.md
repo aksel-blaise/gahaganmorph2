@@ -11,11 +11,11 @@ al. 2011; Ragan and Buchanan 2018), it differs in some fundamental ways.
 The first and most obvious difference is that this is a
 three-dimensional study. The second is the method of landmark placement,
 where Geomagic Design X (Build Version 2019.0.2 \[Build Number: 78\]) is
-used to generate a spline. That spline is used to populate the landmarks
-in a replicable manner using a variety of mathematically-defined
-criteria. The goal was to increase the precision of the study by
-including the z-dimension to capture the morphological characteristics
-associated with axial twisting that are introduced through beveling.
+used to generate a spline, and to populate the landmarks in a replicable
+manner using a variety of mathematically-defined criteria. The goal was
+to increase the precision of the study by including the z-dimension to
+capture the morphological characteristics associated with axial twisting
+that are introduced through the practice of bifacial beveling.
 
 ``` r
 knitr::include_graphics('images/figbev.png')
@@ -33,7 +33,7 @@ Unlike the previous study, where the outline of each Gahagan biface was
 projected onto a 2D plane, this effort enlists a spline extracted from
 the surface geometry of the 3D mesh. The spline follows the contours of
 the highest curvature around the entirety of the lateral and basal
-edges. The remainder of the landmarking protocol is based upon this
+edges. The remainder of the landmarking protocol is based upon the
 spline, which was subsequently split at four mathematically-defined
 locations.
 
@@ -53,17 +53,17 @@ The characteristic points and tangents developed for this protocol were
 inspired by the work of Birkhoff (1933). The first is the horizontal
 tangent at the tip of each Gahagan biface. The horizontal tangent is
 calculated by drawing a horizontal line above the tip of the biface
-using tangent as a common contraint, and the horizontal plane as the
+using the tangent as a common contraint, and the horizontal plane as the
 independent constraint (below image, left).
 
 To split the 3D spline at the location of the horizontal tangent, a
 reference point was inserted at the location of the tangent in the 2D
 sketch (light blue point labeled h-tangent in below image, left),
-followed by a reference plane using the pick point and normal axis
-function. The reference point (h-tangent) was used as the pick point,
-and the Right plane as the normal axis (below image, left). The 3D
-spline was then cut at the location where the reference plane intersects
-the spline (below image, right).
+followed by a reference plane using the pick point and normal function.
+The reference point (h-tangent) was used as the pick point, and the
+Right plane as the normal (below image, left). The 3D spline was then
+cut at the location where the reference plane intersects the spline
+(below image, right).
 
 ``` r
 knitr::include_graphics('images/lm1.png')
@@ -79,11 +79,10 @@ The point of highest curvature on either side of the basal edge was
 calculated using the curvature function (below image). This function
 allows the user to identfy the point of highest curvature for a section
 of the spline. The points of highest curvature used in this study were
-located between the basal edge of the base and the lateral edges of the
-blade on either side. The alignment and orientation of the biface in 3D
-space was dictated by the results of *auto3dgm* (see Figure 7a in the
-manuscript), where LM2 was always placed on the right side of the basal
-edge, and LM3 on the left.
+located between the basal and lateral edges on either side. The
+alignment and orientation of the biface in 3D space was dictated by the
+results of *auto3dgm* (see Figure 7a in the manuscript), where LM2 was
+always placed on the right side of the basal edge, and LM3 on the left.
 
 ``` r
 knitr::include_graphics('images/splinesplit1.png')
@@ -99,7 +98,7 @@ One additional landmark (LM4) was placed in the centre of the base. The
 location of this landmark was identified by calculating the linear
 distance between LM2 and LM3, and placing a reference point (ctrl-div in
 image below) at that location. A reference plane was added using the
-ctrl-div as the pick point, and the Right plane as the normal axis. The
+ctrl-div as the pick point, and the Right plane as the normal. The
 spline was split at the intersection of the reference plane and the
 basal spline.
 
@@ -116,9 +115,9 @@ fig.cap="Calculate linear distance between LM2 and LM3, insert reference plane c
 ### Landmark placement
 
 Landmarks 1-4 were placed at each spline split (blue points, below).
-Equidistant semilandmarks were added to each of the four splines, where
-20 semilandmarks are located between LM1 and LM2, five between LM2 and
-LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
+Equidistant semilandmarks were added to each of the four splines; 20
+between LM1 and LM2, five between LM2 and LM4, five between LM4 and LM3,
+and 20 between LM3 and LM1.
 
 ``` r
 knitr::include_graphics('images/lmslm-all.png')
