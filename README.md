@@ -14,7 +14,7 @@ Although not a component of the current analysis, attributes associated with ret
 
 ![](./images/gahagan-beveling-rev1.png)
 
-Enlisting the reference geometry used in the development of the current landmark configuration, the measure is comprised of an angle that occurs between two linear vectors. To calculate the angle from the aligned mesh, one vector is placed between landmarks 2 and 3 (base), then another between semilandmarks 5 and 54 (immediately below the tip), after which the angle between the two vectors can be calculated. It is not known whether this measure will correlate with those associated with retouch. However, should this angle be found to correlate with attributes related to size, spin torque, or other useful measures, it could hold value in future analyses.
+Enlisting the reference geometry used in the development of the [landmark configuration](analysis/landmarking-protocol.md), the measure is comprised of an angle that occurs between two linear vectors. To calculate the angle from the aligned mesh, one vector is placed between landmarks 2 and 3 (base), then another between semilandmarks 5 and 54 (immediately below the tip), after which the angle between the two vectors can be calculated. It is not known whether this measure will correlate with those associated with retouch. However, should this angle be found to correlate with attributes related to size, spin torque, or other useful measures, it could hold value in future analyses.
 
 ### Foundations and Development
 
