@@ -20,7 +20,7 @@ fig.cap="Gahagan biface 545 from the Gahagan Mound site, illustrating axial twis
 
 ### Generating the spline
 
-Unlike the previous study, where the outline of each Gahagan biface was projected onto a plane, this effort enlists a spline that is extracted from the surface geometry of the 3D mesh. The spline follows the contours of the highest curvature around the entirety of the lateral and basal edge. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
+Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the 3D mesh. The spline follows the contours of the highest curvature around the entirety of the lateral and basal edges. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
 
 ```{r figspline}
 knitr::include_graphics('images/extractspline.png')
@@ -31,7 +31,7 @@ fig.cap="Spline extracted along the highest contours of the projectile. \\label{
 
 The characteristic points and tangents developed for this protocol were inspired by the work of Birkhoff [-@RN11786]. The first is the horizontal tangent at the tip of each Gahagan biface. The horizontal tangent is calculated by drawing a horizontal line above the tip of the biface using tangent as a common contraint, and the horizontal plane as the independent constraint (below image, left).
 
-To split the spline at the location of the horizontal tangent, a 2D mesh sketch was rendered, where a reference point was inserted at the location of the tangent (light blue point labeled h-tangent in below image, left), followed by a reference plane using the pick point and normal axis function. The reference point (h-tangent) was used as the pick point, and the Right plane as the normal axis (below image, left). The 3D spline was then cut at the location where the reference plane intersects the spline (below image, right).
+To split the 3D spline at the location of the horizontal tangent, a reference point was inserted at the location of the tangent in the 2D sketch (light blue point labeled h-tangent in below image, left), followed by a reference plane using the pick point and normal axis function. The reference point (h-tangent) was used as the pick point, and the Right plane as the normal axis (below image, left). The 3D spline was then cut at the location where the reference plane intersects the spline (below image, right).
 
 ```{r figlm1}
 knitr::include_graphics('images/lm1.png')
@@ -45,7 +45,7 @@ knitr::include_graphics('images/splinesplit1.png')
 fig.cap="Identify points of hightest curvature (light blue) at left/right intersection of lateral and basal edges. \\label{figsplinesplitlr}"
 ```
 
-One additional landmark (LM4) was placed in the centre of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and placing a reference point (ctrl-div in image below) at that location. A reference plane was then added using the ctrl-div as the pick point, and the Right plane as the normal axis. The spline was split at the intersection of the reference plane and the basal spline.
+One additional landmark (LM4) was placed in the centre of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and placing a reference point (ctrl-div in image below) at that location. A reference plane was added using the ctrl-div as the pick point, and the Right plane as the normal axis. The spline was split at the intersection of the reference plane and the basal spline.
 
 ```{r figlm4}
 knitr::include_graphics('images/lm4.png')
