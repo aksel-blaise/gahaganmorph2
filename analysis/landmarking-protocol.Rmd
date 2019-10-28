@@ -10,21 +10,21 @@ bibliography: landmarking-protocol.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-While the landmarking protocol developed for this project bears some visual similarities with the configuration used in the previous study [@RN11783], as well as other two-dimensional geometric morphometric analyses [@RN1754;@RN1736;@RN11731], it differs in some fundamental ways. The first and most obvious difference is that this is a three-dimensional study. The second is the method of landmark placement, where Geomagic Design X (Build Version 2019.0.2 [Build Number: 78]) is used to generate a spline that is constrained by a suite of reference points, planes, and vectors. The reference geometry is used to populate the landmarks in a replicable manner using a variety of mathematically-defined criteria. The goal was to increase the precision of the study by including the z-dimension to capture the axial twisting introduced through beveling.
+While the landmarking protocol developed for this project bears some visual similarities with the configuration used in the previous study [@RN11783], as well as other two-dimensional geometric morphometric analyses [@RN1754;@RN1736;@RN11731], it differs in some fundamental ways. The first and most obvious difference is that this is a three-dimensional study. The second is the method of landmark placement, where Geomagic Design X (Build Version 2019.0.2 [Build Number: 78]) is used to generate a spline. That spline is  used to populate the landmarks in a replicable manner using a variety of mathematically-defined criteria. The goal was to increase the precision of the study by including the z-dimension to capture the morphological characteristics associated with axial twisting that are introduced through beveling.
 
 ![](./images/figbev.png)
 
 ### Generating the spline
 
-Unlike the previous study, where the outline of each Gahagan biface was projected onto a plane, this effort enlists a spline that is extracted from the surface geometry of the 3D mesh. The spline follows the contours of the highest curvature around the entirety of the lateral and basal edge. The remainder of the landmarking protocol is based upon this spline, which was subsequently split in four mathematically-defined locations.
+Unlike the previous study, where the outline of each Gahagan biface was projected onto a plane, this effort enlists a spline that is extracted from the surface geometry of the 3D mesh. The spline follows the contours of the highest curvature around the entirety of the lateral and basal edge. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
 
 ![Spline extracted along the highest contours of the projectile.](./images/extractspline.png)
 
 ### Splitting the spline
 
-The characteristic points and tangents developed for this protocol were inspired by the work of Birkhoff [-@RN11786]. The first is the horizontal tangent at the tip of each Gahagan biface. The horizontal tangent is calculated by drawing a horizontal line above the tip of the biface that uses the tangent as a common contraint, and the horizontal plane as the independent constraint. 
+The characteristic points and tangents developed for this protocol were inspired by the work of Birkhoff [-@RN11786]. The first is the horizontal tangent at the tip of each Gahagan biface. The horizontal tangent is calculated by drawing a horizontal line above the tip of the biface using tangent as a common contraint, and the horizontal plane as the independent constraint (below image, left).
 
-To split the spline at the location of the horizontal tangent, a 2D mesh sketch was rendered, where a reference point was inserted at the location of the tangent, followed by a reference plane using the pick point and normal axis function. The reference point was used as the pick point, and the Right plane as the normal axis (below image, left). The 3D spline was then cut at the location where the reference plane intersects the spline (below image, right).
+To split the spline at the location of the horizontal tangent, a 2D mesh sketch was rendered, where a reference point was inserted at the location of the tangent (light blue point labeled h-tangent in below image, left), followed by a reference plane using the pick point and normal axis function. The reference point (h-tangent) was used as the pick point, and the Right plane as the normal axis (below image, left). The 3D spline was then cut at the location where the reference plane intersects the spline (below image, right).
 
 ![](./images/lm1.png)
 
@@ -32,17 +32,17 @@ The point of highest curvature on either side of the basal edge was calculated u
 
 ![](./images/splinesplit1.png)
 
-One additional landmark (LM4) was placed in the center of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and placing a reference point (ctrl-div in image below) at that location. A reference plane was then added using the ctrl-div as the pick point, and the Right plane as the normal axis. The spline was then split at the intersection of the reference plane and the basal spline. 
+One additional landmark (LM4) was placed in the centre of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and placing a reference point (ctrl-div in image below) at that location. A reference plane was then added using the ctrl-div as the pick point, and the Right plane as the normal axis. The spline was split at the intersection of the reference plane and the basal spline.
 
 ![](./images/lm4.png)
 
 ### Landmark placement
 
-Landmarks 1-4 were placed at each spline split (blue, below). Equidistant semilandmarks were then added to each of the four splines, where 20 semilandmarks are located between LM1 and LM2, five between LM2 and LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
+Landmarks 1-4 were placed at each spline split (blue points, below). Equidistant semilandmarks were added to each of the four splines, where 20 semilandmarks are located between LM1 and LM2, five between LM2 and LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
 
 ![](./images/lmslm-all.png)
 
-Superficially, this constellation of landmarks and semilandmarks appears similar to those used in recent 2D studies. However, these landmarks and semilandmarks capture the morphological variation that articulates with axial twisting introduced by the practice of beveling (see image at the top of this document). Thus, this constellation of landmarks and semilandmarks provides for greater precision in the geometric morphometric analysis, marking a substantive advancement in the analytical protocols used to analyse Gahagan biface morphology.
+Superficially, this constellation of landmarks and semilandmarks appears similar to those used in recent 2D studies. However, these landmarks and semilandmarks capture the morphological variation that articulates with axial twisting introduced by the practice of beveling. Thus, this constellation of landmarks and semilandmarks provides for greater precision in the geometric morphometric analysis, marking a substantive advancement in the analytical protocols used to analyse Gahagan biface morphology.
 
 ![](./images/figbevlm.png)
 
