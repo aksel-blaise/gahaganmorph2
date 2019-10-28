@@ -12,10 +12,10 @@ The first and most obvious difference is that this is a
 three-dimensional study. The second is the method of landmark placement,
 where Geomagic Design X (Build Version 2019.0.2 \[Build Number: 78\]) is
 used to generate a spline, and to populate the landmarks in a replicable
-manner using a variety of mathematically-defined criteria. The goal was
-to increase the precision of the study by including the z-dimension to
-capture the morphological characteristics associated with axial twisting
-that are introduced through the practice of bifacial beveling.
+manner using a variety of mathematically-defined criteria. The goal here
+was to increase the precision of the study by including the z-dimension
+to capture those morphological characteristics associated with axial
+twisting introduced through the practice of bifacial beveling.
 
 ``` r
 knitr::include_graphics('images/figbev.png')
@@ -31,11 +31,10 @@ fig.cap="Gahagan biface 545 from the Gahagan Mound site, illustrating axial twis
 
 Unlike the previous study, where the outline of each Gahagan biface was
 projected onto a 2D plane, this effort enlists a spline extracted from
-the surface geometry of the 3D mesh. The spline follows the contours of
-the highest curvature around the entirety of the lateral and basal
-edges. The remainder of the landmarking protocol is based upon the
-spline, which was subsequently split at four mathematically-defined
-locations.
+the surface geometry of the mesh itself. The spline follows the highest
+curvature contours around the periphery of the lateral and basal edges.
+The remainder of the landmarking protocol is based upon the spline,
+which was split at four mathematically-defined locations.
 
 ``` r
 knitr::include_graphics('images/extractspline.png')
@@ -51,19 +50,19 @@ fig.cap="Spline extracted along the highest contours of the projectile. \\label{
 
 The characteristic points and tangents developed for this protocol were
 inspired by the work of Birkhoff (1933). The first is the horizontal
-tangent at the tip of each Gahagan biface. The horizontal tangent is
-calculated by drawing a horizontal line above the tip of the biface
-using the tangent as a common contraint, and the horizontal plane as the
-independent constraint (below image, left).
+tangent located at the tip of each Gahagan biface. The horizontal
+tangent is calculated by drawing a horizontal line above the tip of the
+biface using the tangent as a common contraint, and the horizontal plane
+as the independent constraint (below image, left).
 
 To split the 3D spline at the location of the horizontal tangent, a
 reference point was inserted at the location of the tangent in the 2D
 sketch (light blue point labeled h-tangent in below image, left),
-followed by a reference plane using the pick point and normal function.
-The reference point (h-tangent) was used as the pick point, and the
-Right plane as the normal (below image, left). The 3D spline was then
-cut at the location where the reference plane intersects the spline
-(below image, right).
+followed by a reference plane using the pick point and normal function
+where the reference point (h-tangent) was used as the pick point, and
+the Right plane as the normal (below image, left). The 3D spline was
+then cut at the location where the reference plane intersected with the
+spline (below image, right).
 
 ``` r
 knitr::include_graphics('images/lm1.png')
@@ -77,11 +76,11 @@ fig.cap="Identify horizontal tangent, insert reference point and reference plane
 
 The point of highest curvature on either side of the basal edge was
 calculated using the curvature function (below image). This function
-allows the user to identfy the point of highest curvature for a section
-of the spline. The points of highest curvature used in this study were
-located between the basal and lateral edges on either side. The
-alignment and orientation of the biface in 3D space was dictated by the
-results of *auto3dgm* (see Figure 7a in the manuscript), where LM2 was
+allows the user to identify the point of highest curvature for a section
+of the spline. The two points of highest curvature used in this study
+were located between the basal and lateral edges on either side of each
+biface. The alignment and orientation of the biface was dictated by the
+*auto3dgm* output (see Figure 7a in the manuscript), where LM2 was
 always placed on the right side of the basal edge, and LM3 on the left.
 
 ``` r
@@ -94,7 +93,7 @@ knitr::include_graphics('images/splinesplit1.png')
 fig.cap="Identify points of hightest curvature (light blue) at left/right intersection of lateral and basal edges. \\label{figsplinesplitlr}"
 ```
 
-One additional landmark (LM4) was placed in the centre of the base. The
+One additional landmark (LM4) was placed at the centre of the base. The
 location of this landmark was identified by calculating the linear
 distance between LM2 and LM3, and placing a reference point (ctrl-div in
 image below) at that location. A reference plane was added using the
