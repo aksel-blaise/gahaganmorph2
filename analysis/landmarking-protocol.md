@@ -125,7 +125,7 @@ knitr::include_graphics('images/lmslm-all.png')
 ![](images/lmslm-all.png)<!-- -->
 
 ``` r
-fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) applied, with top, right, and front planes.  \\label{figlmslm-all}"
+fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) applied, with top, right, and front planes. Semilandmarks are renumbered in post.  \\label{figlmslm-all}"
 ```
 
 Superficially, this constellation of landmarks and semilandmarks appears
