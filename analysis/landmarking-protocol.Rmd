@@ -20,7 +20,7 @@ fig.cap="Gahagan biface 545 from the Gahagan Mound site, illustrating axial twis
 
 ### Generating the spline
 
-Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh itself. The spline follows the highest curvature contours around the periphery of the lateral and basal edges. The remainder of the landmarking protocol is based upon the spline, which was split at four mathematically-defined locations.
+Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh itself. The spline follows the highest curvature contours around the periphery of the lateral and basal edges. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
 
 ```{r figspline}
 knitr::include_graphics('images/extractspline.png')
