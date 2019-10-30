@@ -88,8 +88,8 @@ curvature were located between the basal and lateral edges on either
 side of each biface where the local radius measure was largest. The
 alignment and orientation of each biface was dictated by the *auto3dgm*
 output (see Figure 7a in the manuscript), and the landmarking protocol
-follows the orientation in that figure, where LM2 was always placed on
-the right side of the basal edge, and LM3 on the left.
+follows the mesh orientation in that figure, where LM2 was always placed
+on the right side of the basal edge, and LM3 on the left.
 
 ``` r
 knitr::include_graphics('images/splinesplit1.png')
