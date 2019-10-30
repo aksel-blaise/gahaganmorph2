@@ -1,21 +1,23 @@
 3D Landmarking Protocol for Gahagan Bifaces
 ================
 Robert Z. Selden, Jr.
-October 26, 2019
+October 30, 2019
 
-While the landmarking protocol developed for this project bears some
-visual similarities with the configuration used in the previous study
-(Selden Jr., Dockall, and Shafer 2018), as well as other two-dimensional
+The landmarking protocol developed for this project bears some visual
+similarities with the configuration used in the previous study (Selden
+Jr., Dockall, and Shafer 2018), as well as other two-dimensional
 geometric morphometric analyses (Buchanan and Collard 2010; Buchanan et
-al. 2011; Ragan and Buchanan 2018), it differs in some fundamental ways.
-The first and most obvious difference is that this is a
-three-dimensional study. The second is the method of landmark placement,
-where Geomagic Design X (Build Version 2019.0.2 \[Build Number: 78\]) is
-used to generate a spline, and to populate the landmarks in a replicable
-manner using a variety of mathematically-defined criteria. The goal here
-was to increase the precision of the study by including the z-dimension
-to capture those morphological characteristics associated with axial
-twisting introduced through the practice of bifacial beveling.
+al. 2011; Ragan and Buchanan 2018); however, it differs in some
+fundamental ways. The first and most obvious difference is that this is
+a three-dimensional study. The second is the method of landmark
+placement, where *Geomagic Design X* (Build Version 2019.0.2 \[Build
+Number: 78\]) was used to generate a spline around the periphery of each
+biface, and to populate the landmarks and semilandmarks in a replicable
+manner using a variety of mathematically-defined criteria. The goal of
+this effort was to increase the precision and rigour of the study by
+including the z-dimension to capture those morphological characteristics
+associated with axial twisting introduced through the practice of
+bifacial beveling.
 
 ``` r
 knitr::include_graphics('images/figbev.png')
@@ -125,17 +127,17 @@ knitr::include_graphics('images/lmslm-all.png')
 ![](images/lmslm-all.png)<!-- -->
 
 ``` r
-fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) applied, with top, right, and front planes.  \\label{figlmslm-all}"
+fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) applied, with top, right, and front planes. Semilandmarks are renumbered in post.  \\label{figlmslm-all}"
 ```
 
 Superficially, this constellation of landmarks and semilandmarks appears
-similar to those used in recent 2D studies. However, these landmarks and
-semilandmarks capture the morphological variation that articulates with
-axial twisting introduced by the practice of beveling. Thus, this
-constellation of landmarks and semilandmarks provides for greater
-precision in the geometric morphometric analysis, marking a substantive
-advancement in the analytical protocols used to analyse Gahagan biface
-morphology.
+similar to those used in recent 2D studies. However, this rigourous
+protocol for applying landmarks and semilandmarks aids in capturing the
+morphological variation that articulates with axial twisting introduced
+by knappers through the practice of beveling. Thus, this constellation
+of landmarks and semilandmarks provides for greater precision in the
+geometric morphometric analysis, marking a substantive advancement in
+the analytical protocols used to analyse Gahagan biface morphology.
 
 ``` r
 knitr::include_graphics('images/figbevlm.png')
