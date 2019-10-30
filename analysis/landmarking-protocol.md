@@ -77,13 +77,18 @@ fig.cap="Identify horizontal tangent, insert reference point and reference plane
 ```
 
 The point of highest curvature on either side of the basal edge was
-calculated using the curvature function (below image). This function
-allows the user to identify the point of highest curvature for a section
-of the spline. The two points of highest curvature used in this study
-were located between the basal and lateral edges on either side of each
-biface. The alignment and orientation of the biface was dictated by the
-*auto3dgm* output (see Figure 7a in the manuscript), where LM2 was
-always placed on the right side of the basal edge, and LM3 on the left.
+calculated using the curvature function in the Accuracy Analyser. This
+function displays the curvature flow as a continuous colour plot across
+the area of the curve. In this instance, curvature is defined as the
+amount by which a geometric shape deviates from being flat or straight
+in the case of a line. The curvature is displayed in different colours
+according to the local radius, and is calculated in only one direction
+(U or V) along the curve. Using this tool, the two points of highest
+curvature were located between the basal and lateral edges on either
+side of each biface where the local radius measure was largest. The
+alignment and orientation of the biface was dictated by the *auto3dgm*
+output (see Figure 7a in the manuscript), where LM2 was always placed on
+the right side of the basal edge, and LM3 on the left.
 
 ``` r
 knitr::include_graphics('images/splinesplit1.png')
