@@ -86,8 +86,9 @@ according to the local radius, and is calculated in only one direction
 (U or V) along the curve. Using this tool, the two points of highest
 curvature were located between the basal and lateral edges on either
 side of each biface where the local radius measure was largest. The
-alignment and orientation of the biface was dictated by the *auto3dgm*
-output (see Figure 7a in the manuscript), where LM2 was always placed on
+alignment and orientation of each biface was dictated by the *auto3dgm*
+output (see Figure 7a in the manuscript), and the landmarking protocol
+follows the orientation in that figure, where LM2 was always placed on
 the right side of the basal edge, and LM3 on the left.
 
 ``` r
