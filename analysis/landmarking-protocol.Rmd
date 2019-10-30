@@ -54,7 +54,7 @@ fig.cap="Calculate linear distance between LM2 and LM3, insert reference plane c
 
 ### Landmark placement
 
-Landmarks 1-4 were placed at each spline split (blue points, below). Equidistant semilandmarks were added to each of the four splines; 20 between LM1 and LM2, five between LM2 and LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
+Landmarks 1-4 were placed at the location of each spline split (blue points, below). Equidistant semilandmarks were added to each of the four splines; 20 between LM1 and LM2, five between LM2 and LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
 
 ```{r figlmslm-all}
 knitr::include_graphics('images/lmslm-all.png')
