@@ -10,12 +10,13 @@ geometric morphometric analyses (Buchanan and Collard 2010; Buchanan et
 al. 2011; Ragan and Buchanan 2018), it differs in some fundamental ways.
 The first and most obvious difference is that this is a
 three-dimensional study. The second is the method of landmark placement,
-where Geomagic Design X (Build Version 2019.0.2 \[Build Number: 78\]) is
-used to generate a spline, and to populate the landmarks in a replicable
-manner using a variety of mathematically-defined criteria. The goal here
-was to increase the precision of the study by including the z-dimension
-to capture those morphological characteristics associated with axial
-twisting introduced through the practice of bifacial beveling.
+where Geomagic Design X (Build Version 2019.0.2 \[Build Number: 78\])
+was used to generate a spline, and to populate the landmarks in a
+replicable manner using a variety of mathematically-defined criteria.
+The goal here was to increase the precision of the study by including
+the z-dimension to capture those morphological characteristics
+associated with axial twisting introduced through the practice of
+bifacial beveling.
 
 ``` r
 knitr::include_graphics('images/figbev.png')
@@ -129,13 +130,13 @@ fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) a
 ```
 
 Superficially, this constellation of landmarks and semilandmarks appears
-similar to those used in recent 2D studies. However, these landmarks and
-semilandmarks capture the morphological variation that articulates with
-axial twisting introduced by the practice of beveling. Thus, this
-constellation of landmarks and semilandmarks provides for greater
-precision in the geometric morphometric analysis, marking a substantive
-advancement in the analytical protocols used to analyse Gahagan biface
-morphology.
+similar to those used in recent 2D studies. However, this rigourous
+protocol for applying landmarks and semilandmarks aids in capturing the
+morphological variation that articulates with axial twisting introduced
+by knappers through the practice of beveling. Thus, this constellation
+of landmarks and semilandmarks provides for greater precision in the
+geometric morphometric analysis, marking a substantive advancement in
+the analytical protocols used to analyse Gahagan biface morphology.
 
 ``` r
 knitr::include_graphics('images/figbevlm.png')

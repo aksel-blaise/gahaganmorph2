@@ -11,7 +11,7 @@ fig_caption: yes
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-While the landmarking protocol developed for this project bears some visual similarities with the configuration used in the previous study [@RN11783], as well as other two-dimensional geometric morphometric analyses [@RN1754;@RN1736;@RN11731], it differs in some fundamental ways. The first and most obvious difference is that this is a three-dimensional study. The second is the method of landmark placement, where Geomagic Design X (Build Version 2019.0.2 [Build Number: 78]) is used to generate a spline, and to populate the landmarks in a replicable manner using a variety of mathematically-defined criteria. The goal here was to increase the precision of the study by including the z-dimension to capture those morphological characteristics associated with axial twisting introduced through the practice of bifacial beveling.
+While the landmarking protocol developed for this project bears some visual similarities with the configuration used in the previous study [@RN11783], as well as other two-dimensional geometric morphometric analyses [@RN1754;@RN1736;@RN11731], it differs in some fundamental ways. The first and most obvious difference is that this is a three-dimensional study. The second is the method of landmark placement, where Geomagic Design X (Build Version 2019.0.2 [Build Number: 78]) was used to generate a spline, and to populate the landmarks in a replicable manner using a variety of mathematically-defined criteria. The goal here was to increase the precision of the study by including the z-dimension to capture those morphological characteristics associated with axial twisting introduced through the practice of bifacial beveling.
 
 ```{r figbev}
 knitr::include_graphics('images/figbev.png')
@@ -61,7 +61,7 @@ knitr::include_graphics('images/lmslm-all.png')
 fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) applied, with top, right, and front planes. Semilandmarks are renumbered in post.  \\label{figlmslm-all}"
 ```
 
-Superficially, this constellation of landmarks and semilandmarks appears similar to those used in recent 2D studies. However, these landmarks and semilandmarks capture the morphological variation that articulates with axial twisting introduced by the practice of beveling. Thus, this constellation of landmarks and semilandmarks provides for greater precision in the geometric morphometric analysis, marking a substantive advancement in the analytical protocols used to analyse Gahagan biface morphology.
+Superficially, this constellation of landmarks and semilandmarks appears similar to those used in recent 2D studies. However, this rigourous protocol for applying landmarks and semilandmarks aids in capturing the morphological variation that articulates with axial twisting introduced by knappers through the practice of beveling. Thus, this constellation of landmarks and semilandmarks provides for greater precision in the geometric morphometric analysis, marking a substantive advancement in the analytical protocols used to analyse Gahagan biface morphology.
 
 ```{r figbevlm}
 knitr::include_graphics('images/figbevlm.png')
