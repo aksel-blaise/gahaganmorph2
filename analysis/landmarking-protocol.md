@@ -226,7 +226,7 @@ fig.cap="Mesh for Gahagan biface 545 from Gahagan Mound with landmarks and equid
 
 ### Acknowledgments
 
-I extend my gratitude to David K. Thulman for his thoughtful comments
+I extend my gratitude to Christian S. Hoggard and David K. Thulman for their thoughtful comments
 and constructive criticisms on an earlier draft of this landmarking
 protocol. The current iteration of the landmarking protocol was
 developed using the `digit3DLand` package in R (that code is made
