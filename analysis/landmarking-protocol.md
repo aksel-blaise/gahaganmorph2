@@ -233,7 +233,9 @@ initially developed using the `digit3DLand` package in R (that code is
 made available in this repository); however, the capacity to populate a
 replicable suite of reference geometry across the sample in *Geomagic
 Design X* made it a better option for the evolution and design process
-associated with this landmarking protocol.
+associated with this landmarking protocol. The definitions of reference
+geometries and Design X features described in this protocol are
+paraphrased from the reference manual.
 
 ### References cited
 
