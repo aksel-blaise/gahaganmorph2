@@ -59,8 +59,8 @@ building a `patch network` or `non-uniform rational B-spline` (NURBS)
 surface. The extracted feature curve is rendered as a spline, and
 follows the highest curvature contours around the periphery of the
 lateral and basal edges, following the sinuous edge morphology around
-the entirety of the biface. The remainder of the landmarking protocol is
-based upon this spline, which was subsequently split at four
+the entirety of the bifacial edge. The remainder of the landmarking
+protocol is based upon this spline, which was subsequently split at four
 mathematically-defined locations.
 
 ``` r
@@ -98,7 +98,7 @@ place the reference plane used to cut the spline at the location of LM4.
 #### Spline split at location of LM1
 
 The `horizontal tangent` is calculated by drawing a horizontal line
-above the tip of the biface using the tangent as a `common contraint`,
+above the tip of the biface using the tangent as a `common constraint`,
 and the horizontal plane as the `independent constraint`. To split the
 3D spline at the location of the horizontal tangent, a `reference point`
 was inserted at the location of the `tangent` in the 2D sketch (light
@@ -150,9 +150,9 @@ fig.cap="Identify points of hightest curvature (light blue) at left/right inters
 
 One additional landmark (LM4) was placed at the centre of the base. The
 location of this landmark was identified by calculating the linear
-distance between LM2 and LM3, and placing a `reference point` (ctrl-div;
-below) equidistant between the two points. A `reference plane` was added
-using the ctrl-div as the pick point, and the `Right plane` as the
+distance between LM2 and LM3, and projecting a `reference point`
+(ctrl-div; below) equidistant between the two. A `reference plane` was
+added using the ctrl-div as the pick point, and the `Right plane` as the
 `normal axis`. The spline was then split at the intersection of the
 `reference plane` and the basal spline.
 

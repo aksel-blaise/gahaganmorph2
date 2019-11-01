@@ -24,7 +24,7 @@ This landmarking protocol thus represents an intermediate iteration between the 
 
 ### Generating the spline
 
-Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh itself using the `extract contour curves` command. This command is used to detect and extract 3D contour curves from the high-curvature areas of the mesh. In reverse-engineering, this command is regularly used as the first step in building a `patch network` or `non-uniform rational B-spline` (NURBS) surface. The extracted feature curve is rendered as a spline, and follows the highest curvature contours around the periphery of the lateral and basal edges, following the sinuous edge morphology around the entirety of the biface. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
+Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh itself using the `extract contour curves` command. This command is used to detect and extract 3D contour curves from the high-curvature areas of the mesh. In reverse-engineering, this command is regularly used as the first step in building a `patch network` or `non-uniform rational B-spline` (NURBS) surface. The extracted feature curve is rendered as a spline, and follows the highest curvature contours around the periphery of the lateral and basal edges, following the sinuous edge morphology around the entirety of the bifacial edge. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
 
 ```{r figspline}
 knitr::include_graphics('images/extractspline.png')
@@ -39,7 +39,7 @@ The characteristic points and tangents developed for this protocol were inspired
 
 #### Spline split at location of LM1
 
-The `horizontal tangent` is calculated by drawing a horizontal line above the tip of the biface using the tangent as a `common contraint`, and the horizontal plane as the `independent constraint`. To split the 3D spline at the location of the horizontal tangent, a `reference point` was inserted at the location of the `tangent` in the 2D sketch (light blue point; below, left), followed by a `reference plane` (in white; below, left and right) using the `pick point and normal axis` function where the `reference point` (h-tangent) was used as the `pick point`, and the `Right plane` as the `normal axis` (below, left). The 3D spline was then cut at the location where the `reference plane` intersected with the spline (below image, right).
+The `horizontal tangent` is calculated by drawing a horizontal line above the tip of the biface using the tangent as a `common constraint`, and the horizontal plane as the `independent constraint`. To split the 3D spline at the location of the horizontal tangent, a `reference point` was inserted at the location of the `tangent` in the 2D sketch (light blue point; below, left), followed by a `reference plane` (in white; below, left and right) using the `pick point and normal axis` function where the `reference point` (h-tangent) was used as the `pick point`, and the `Right plane` as the `normal axis` (below, left). The 3D spline was then cut at the location where the `reference plane` intersected with the spline (below image, right).
 
 ```{r figlm1}
 knitr::include_graphics('images/lm1.png')
@@ -57,7 +57,7 @@ fig.cap="Identify points of hightest curvature (light blue) at left/right inters
 
 #### Spline split at location of LM4
 
-One additional landmark (LM4) was placed at the centre of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and placing a `reference point` (ctrl-div; below) equidistant between the two points. A `reference plane` was added using the ctrl-div as the pick point, and the `Right plane` as the `normal axis`. The spline was then split at the intersection of the `reference plane` and the basal spline.
+One additional landmark (LM4) was placed at the centre of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and projecting a `reference point` (ctrl-div; below) equidistant between the two. A `reference plane` was added using the ctrl-div as the pick point, and the `Right plane` as the `normal axis`. The spline was then split at the intersection of the `reference plane` and the basal spline.
 
 ```{r figlm4}
 knitr::include_graphics('images/lm4.png')
