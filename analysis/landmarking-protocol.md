@@ -58,7 +58,7 @@ reverse-engineering, this command is regularly used as the first step in
 building a `patch network` or `non-uniform rational B-spline` (NURBS)
 surface. The extracted feature curve is rendered as a spline, and
 follows the highest curvature contours around the periphery of the
-lateral and basal edges, following the sinuous edge morphology around
+lateral and basal edges, following the sinuous morphology around
 the entirety of the bifacial edge. The remainder of the landmarking
 protocol is based upon this spline, which was subsequently split at four
 mathematically-defined locations.
@@ -86,20 +86,20 @@ body, and is used to create other features.*
 
 The characteristic points and tangents developed for this protocol were
 inspired by the work of Birkhoff (1933). The first landmark (LM1) is
-places at the horizontal tangent on the tip of each Gahagan biface. The
-second and third splits (LM2 and LM3) occur and the point of highest
+placed at the horizontal tangent on the tip of each Gahagan biface. The
+second and third splits (LM2 and LM3) occur at the points of highest
 curvature, and LM2 is always split on the right side of the biface when
-it is oriented in 3D space following the alignment output of *auto3dgm*,
+oriented in 3D space following the alignment output of *auto3dgm*,
 illustrated in Figure 7a of the manuscript. To place the final landmark
 (LM4), a linear measurement was used to place a reference point
 equidistant between LM2 and LM3. The location of that point was used to
-place the reference plane used to cut the spline at the location of LM4.
+position the reference plane used to cut the spline at the location of LM4.
 
 #### Spline split at location of LM1
 
 The `horizontal tangent` is calculated by drawing a horizontal line
 above the tip of the biface using the tangent as a `common constraint`,
-and the horizontal plane as the `independent constraint`. To split the
+and the horizontal as the `independent constraint`. To split the
 3D spline at the location of the horizontal tangent, a `reference point`
 was inserted at the location of the `tangent` in the 2D sketch (light
 blue point; below, left), followed by a `reference plane` (in white;
@@ -130,8 +130,7 @@ in the case of a line. The curvature is displayed in different colours
 according to the local radius, and is calculated in only one direction
 (U or V) along the curve. Using this tool, the two points of highest
 curvature were located between the basal and lateral edges on either
-side of each biface where the local radius measure was largest. The
-alignment and orientation of each biface was dictated by the *auto3dgm*
+side of the bifaces where the local radius measure was largest. Alignment and orientation was dictated by the *auto3dgm*
 output (see Figure 7a in the manuscript), and the landmarking protocol
 follows the mesh orientation in that figure, where LM2 was always placed
 on the right side of the basal edge, and LM3 on the left.
@@ -168,14 +167,14 @@ fig.cap="Calculate linear distance between LM2 and LM3, insert reference plane c
 
 #### Final spline
 
-Through the preceding protocol, the initial spline has been split to
+Through the preceding protocol, the initial spline was partitioned to
 include four discrete splines. The splines articulate with components of
 bifacial morphology that can be compartmentalised in the subsequent
-analysis (i.e., left/right \[directional\] asymmetry, blade/base
+analysis (i.e., left/right \[directional] asymmetry, blade/base
 morphological integration, etc.). The primary analytical gain achieved
 through this exercise is that it provides the requisite foundation
 needed for a replicable analysis of Gahagan biface morphology in three
-dimensions, which increases the precision of the geometric morphometric
+dimensions, increasing the precision of the subsequent geometric morphometric
 analysis.
 
 ``` r
