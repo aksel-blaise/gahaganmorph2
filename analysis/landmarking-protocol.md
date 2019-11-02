@@ -26,8 +26,8 @@ fig.cap="Gahagan biface 545 from the Gahagan Mound site, illustrating axial twis
 ```
 
 The goal of this effort was to increase both the precision and rigour of
-the study by including the z-dimension to capture the morphological
-characteristics associated with axial twisting introduced through the
+the study by including the z-dimension to capture those morphological
+characteristics associated with axial twisting that are introduced through the
 practice of bifacial beveling. Thus, the geometric morphometric analysis
 provided a means of assessing morphological variation in Gahagan bifaces
 across all three dimensions. It warrants mention that a subsequent
@@ -38,13 +38,12 @@ each biface.
 This landmarking protocol thus represents an intermediate iteration
 between the previous 2D analysis (Selden Jr., Dockall, and Shafer 2018),
 and the forthcoming protocol that includes cross-sections, where an
-ever-greater amount of surficial morphology is included in each
-analysis. The evolution of this landmarking protocol represents a
+ever-greater amount of surficial morphology is included. The evolution of this landmarking protocol represents a
 concerted effort to better comprehend the vagaries of morphological
 similarities and differences in Gahagan bifaces. While true that some
-landmarking protocols can be—and often are—recycled as new specimens are
+landmarking protocols can be---and often are---recycled as new specimens are
 added, this particular research programme endeavours to achieve
-ever-greater accuracy and precision in each subsequent iteration.
+greater accuracy and precision in each subsequent iteration.
 
 ### Generating the spline
 
