@@ -26,38 +26,36 @@ fig.cap="Gahagan biface 545 from the Gahagan Mound site, illustrating axial twis
 ```
 
 The goal of this effort was to increase both the precision and rigour of
-the study by including the z-dimension to capture the morphological
+the study by including the z-dimension to capture those morphological
 characteristics associated with axial twisting introduced through the
-practice of bifacial beveling. Thus, the geometric morphometric analysis
-provided a means of assessing morphological variation in Gahagan bifaces
-across all three dimensions. It warrants mention that a subsequent
+practice of bifacial beveling. It warrants mention that a subsequent
 iteration of this landmarking protocol is currently in development, and
 includes equidistant latitudinal cross-sections throughout the length of
 each biface.
 
-This landmarking protocol thus represents an intermediate iteration
-between the previous 2D analysis (Selden Jr., Dockall, and Shafer 2018),
-and the forthcoming protocol that includes cross-sections, where an
-ever-greater amount of surficial morphology is included in each
-analysis. The evolution of this landmarking protocol represents a
-concerted effort to better comprehend the vagaries of morphological
-similarities and differences in Gahagan bifaces. While true that some
-landmarking protocols can be—and often are—recycled as new specimens are
-added, this particular research programme endeavours to achieve
-ever-greater accuracy and precision in each subsequent iteration.
+This landmarking protocol represents an intermediate iteration between
+the previous 2D analysis (Selden Jr., Dockall, and Shafer 2018), and the
+forthcoming protocol that includes cross-sections, where an ever-greater
+amount of mesh topology is included in each analysis. The evolution of
+this landmarking protocol represents a concerted effort to better
+comprehend the vagaries of morphological similarities and differences in
+Gahagan bifaces. While true that some landmarking protocols can be—and
+often are—recycled as new specimens are added, this particular research
+programme endeavours to achieve ever-greater accuracy and precision in
+each subsequent iteration.
 
 ### Generating the spline
 
 Unlike the previous study, where the outline of each Gahagan biface was
 projected onto a 2D plane, this effort enlists a spline extracted from
-the surface geometry of the mesh itself using the `extract contour
-curves` command. This command is used to detect and extract 3D contour
-curves from high-curvature areas of the mesh. In reverse-engineering,
-`extract contour curves` is regularly used as the first step in building
-a `patch network` or `non-uniform rational B-spline` (NURBS) surface.
-The extracted feature curve is rendered as a spline, and follows the
-highest curvature contours around the periphery of the lateral and basal
-edges, following the highly variable sinuous edge morphology around the
+the surface geometry of the mesh using the `extract contour curves`
+command, which is used to detect and extract 3D contour curves from
+high-curvature areas of the mesh. In reverse-engineering, `extract
+contour curves` is regularly employed as the first step in building a
+`patch network` or `non-uniform rational B-spline` (NURBS) surface. The
+extracted feature curve is rendered as a spline, and follows the highest
+curvature contours around the periphery of the lateral and basal edges,
+following the highly variable sinuous edge morphology around the
 entirety of the bifacial edge. The remainder of the landmarking protocol
 is based upon this spline, which was subsequently split at four
 mathematically-defined locations.
@@ -89,9 +87,9 @@ landmark (LM1) is placed at the horizontal tangent on the tip of each
 Gahagan biface. The second and third splits (LM2 and LM3) occur at
 points of highest curvature, and LM2 is always split on the right side
 of the biface when oriented in 3D space following the alignment output
-of *auto3dgm*, which is illustrated in Figure 7a of the manuscript. To
-place the final landmark (LM4), a linear measurement was used to insert
-a reference point equidistant between LM2 and LM3. The location of that
+of *auto3dgm*, illustrated in Figure 7a of the manuscript. To place the
+final landmark (LM4), a linear measurement was used to insert a
+reference point equidistant between LM2 and LM3. The location of that
 point was leveraged in placing the reference plane used to cut the
 spline at the location of LM4.
 
@@ -99,8 +97,8 @@ spline at the location of LM4.
 
 The `horizontal tangent` is calculated by drawing a horizontal line
 above the tip of the biface using the tangent as a `common constraint`,
-and the horizontal plane as the `independent constraint`. To split the
-3D spline at the location of the horizontal tangent, a `reference point`
+and the horizontal as the `independent constraint`. To split the 3D
+spline at the location of the horizontal tangent, a `reference point`
 was inserted at the location of the `tangent` in the 2D sketch (light
 blue point; below, left), followed by a `reference plane` (in white;
 below, left and right) using the `pick point and normal axis` function
@@ -168,15 +166,14 @@ fig.cap="Calculate linear distance between LM2 and LM3, insert reference plane c
 
 #### Final spline
 
-Through the preceding protocol, the initial spline has been split into
-four discrete splines. The splines articulate with components of
-bifacial morphology that can be compartmentalised in the subsequent
-analysis (i.e., left/right \[directional\] asymmetry, blade/base
-morphological integration, etc.). The primary analytical gain achieved
-through this exercise is that it provides the requisite foundation
-needed for a replicable analysis of Gahagan biface morphology in three
-dimensions, increasing the precision of the geometric morphometric
-analysis.
+Through the preceding protocol, the initial spline was split into four
+discrete splines. The splines articulate with components of bifacial
+morphology that can be compartmentalised in the subsequent analyses
+(i.e., left/right \[directional\] asymmetry, blade/base morphological
+integration, etc.). The primary analytical gain achieved through this
+exercise is the requisite foundation needed to carry out replicable
+analyses of Gahagan biface morphology in three dimensions, further
+increasing the precision of the geometric morphometric analysis.
 
 ``` r
 knitr::include_graphics('images/splinesplit-frbl.png')
@@ -208,12 +205,12 @@ fig.cap="3D spline with landmarks (blue) and equidistant semilandmarks (white) a
 Superficially, this constellation of landmarks and semilandmarks appears
 similar to those used in recent 2D studies. However, the rigourous
 protocol used in the application of landmarks and semilandmarks aids in
-capturing the morphological variation that articulates with axial
-twisting introduced by knappers through the practice of beveling. Thus,
-this constellation of landmarks and semilandmarks provides for greater
-precision in the subsequent geometric morphometric analysis, marking a
-substantive advancement in the analytical protocols used to analyse
-Gahagan biface morphology.
+capturing morphological variation that articulates with axial twisting
+introduced by knappers through the practice of beveling. Thus, this
+constellation of landmarks and semilandmarks provides for greater
+precision in the geometric morphometric analysis, marking a substantive
+advancement in the analytical protocols used to analyse Gahagan biface
+morphology.
 
 ``` r
 knitr::include_graphics('images/figbevlm.png')
@@ -227,14 +224,14 @@ fig.cap="Mesh for Gahagan biface 545 from Gahagan Mound with landmarks and equid
 
 ### Acknowledgments
 
-I extend my gratitude to David K. Thulman for his thoughtful comments
-and constructive criticisms on an earlier draft of this landmarking
-protocol. The current iteration of the landmarking protocol was
-developed using the `digit3DLand` package in R (that code is made
-available in this repository); however, the capacity to populate a
+I extend my gratitude to Christian S. Hoggard and David K. Thulman for
+their thoughtful comments and constructive criticisms on an earlier
+draft of this landmarking protocol. The current iteration of the
+landmarking protocol was developed using the `digit3DLand` package in R
+(code available in this repository); however, the capacity to populate a
 replicable suite of reference geometry across the sample in *Geomagic
-Design X* made it a better option for the dynamic design process. The
-definitions of reference geometries and *Design X* features described in
+Design X* made it a better option for the dynamic design process.
+Definitions of reference geometries and *Design X* features described in
 this protocol are paraphrased from the reference manual.
 
 ### References cited
