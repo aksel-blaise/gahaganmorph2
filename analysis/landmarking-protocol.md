@@ -30,10 +30,10 @@ the study by including the z-dimension to capture those morphological
 characteristics associated with axial twisting introduced through the
 practice of bifacial beveling. This landmarking protocol represents an
 intermediate iteration between the previous 2D analysis (Selden Jr.,
-Dockall, and Shafer 2018), and the forthcoming protocol that includes
-semilandmarks placed on a series of equidistant cross-sections. The
-cross-sections increase coverage of the semilandmarks across the mesh
-topology, and provide for greater precision in the analysis of
+Dockall, and Shafer 2018), and the forthcoming protocol that also
+includes semilandmarks placed on a series of equidistant cross-sections.
+The cross-sections increase coverage of the semilandmarks across the
+mesh topology, and provide for greater precision in the analysis of
 morphology for the whole object. The evolution of this landmarking
 protocol represents a concerted effort to better comprehend the vagaries
 of morphological similarities and differences among Gahagan bifaces.
