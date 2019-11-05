@@ -25,22 +25,22 @@ knitr::include_graphics('images/figbev.png')
 fig.cap="Gahagan biface 545 from the Gahagan Mound site, illustrating axial twisting. \\label{figbev}"
 ```
 
-The goal of this effort was to increase both the precision and rigour of
-the study by including the z-dimension to capture those morphological
-characteristics associated with axial twisting introduced through the
-practice of bifacial beveling. This landmarking protocol represents an
-intermediate iteration between the previous 2D analysis (Selden Jr.,
-Dockall, and Shafer 2018), and the forthcoming protocol that also
-includes semilandmarks placed on a series of equidistant cross-sections.
-The cross-sections increase coverage of the semilandmarks across the
-mesh topology, and provide for greater precision in the analysis of
-morphology for the whole object. The evolution of this landmarking
-protocol represents a concerted effort to better comprehend the vagaries
-of morphological similarities and differences among Gahagan bifaces.
-While true that some landmarking protocols can be—and often are—recycled
-as new specimens are added, this particular research programme
-endeavours to achieve ever-greater accuracy and precision in each
-analytical iteration.
+The goal of this effort was to increase the precision and rigour of the
+study by including the z-dimension to capture those morphological
+characteristics associated with axial twisting that are introduced
+through the practice of bifacial beveling. This landmarking protocol
+represents an intermediate iteration between the previous 2D analysis
+(Selden Jr., Dockall, and Shafer 2018), and the forthcoming protocol
+that also includes semilandmarks placed on a series of equidistant
+cross-sections. The cross-sections increase the coverage of
+semilandmarks across the mesh topology, and provide for greater
+precision in the analysis of morphology for the whole object. The
+evolution of this landmarking protocol represents a concerted effort to
+better comprehend the vagaries of morphological similarities and
+differences among Gahagan bifaces. While true that some landmarking
+protocols can be—and often are—recycled as new specimens are added, this
+particular research programme endeavours to achieve ever-greater
+accuracy and precision in each analytical iteration.
 
 ### Generating the spline
 
@@ -50,13 +50,13 @@ the surface geometry of the mesh using the `extract contour curves`
 command, which is used to detect and extract 3D contour curves from
 high-curvature areas of the mesh. In reverse-engineering, `extract
 contour curves` is regularly employed as the first step in building a
-`patch network` or `non-uniform rational B-spline` (NURBS) surface. The
-extracted feature curve is rendered as a spline, and follows the highest
-curvature contours around the periphery of the lateral and basal edges,
-following the highly variable sinuous edge morphology around the
-entirety of the bifacial edge. The remainder of the landmarking protocol
-is based upon this spline, which was subsequently split at four
-mathematically-defined locations.
+`patch network` that is used to create a surface. The extracted feature
+curve is rendered as a spline, and follows the highest curvature
+contours around the periphery of the lateral and basal edges, following
+the highly variable sinuous edge morphology around the entirety of the
+biface. The remainder of the landmarking protocol is based upon this
+spline, which was subsequently split at four mathematically-defined
+locations.
 
 ``` r
 knitr::include_graphics('images/extractspline.png')
@@ -85,9 +85,9 @@ landmark (LM1) is placed at the horizontal tangent on the tip of each
 Gahagan biface. The second and third splits (LM2 and LM3) occur at
 points of highest curvature, and LM2 is always split on the right side
 of the biface when oriented in 3D space following the alignment output
-of *auto3dgm*, illustrated in Figure 7a of the manuscript. To place the
-final landmark (LM4), a linear measurement was used to insert a
-reference point equidistant between LM2 and LM3. The location of that
+of *auto3dgm*, which is illustrated in Figure 7a of the manuscript. To
+place the final landmark (LM4), a linear measurement was used to project
+a reference point equidistant between LM2 and LM3. The location of that
 point was leveraged in placing the reference plane used to cut the
 spline at the location of LM4.
 
@@ -165,7 +165,7 @@ fig.cap="Calculate linear distance between LM2 and LM3, insert reference plane c
 #### Final spline
 
 Through the preceding protocol, the initial spline was split into four
-discrete splines. The splines articulate with components of bifacial
+discrete splines. These splines articulate with components of bifacial
 morphology that can be compartmentalised in the subsequent analyses
 (i.e., left/right \[directional\] asymmetry, blade/base morphological
 integration, etc.). The primary analytical gain achieved through this
@@ -186,9 +186,9 @@ fig.cap="Result of spline splits include four discrete splines, each articulatin
 ### Landmark and semilandmark placement
 
 Landmarks 1-4 were placed at the location of each spline split (blue
-points, below). Equidistant semilandmarks were added to each of the four
-splines; 20 between LM1 and LM2, five between LM2 and LM4, five between
-LM4 and LM3, and 20 between LM3 and LM1.
+points, below). Equidistant semilandmarks were then added to each of the
+four splines; 20 between LM1 and LM2, five between LM2 and LM4, five
+between LM4 and LM3, and 20 between LM3 and LM1.
 
 ``` r
 knitr::include_graphics('images/lmslm-all.png')
@@ -207,8 +207,8 @@ capturing morphological variation that articulates with axial twisting
 introduced by knappers through the practice of beveling. Thus, this
 constellation of landmarks and semilandmarks provides for greater
 precision in the geometric morphometric analysis, marking a substantive
-advancement in the analytical protocols used to analyse Gahagan biface
-morphology.
+advancement in those analytical protocols used to ahieve a more complete
+and holistic analysis of Gahagan biface morphology.
 
 ``` r
 knitr::include_graphics('images/figbevlm.png')
