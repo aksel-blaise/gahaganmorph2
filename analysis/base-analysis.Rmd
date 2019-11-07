@@ -1,0 +1,116 @@
+---
+title: "Supplemental materials: Shape difference or shape change? Inter-regional variation in Gahagan biface morphology"
+author: "Robert Z. Selden, Jr."
+date: "November 7, 2019"
+output: github_document
+bibliography: gahagan.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Introduction
+
+This document includes supplemental materials for the article, "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." The study represents the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape, follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where the Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852], and builds upon the work of Shafer [-@RN3684;-@RN20701;-@RN4924].
+
+### Load geomorph and data
+
+```{r load geomorph, setwd, and load data, echo=TRUE}
+# load geomorph
+devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
+library(geomorph)
+
+# set working directory
+setwd(getwd())
+source('readmulti.csv.r')
+
+# read .csv files
+setwd("./data")
+filelist <- list.files(pattern = ".csv")
+coords<-readmulti.csv(filelist)
+setwd("../")
+
+# read qualitative data
+qdata<-read.csv("qdata.csv",header=TRUE, row.names=1)
+qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
+```
+
+### GPA and PCA
+
+```{r gpa and pca}
+Y.gpa<-gpagen(coords, PrinAxes = TRUE)
+plot(Y.gpa)
+### analyses
+gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region)
+csz<-Y.gpa$Csize
+rgn<-qdata$region
+# principal components analysis
+PCA<-gm.prcomp(Y.gpa$coords)
+summary(PCA)
+```
+
+### Plot PCA
+
+```{r plot PCA}
+# set plot parameters
+colors <- c("dodgerblue4","indianred4") # baseball colors, naturally
+colors <- colors[as.numeric(qdata$region)]
+shapes <- c(2,4) # open triangle (ctx) and X (sca)
+shapes <- shapes[as.numeric(qdata$region)]
+
+# plotPCA
+plot(PCA, col = colors, pch = shapes)
+```
+
+### Define models
+
+```{r define models}
+# define models
+fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
+fit.region<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
+```
+
+### Allometry
+
+```{r allometry}
+# allometry: does shape change with size?  
+anova(fit.size)
+plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
+    # common allometric component (Mitteroecker et al. 2004)
+plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
+    # size-shape PCA (Mitteroecker et al. 2004)
+plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
+    # do Gahagan biface forms from the different regions express parallel, convergent, or divergent morphological characteristics?
+test<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
+    # boxplot of central Texas and southern Caddo area Gahagan bifaces by centroid size
+boxplot(csz~rgn, 
+        main = "Centroid size of Gahagan bifaces by Region",
+        names = c("Central Texas", "Southern Caddo Area"),
+        xlab = "Region",
+        ylab = "Centroid Size",
+        col = c("dodgerblue4","indianred4")
+        )
+```
+
+### Shape ~ Region?
+
+```{r region}
+# ANOVA: do Gahagan biface shapes differ by region?
+anova(fit.region)
+```
+
+### Morphological disparity
+
+```{r m-disparity}
+# morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
+morphol.disparity(fit.region, groups = qdata$region, data = gdf, iter = 9999)
+```
+
+### Morphological integration
+
+
+
+### References cited
+
