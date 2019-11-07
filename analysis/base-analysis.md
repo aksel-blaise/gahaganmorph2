@@ -19,8 +19,13 @@ as the Smithport Plain and Hickory Engraved bottles (Selden Jr. 2018a,
 
 ### Load geomorph and data
 
-The most recent release of the *geomorph* library was loaded from the
-GitHub repository.
+``` r
+# load geomorph
+devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
+```
+
+    ## Skipping install of 'geomorph' from a github remote, the SHA1 (e423f85f) has not changed since last install.
+    ##   Use `force = TRUE` to force installation
 
 ``` r
 library(geomorph)

@@ -16,10 +16,9 @@ This document includes supplemental materials for the article, "Shape difference
 
 ### Load geomorph and data
 
-The most recent release of the _geomorph_ library was loaded from the GitHub repository.
-
-
 ```{r load geomorph, setwd, and load data, echo=TRUE}
+# load geomorph
+devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
 library(geomorph)
 
 # set working directory
