@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Introduction
 
-This document includes supplemental materials for the article, "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." The study represents the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape, follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where the Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852], and builds upon the work of Shafer [-@RN3684;-@RN20701;-@RN4924].
+This document includes supplemental materials for the article, "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." The study represents the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape. This effort follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852]. The analysis builds upon previous discussions and analyses conducted by Shafer [-@RN3684;-@RN20701;-@RN4924]. A succinct overview of the analytical procedures used in the analysis is provided in the manuscript, and the analytical code provided in this document can be used to reproduce the results exactly.
 
 ### Load geomorph and data
 
@@ -41,10 +41,17 @@ qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 ```{r gpa and pca}
 Y.gpa<-gpagen(coords, PrinAxes = TRUE)
 plot(Y.gpa)
+# quantify global integration relative to self-similarity (Bookstein 2015)
+globalIntegration(Y.gpa$coords)
+# plot consensus configuration in 2D to illustrate axial twisting
+par(mfrow=c(1,3))
+plot(Y.gpa$consensus[,c("Y", "X")], pch=20)
+plot(Y.gpa$consensus[,c("Z", "X")], pch=20)
+plot(Y.gpa$consensus[,c("Z", "Y")], pch=20)
 ### analyses
-gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region)
-csz<-Y.gpa$Csize
-rgn<-qdata$region
+gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) # geomorph data frame
+csz<-Y.gpa$Csize # attribute for boxplot
+rgn<-qdata$region # attribute for boxplot
 # principal components analysis
 PCA<-gm.prcomp(Y.gpa$coords)
 summary(PCA)
@@ -60,7 +67,9 @@ shapes <- c(2,4) # open triangle (ctx) and X (sca)
 shapes <- shapes[as.numeric(qdata$region)]
 
 # plotPCA
-plot(PCA, col = colors, pch = shapes)
+PCAplot<-plot(PCA, col = colors, pch = shapes)
+knitr::include_graphics('images/pc1-neg-pos.png')
+fig.cap="Plot of plan and profile views for extreme negative and positive shapes along the PC1 axis."
 ```
 
 ### Define models
@@ -77,13 +86,6 @@ fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, 
 ```{r allometry}
 # allometry: does shape change with size?  
 anova(fit.size)
-plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
-    # common allometric component (Mitteroecker et al. 2004)
-plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
-    # size-shape PCA (Mitteroecker et al. 2004)
-plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
-    # do Gahagan biface forms from the different regions express parallel, convergent, or divergent morphological characteristics?
-test<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
     # boxplot of central Texas and southern Caddo area Gahagan bifaces by centroid size
 boxplot(csz~rgn, 
         main = "Centroid size of Gahagan bifaces by Region",
@@ -92,6 +94,13 @@ boxplot(csz~rgn,
         ylab = "Centroid Size",
         col = c("dodgerblue4","indianred4")
         )
+plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
+    # common allometric component (Mitteroecker 2004)
+plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
+    # size-shape PCA (Mitteroecker 2004)
+plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
+    # do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
+test<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
 ```
 
 ### Shape ~ Region?
@@ -109,8 +118,6 @@ morphol.disparity(fit.region, groups = qdata$region, data = gdf, iter = 9999)
 ```
 
 ### Morphological integration
-
-
 
 ### References cited
 
