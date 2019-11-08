@@ -92,6 +92,14 @@ plot(Y.gpa$consensus[,c("Z", "Y")], pch=20)
 ![](base-analysis_files/figure-gfm/gpa%20and%20pca-2.png)<!-- -->
 
 ``` r
+# 3D GPA plot
+knitr::include_graphics('images/gpa3d.png')
+```
+
+![](images/gpa3d.png)<!-- -->
+
+``` r
+fig.cap="Results of generalized Procrustes analysis."
 ### analyses
 gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) # geomorph data frame
 csz<-Y.gpa$Csize # attribute for boxplot
@@ -219,13 +227,13 @@ PCAplot<-plot(PCA, col = colors, pch = shapes)
 ![](base-analysis_files/figure-gfm/plot%20PCA-1.png)<!-- -->
 
 ``` r
-knitr::include_graphics('images/pc1-neg-pos.png')
+knitr::include_graphics('images/pca-warp-ref.png')
 ```
 
-![](images/pc1-neg-pos.png)<!-- -->
+![](images/pca-warp-ref.png)<!-- -->
 
 ``` r
-fig.cap="Plot of plan and profile views for extreme negative and positive shapes along the PC1 axis."
+fig.cap="Results of PCA with central Texas sample in blue triangles, and southern Caddo area in red X's. Reference shapes include the consensus configuration (gray) and the shape at the extreme of each PC in black. Reference shapes do not articulate with any specimens used in this analysis."
 ```
 
 ### Define models
