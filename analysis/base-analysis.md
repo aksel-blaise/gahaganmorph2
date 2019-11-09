@@ -1,7 +1,7 @@
-Geometric morphometric analysis of Gahagan bifaces (DRAFT)
+Geometric morphometric analysis of Gahagan bifaces
 ================
 Robert Z. Selden, Jr.
-November 7, 2019
+November 9, 2019
 
 ### Introduction
 
@@ -53,7 +53,19 @@ qdata<-read.csv("qdata.csv",header=TRUE, row.names=1)
 qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 ```
 
-### GPA and PCA
+### Generalised Procrustes Analysis
+
+Landmark data were aligned to a global coordinate system (Kendall 1981,
+1984; Slice 2001), achieved through generalised Procrustes
+superimposition (Rohlf and Slice 1990) performed in R 3.6.1 (R Core
+Development Team, 2019) using the `geomorph` library v.3.1.2 (Adams et
+al. 2017; Adams and Otárola-Castillo 2013). Procrustes superimposition
+translates, scales, and rotates the coordinate data to allow for
+comparisons among objects (Gower 1975; Rohlf and Slice 1990). The
+`geomorph` package uses a partial Procrustes superimposition that
+projects the aligned specimens into tangent space subsequent to
+alignment in preparation for the use of multivariate methods that assume
+linear space (Rohlf 1999; Slice 2001).
 
 ``` r
 Y.gpa<-gpagen(coords, PrinAxes = TRUE)
@@ -75,10 +87,27 @@ plot(Y.gpa)
 globalIntegration(Y.gpa$coords)
 ```
 
-![](base-analysis_files/figure-gfm/gpa%20and%20pca-1.png)<!-- -->
+![](base-analysis_files/figure-gfm/gpa-1.png)<!-- -->
 
     ##     BEval 
     ## -1.349866
+
+``` r
+# geomorph data frame
+gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) 
+csz<-Y.gpa$Csize # attribute for boxplot
+rgn<-qdata$region # attribute for boxplot
+# boxplot of central Texas and southern Caddo area Gahagan bifaces by centroid size
+boxplot(csz~rgn, 
+        main = "Centroid size of Gahagan bifaces by Region",
+        names = c("Central Texas", "Southern Caddo Area"),
+        xlab = "Region",
+        ylab = "Centroid Size",
+        col = c("dodgerblue4","indianred4")
+        )
+```
+
+![](base-analysis_files/figure-gfm/gpa-2.png)<!-- -->
 
 ``` r
 # plot consensus configuration in 2D to illustrate axial twisting
@@ -88,7 +117,7 @@ plot(Y.gpa$consensus[,c("Z", "X")], pch=20)
 plot(Y.gpa$consensus[,c("Z", "Y")], pch=20)
 ```
 
-![](base-analysis_files/figure-gfm/gpa%20and%20pca-2.png)<!-- -->
+![](base-analysis_files/figure-gfm/gpa-3.png)<!-- -->
 
 ``` r
 # 3D GPA plot
@@ -99,10 +128,16 @@ knitr::include_graphics('images/gpa3d.png')
 
 ``` r
 fig.cap="Results of generalized Procrustes analysis."
-### analyses
-gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) # geomorph data frame
-csz<-Y.gpa$Csize # attribute for boxplot
-rgn<-qdata$region # attribute for boxplot
+```
+
+### Principal Components Analysis
+
+Principal components analysis (Jolliffe 2002) was used to visualise
+shape variation among the bifaces. The shape changes described by each
+principal axis are commonly visualised using thin-plate spline warping
+of a reference 3D mesh (Klingenberg 2013; Sherratt et al. 2014).
+
+``` r
 # principal components analysis
 PCA<-gm.prcomp(Y.gpa$coords)
 summary(PCA)
@@ -210,20 +245,17 @@ summary(PCA)
     ## Proportion of variance 2.754395e-06 2.205779e-06
     ## Cumulative Proportion  9.999978e-01 1.000000e+00
 
-### Plot PCA
-
 ``` r
 # set plot parameters
 colors <- c("dodgerblue4","indianred4") # baseball colors, naturally
 colors <- colors[as.numeric(qdata$region)]
 shapes <- c(2,4) # open triangle (ctx) and X (sca)
 shapes <- shapes[as.numeric(qdata$region)]
-
 # plotPCA
 PCAplot<-plot(PCA, col = colors, pch = shapes)
 ```
 
-![](base-analysis_files/figure-gfm/plot%20PCA-1.png)<!-- -->
+![](base-analysis_files/figure-gfm/pca-1.png)<!-- -->
 
 ``` r
 knitr::include_graphics('images/pca-warp-ref.png')
@@ -236,6 +268,16 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 ```
 
 ### Define models
+
+A residual randomisation permutation procedure (RRPP; n = 10,000
+permutations) was used for all Procrustes ANOVAs (Adams and Collyer
+2015; Collyer and Adams 2018), which has higher statistical power and a
+greater ability to identify patterns in the data should they be present
+(Anderson and Ter Braak 2003). To assess whether shape changes with size
+(allometry), and differs by group (region), Procrustes ANOVAs (Goodall
+1991) were run that enlist effect-sizes (z-scores) computed as standard
+deviates of the generated sampling distributions (Collyer, Sekora, and
+Adams 2015).
 
 ``` r
 # define models
@@ -269,44 +311,31 @@ anova(fit.size)
     ## Call: procD.lm(f1 = shape ~ size, iter = 9999, data = gdf, print.progress = FALSE)
 
 ``` r
-    # boxplot of central Texas and southern Caddo area Gahagan bifaces by centroid size
-boxplot(csz~rgn, 
-        main = "Centroid size of Gahagan bifaces by Region",
-        names = c("Central Texas", "Southern Caddo Area"),
-        xlab = "Region",
-        ylab = "Centroid Size",
-        col = c("dodgerblue4","indianred4")
-        )
-```
-
-![](base-analysis_files/figure-gfm/allometry-1.png)<!-- -->
-
-``` r
 plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
 ```
 
-![](base-analysis_files/figure-gfm/allometry-2.png)<!-- -->
+![](base-analysis_files/figure-gfm/allometry-1.png)<!-- -->
 
 ``` r
     # common allometric component (Mitteroecker 2004)
 plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
 ```
 
-![](base-analysis_files/figure-gfm/allometry-3.png)<!-- -->
+![](base-analysis_files/figure-gfm/allometry-2.png)<!-- -->
 
 ``` r
     # size-shape PCA (Mitteroecker 2004)
 plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
 ```
 
-![](base-analysis_files/figure-gfm/allometry-4.png)<!-- -->
+![](base-analysis_files/figure-gfm/allometry-3.png)<!-- -->
 
 ``` r
     # do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
 test<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
 ```
 
-![](base-analysis_files/figure-gfm/allometry-5.png)<!-- -->
+![](base-analysis_files/figure-gfm/allometry-4.png)<!-- -->
 
 ### Shape \~ Region?
 
@@ -702,11 +731,136 @@ morphol.disparity(fit.region, groups = qdata$region, data = gdf, iter = 9999)
     ## CTX 1.000 0.815
     ## SCA 0.815 1.000
 
-### Morphological integration
-
 ### References cited
 
 <div id="refs" class="references">
+
+<div id="ref-RN1655">
+
+Adams, D. C., and M. L. Collyer. 2015. “Permutation Tests for
+Phylogenetic Comparative Analyses of High-Dimensional Shape Data: What
+you Shuffle Matters.” Journal Article. *Evolution* 69 (3): 823–9.
+<https://doi.org/10.1111/evo.12596>.
+
+</div>
+
+<div id="ref-RN11530">
+
+Adams, Dean C., Michael L. Collyer, Antigoni Kaliontzopoulou, and Emma
+Sherratt. 2017. “Package ’geomorph’: Geometric Morphometric Analyses of
+2D/3D Landmark Data. R package version 3.0.5.” Journal Article.
+<http://geomorphr.github.io/geomorph/>.
+
+</div>
+
+<div id="ref-RN1774">
+
+Adams, Dean C., and Erik Otárola-Castillo. 2013. “geomorph: An R Package
+for the Collection and Analysis of Geometric Morphometric Shape Data.”
+Journal Article. *Methods in Ecology and Evolution* 4 (4): 393–99.
+<https://doi.org/10.1111/2041-210x.12035>.
+
+</div>
+
+<div id="ref-RN1719">
+
+Anderson, M. J., and C. J. F. Ter Braak. 2003. “Permutation Tests for
+Multi-Factoral Analysis of Variance.” Journal Article. *Journal of
+Statistical Computation and Simulation* 73 (2): 85–113.
+<https://doi.org/10.1080=0094965021000015558>.
+
+</div>
+
+<div id="ref-RN11775">
+
+Collyer, Michael L., and Dean C. Adams. 2018. “RRPP: An R Package for
+Fitting Linear Models to High-Dimensional Data using Residual
+Randomization.” Journal Article. *Methods in Ecology and Evolution* 9
+(7): 1772–9. <https://doi.org/https://doi.org/10.1111/2041-210X.13029>.
+
+</div>
+
+<div id="ref-RN1756">
+
+Collyer, M. L., D. J. Sekora, and D. C. Adams. 2015. “A Method for
+Analysis of Phenotypic Change for Phenotypes Described by
+High-Dimensional Data.” Journal Article. *Heredity* 115 (4): 357–65.
+<https://doi.org/10.1038/hdy.2014.75>.
+
+</div>
+
+<div id="ref-RN1749">
+
+Goodall, Colin. 1991. “Procrustes Methods in the Statistical Analysis of
+Shape.” Journal Article. *Journal of the Royal Statistical Society.
+Series B (Methodological)* 53 (2): 285–339.
+
+</div>
+
+<div id="ref-RN11564">
+
+Gower, J. C. 1975. “Generalized Procrustes Analysis.” Journal Article.
+*Psychometrika* 40 (1): 33–51.
+<https://doi.org/https://doi.org/10.1007/BF02291478>.
+
+</div>
+
+<div id="ref-RN1746">
+
+Jolliffe, Ian T. 2002. *Principal Component Analysis*. Book. New York:
+Springer.
+
+</div>
+
+<div id="ref-RN11622">
+
+Kendall, D. 1981. “The Statistics of Shape.” Book Section. In
+*Interpreting Multivariate Data*, edited by V. Barnett, 75–80. New York:
+Wiley.
+
+</div>
+
+<div id="ref-RN11623">
+
+Kendall, David G. 1984. “Shape Manifolds, Procrustean Metrics, and
+Complex Projective Spaces.” Journal Article. *Bulletin of the London
+Mathematical Society* 16 (2): 81–121.
+<https://doi.org/10.1112/blms/16.2.81>.
+
+</div>
+
+<div id="ref-RN1731">
+
+Klingenberg, Christian Peter. 2013. “Visualizations in Geometric
+Morphometrics: How to Read and How to Make Graphs Showing Shape
+Changes.” Journal Article. *Hystrix* 24 (1): 15–24.
+<https://doi.org/http://dx.doi.org/10.4404/hystrix-24.1-7691>.
+
+</div>
+
+<div id="ref-R">
+
+R Core Development Team, 2019. *R: A Language and Environment for
+Statistical Computing*. Vienna, Austria: R Foundation for Statistical
+Computing. <http://www.R-project.org/>.
+
+</div>
+
+<div id="ref-RN1646">
+
+Rohlf, F. James. 1999. “Shape Statistics: Procrustes Superimpositions
+and Tangent Spaces.” Journal Article. *Journal of Classification* 16
+(2): 197–223. <https://doi.org/10.1007/s003579900054>.
+
+</div>
+
+<div id="ref-RN478">
+
+Rohlf, F. James, and Dennis Slice. 1990. “Extensions of the Procrustes
+Method for the Optimal Superimposition of Landmarks.” Journal Article.
+*Systematic Zoology* 39 (1): 40–59. <https://doi.org/10.2307/2992207>.
+
+</div>
 
 <div id="ref-RN11801">
 
@@ -772,6 +926,24 @@ of Texas at Austin.
 ———. 2006. “People of the Prairie: A Possible Connection to the Davis
 Site Caddo.” Texas Department of Transportation; Prewitt & Associates,
 Inc.
+
+</div>
+
+<div id="ref-RN479">
+
+Sherratt, E., D. J. Gower, C. P. Klingenberg, and M. Wilkinson. 2014.
+“Evolution of Cranial Shape in Caecilians (Amphibia: Gymnophiona).”
+Journal Article. *Evolutionary Biology* 41 (4): 528–45.
+<https://doi.org/https://doi.org/10.1007/s11692-014-9287-2>.
+
+</div>
+
+<div id="ref-RN11563">
+
+Slice, Dennis E. 2001. “Landmark Coordinates Aligned by Procrustes
+Analysis Do Not Lie in Kendall’s Shape Space.” Journal Article.
+*Systematic Biology* 50 (1): 141–49.
+<https://doi.org/10.1080/10635150119110>.
 
 </div>
 
