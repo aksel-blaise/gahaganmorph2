@@ -1,7 +1,7 @@
 Geometric morphometric analysis of Gahagan bifaces
 ================
 Robert Z. Selden, Jr.
-November 7, 2019
+November 9, 2019
 
 ### Introduction
 
