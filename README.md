@@ -1,6 +1,7 @@
 # gahaganmorph2
 
 Jump ahead to:
+ * [Image of Gahagan bifaces used in the analysis](fig02.pdf)
  * [Temporal dynamics of Gahagan bifaces](analysis/gahagan14c.md)
  * [3D landmarking protocol for Gahagan bifaces](analysis/landmarking-protocol.md)
  * [Geometric morphometric analysis of Gahagan bifaces (DRAFT)](analysis/base-analysis.md)
