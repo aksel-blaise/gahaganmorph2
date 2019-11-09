@@ -1,11 +1,13 @@
 # gahaganmorph2
 
 Jump to:
- * [Previous geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080)
- * [Image (2D) of Gahagan bifaces used in the analysis](fig02.pdf)
- * [Temporal dynamics of Gahagan bifaces](analysis/gahagan14c.md)
- * [3D landmarking protocol for Gahagan bifaces](analysis/landmarking-protocol.md)
- * [Geometric morphometric analysis of Gahagan bifaces](analysis/base-analysis.md)
+ * Resources
+     * [Previous geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080)
+     * [Image (2D) of Gahagan bifaces used in the analysis](fig02.pdf)
+ * Analysis
+     * [Temporal dynamics of Gahagan bifaces](analysis/gahagan14c.md)
+     * [3D landmarking protocol for Gahagan bifaces](analysis/landmarking-protocol.md)
+     * [Geometric morphometric analysis of Gahagan bifaces](analysis/base-analysis.md)
 
 This investigation aggregates intact and reconstructed [Gahagan bifaces](https://scholarworks.sfasu.edu/ita-gahaganbiface/) from the Caddo and central Texas regions to test the hypothesis that Gahagan biface morphology differs between the two regions. The bifaces were scanned, then analysed using the tools of geometric morphometrics. Results provide a preview of the morphological differences that occur in Gahagan bifaces found at Caddo and central Texas sites. The size discrepancy represents an inversion of the theoretical construct that posits a decrease in tool size thought to articulate with an increase in distance from raw material source. One hypothesis (shape difference) posits that the contrasting morphologies represent two discrete communities of practice; one (central Texas hunter-gatherers) where the bifaces were utilised for practical purposes, and the other (Caddo horticulturalists) where Gahagan bifaces were enlisted primarily for burial and ritualistic activities. An alternative hypothesis (shape change) posits that Gahagan bifaces may have served multiple functions in Caddo society that differed in their deployment within and beyond the southern Caddo area.
 
