@@ -1,5 +1,4 @@
-Supplemental materials: Shape difference or shape change? Inter-regional
-variation in Gahagan biface morphology
+Geometric morphometric analysis of Gahagan bifaces (DRAFT)
 ================
 Robert Z. Selden, Jr.
 November 7, 2019
