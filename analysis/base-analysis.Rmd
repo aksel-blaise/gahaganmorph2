@@ -1,5 +1,5 @@
 ---
-title: "Supplemental materials: Shape difference or shape change? Inter-regional variation in Gahagan biface morphology"
+title: "Geometric morphometric analysis of Gahagan bifaces (DRAFT)"
 author: "Robert Z. Selden, Jr."
 date: "November 7, 2019"
 output: github_document
