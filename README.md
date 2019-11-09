@@ -3,6 +3,7 @@
 Jump to:
  * Resources
      * [Previous geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080)
+     * [Access the preprint of the previous analysis on SocArXiv](https://osf.io/preprints/socarxiv/u7qfr/)
      * [Image (2D) of Gahagan bifaces used in the analysis](fig02.pdf)
  * Analysis
      * [Temporal dynamics of Gahagan bifaces](analysis/gahagan14c.md)
