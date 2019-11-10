@@ -1,7 +1,7 @@
 ---
 title: "Geometric morphometric analysis of Gahagan bifaces"
 author: "Robert Z. Selden, Jr."
-date: "November 9, 2019"
+date: "November 10, 2019"
 output: github_document
 bibliography: gahagan.bib
 ---
