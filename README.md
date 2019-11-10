@@ -7,6 +7,7 @@ Jump to:
      * [Image (2D) of Gahagan bifaces used in the analysis](fig02.pdf)
  * Analysis
      * [Temporal dynamics of Gahagan bifaces](analysis/gahagan14c.md)
+     * [Modeling geometry for missing data](analysis/modeling-geometry.md)
      * [3D landmarking protocol for Gahagan bifaces](analysis/landmarking-protocol.md)
      * [Geometric morphometric analysis of Gahagan bifaces](analysis/base-analysis.md)
 
