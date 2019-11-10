@@ -46,16 +46,6 @@ knitr::include_graphics('images/41ce19-4078-8-modeled.png')
 fig.cap="Gahagan biface 4078-8. \\label{fig4078-8-mod}"
 ```
 
-``` r
-knitr::include_graphics('images/41ce19-4078-8.png')
-```
-
-![](images/41ce19-4078-8.png)<!-- -->
-
-``` r
-fig.cap="Gahagan biface 4078-8 illustrating the modeled area (yellow/red) contrasted with the original specimen (green). \\label{fig4078-8-dev}"
-```
-
 #### 4078-72
 
 ``` r
