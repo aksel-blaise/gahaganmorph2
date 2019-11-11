@@ -123,7 +123,7 @@ anova(fit.region)
 
 ```{r m-disparity}
 # morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
-morphol.disparity(fit.region, groups = qdata$region, data = gdf, iter = 9999)
+morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
 ### References cited
