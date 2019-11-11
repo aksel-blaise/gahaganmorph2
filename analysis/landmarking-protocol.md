@@ -207,7 +207,7 @@ capturing morphological variation that articulates with axial twisting
 introduced by knappers through the practice of beveling. Thus, this
 constellation of landmarks and semilandmarks provides for greater
 precision in the geometric morphometric analysis, marking a substantive
-advancement in those analytical protocols used to ahieve a more complete
+advancement in those analytical protocols used to achieve a more complete
 and holistic analysis of Gahagan biface morphology.
 
 ``` r
