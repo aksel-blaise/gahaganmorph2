@@ -59,10 +59,10 @@ fig.cap="Gahagan biface 4078-8, after modeling. \\label{fig4078-8-mod}"
 #### 4078-72
 
 ``` r
-knitr::include_graphics('images/41ce19-4078-72-modeled.png')
+knitr::include_graphics('images/41ce19-4078-72-unmodeled.png')
 ```
 
-![](images/41ce19-4078-72-modeled.png)<!-- -->
+![](images/41ce19-4078-72-unmodeled.png)<!-- -->
 
 ``` r
 fig.cap="Gahagan biface 4078-72, before modeling. \\label{fig4078-72-init}"
