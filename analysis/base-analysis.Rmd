@@ -126,5 +126,12 @@ anova(fit.region)
 morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
+### Mean shapes
+
+```{r m-shapes}
+shape<-Y.gpa$coords
+mean<-mshape(shape)
+```
+
 ### References cited
 

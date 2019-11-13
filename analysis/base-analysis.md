@@ -394,6 +394,13 @@ morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress 
     ## CTX 1.0000 0.7196
     ## SCA 0.7196 1.0000
 
+### Mean shapes
+
+``` r
+shape<-Y.gpa$coords
+mean<-mshape(shape)
+```
+
 ### References cited
 
 <div id="refs" class="references">
