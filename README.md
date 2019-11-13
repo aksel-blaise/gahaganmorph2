@@ -13,7 +13,7 @@ Jump to:
 
 This investigation aggregates intact and reconstructed [Gahagan bifaces](https://scholarworks.sfasu.edu/ita-gahaganbiface/) from the Caddo and central Texas regions to test the hypothesis that Gahagan biface morphology differs between the two regions. The bifaces were scanned, then analysed using the tools of geometric morphometrics. Results provide a preview of the morphological differences that occur in Gahagan bifaces found at Caddo and central Texas sites. The size discrepancy represents an inversion of the theoretical construct that posits a decrease in tool size thought to articulate with an increase in distance from raw material source. One hypothesis (shape difference) posits that the contrasting morphologies represent two discrete communities of practice; one (central Texas hunter-gatherers) where the bifaces were utilised for practical purposes, and the other (Caddo horticulturalists) where Gahagan bifaces were enlisted primarily for burial and ritualistic activities. An alternative hypothesis (shape change) posits that Gahagan bifaces may have served multiple functions in Caddo society that differed in their deployment within and beyond the southern Caddo area.
 
-![](./analysis/images/figbev.png)
+![](./images/fig02.png)
 
 While true that many biface types may not warrant the time and labour investment associated with 3D data collection and analysis, 3D is necessary for the study of Gahagan bifaces. To ensure uniformity across the scan data, a [batch process](analysis/Rvcgbatch.R) was used that enlisted the [_Rvcg package_](https://github.com/zarquon42b/Rvcg) to perform a uniform remesh as well as the decimation needed for _auto3dgm_.
 
