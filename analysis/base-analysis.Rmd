@@ -90,7 +90,6 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 
 A residual randomisation permutation procedure (RRPP; n = 10,000 permutations) was used for all Procrustes ANOVAs [@RN1655;@RN11775], which has higher statistical power and a greater ability to identify patterns in the data should they be present [@RN1719]. To assess whether shape changes with size (allometry), and differs by group (region), Procrustes ANOVAs [@RN1749] were run that enlist effect-sizes (z-scores) computed as standard deviates of the generated sampling distributions [@RN1756]. 
 
-
 ```{r define-models}
 # define models
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
