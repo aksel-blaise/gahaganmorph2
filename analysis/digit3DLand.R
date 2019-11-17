@@ -6,7 +6,7 @@ devtools::install_github("morphOptics/digit3DLand")
 library(digit3DLand)
 library(magrittr)
 library(abind)
-source('utils.r')
+source('utils.R')
 
 #set working directory
 setwd(getwd())

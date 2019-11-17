@@ -23,6 +23,13 @@ used to reproduce the results exactly.
 
 ``` r
 # load geomorph
+devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
+```
+
+    ## Skipping install of 'geomorph' from a github remote, the SHA1 (e423f85f) has not changed since last install.
+    ##   Use `force = TRUE` to force installation
+
+``` r
 library(geomorph)
 ```
 
@@ -33,7 +40,7 @@ library(geomorph)
 ``` r
 # set working directory
 setwd(getwd())
-source('readmulti.csv.r')
+source('readmulti.csv.R')
 
 # read .csv files
 setwd("./data")
