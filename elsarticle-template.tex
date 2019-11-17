@@ -155,7 +155,7 @@ Six of the chronometric dates listed above were included in the chronological mo
 
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{fig03}
-\caption{Probability distributions for dates from contexts associated with Gahagan bifaces used in this study. Two distributions were plotted for each date or combination of dates; one represented by an outline that is the result of simple radiocarbon calibration, and the other in solid black, which articulates with the chronological model. The large square brackets down the left side of the diagram and the OxCal keywords define the model exactly. The oxcAAR script used to generate this figure is available at \href{https://github.com/seldenlab/14cgahagan/blob/master/gahaganb.md}{https://github.com/seldenlab/14cgahagan/blob/master/gahaganb.md}.}
+\caption{Probability distributions for dates from contexts associated with Gahagan bifaces used in this study. Two distributions were plotted for each date or combination of dates; one represented by an outline that is the result of simple radiocarbon calibration, and the other in solid black, which articulates with the chronological model. The large square brackets down the left side of the diagram and the OxCal keywords define the model exactly. The oxcAAR script used to generate this figure is available in the supplementary materials at \href{https://github.com/aksel-blaise/gahaganmorph2/blob/master/analysis/gahagan14c.md}{https://github.com/aksel-blaise/gahaganmorph2/blob/master/analysis/gahagan14c.md}.}
 \label{fig:fig3}
 \end{figure}
 
@@ -175,7 +175,7 @@ Production evidence is present at contemporary sites distributed on the eastern 
 
 \subsection*{Analytical framework}
 
-This basic research endeavour \citep{RN20851} consists of an exploratory analysis (Figure ~\ref{fig:exan}), and enlists the tools of geometric morphometrics to test whether Gahagan biface shapes differ between two archaeological regions. Landmark-based geometric morphometric methods are ideal for research designs that incorporate questions of complex 3D geometry. Examples from the literature cover a broad scope of artefact categories including projectile points \citep{RN1750,RN1755}, bifaces \citep{RN1727,RN4392,RN11550,RN11783}, percussive tools \citep{RN1772}, flake scars \citep{RN253}, flake tools \citep{RN11552}, handaxes \citep{RN1730,RN1766,RN3145,RN1733,RN335}, and Caddo ceramics \citep{RN1994,RN11521,RN11782,RN11801,RN11716,RN20852}. 
+This basic research endeavour \citep{RN20851} consists of an exploratory analysis (Figure ~\ref{fig:exan}), and enlists the tools of geometric morphometrics to test whether Gahagan biface shape, size, and form differs between two archaeological regions. Landmark-based geometric morphometric methods are ideal for research designs that incorporate questions of complex 3D geometry. Examples from the literature cover a broad scope of artefact categories including projectile points \citep{RN1750,RN1755}, bifaces \citep{RN1727,RN4392,RN11550,RN11783}, percussive tools \citep{RN1772}, flake scars \citep{RN253}, flake tools \citep{RN11552}, handaxes \citep{RN1730,RN1766,RN3145,RN1733,RN335}, and Caddo ceramics \citep{RN1994,RN11521,RN11782,RN11801,RN11716,RN20852}. 
 
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{figexan.pdf}
@@ -209,7 +209,7 @@ The same basic constellation of landmarks was employed for this undertaking; how
 
 \subsection*{Alignment and Landmarks}
 
-The \textit{auto3dgm} library \citep{RN20822} was used in in R 3.6.1 \citep{R} to align the meshes using principal alignments and through minimising Procrustes distance between pseudolandmarks. Subjective parameters used in the alignment included 250 initial points, and 1000 final points. The algorithm exported the aligned scans and a 3D image associated with the alignment and minimum spanning tree (MST) (Figure ~\ref{fig:fig4}). The output from \textit{auto3dgm} includes the aligned meshes, an image of the resized and aligned meshes, and the MST. The image of the aligned bifaces produced by \textit{auto3dgm} (Figure ~\ref{fig:fig4}a) was used as the basis for orienting the scans in 3D space throughout the landmarking process. The addition of \textit{auto3dgm} into this workflow aids in reducing investigator bias---although algorithmic bias is still introduced---through providing a method of selecting which face of each Gahagan biface faces toward the investigator during the landmarking process. The MST (Figure ~\ref{fig:fig4}b) has utility in generating hypotheses that can be tested in subsequent analyses. The alignment using \textit{auto3dgm} was initially run in R; however, the final alignment was run in MATLAB where mirroring could be turned off.
+The \textit{auto3dgm} library \citep{RN20822} was used in in R 3.6.1 \citep{R} to align the meshes using principal alignments and through minimising Procrustes distance between pseudolandmarks. Subjective parameters used in the alignment included 250 initial points, and 1000 final points. The algorithm exported the aligned scans and a 3D image associated with the alignment and minimum spanning tree (MST) (Figure ~\ref{fig:fig4}). The output from \textit{auto3dgm} includes the aligned meshes, an image of the resized and aligned meshes, and the MST. The image of the aligned bifaces produced by \textit{auto3dgm} (Figure ~\ref{fig:fig4}a) was used as the basis for orienting the scans in 3D space throughout the landmarking process. The addition of \textit{auto3dgm} into this workflow aids in reducing investigator bias---although algorithmic bias is still introduced---through providing a method of selecting which face of each Gahagan biface faces toward the investigator during the landmarking process. The MST (Figure ~\ref{fig:fig4}b) has utility in generating hypotheses that can be tested in subsequent analyses. The alignment using \textit{auto3dgm} was initially run in R (Figure ~\ref{fig:fig4}); however, the final alignment was run in MATLAB where mirroring could be turned off.
 
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{figalign.pdf}
@@ -217,7 +217,7 @@ The \textit{auto3dgm} library \citep{RN20822} was used in in R 3.6.1 \citep{R} t
 \label{fig:fig4}
 \end{figure}
 
-The \textit{digit3DLand} library (\href{https://github.com/morphOptics/digit3DLand}{https://github.com/morphOptics/digit3DLand}) was used in R 3.6.1 \citep{R} to apply landmarks and equidistant semilandmarks (Table ~\ref{tab:Tbl1} and Figure ~\ref{fig:fig5}). The shift to a 3D analysis was made due to the amount of beveling that occurs in the sample of Gahagan bifaces. The same basic configuration of landmarks and semilandmarks used in the previous study \citep[Figure 3]{RN11783} was repurposed in this iteration; however, these landmarks and semilandmarks were placed directly on the mesh, providing a means of capitalising on the curvature that occurs along the lateral edges.
+The \textit{digit3DLand} library (\href{https://github.com/morphOptics/digit3DLand}{https://github.com/morphOptics/digit3DLand}) was used in R 3.6.1 \citep{R} to iteratively develop the landmark configuration employed in this study (Table ~\ref{tab:Tbl1} and Figure ~\ref{fig:fig5}). The shift to a 3D analysis was made due to the amount of beveling that occurs in the sample of Gahagan bifaces. The same basic configuration of landmarks and semilandmarks used in the previous study \citep[Figure 3]{RN11783} was repurposed in this iteration; however, these landmarks and semilandmarks were placed directly on the mesh, providing a means of capitalising on the curvature that occurs along the lateral edges.
 
 \begin{table}[tbh]\centering
 \footnotesize
@@ -236,6 +236,54 @@ Point04 & CentreBase & Equidistant between Points 2 and 3\\
 \label{tab:Tbl1}
 \end{table}
 
+The final landmarking protocol developed for this study \citep{RN20850} enlisted \textit{Geomagic Design X (Build Version 2019.0.2 [Build Number: 78])} to generate a spline around the periphery of each biface, and to populate the landmarks and equidistant semilandmarks in a replicable manner using mathematically-defined criteria. The 3D landmark configuration increases both the precision and rigour of the study by including the z-dimension to capture those morphological characteristics associated with axial twisting that are introduced through the practice of bifacial beveling. This landmarking protocol represents an intermediate iteration between the previous 2D analysis \citep{RN11783}, and the forthcoming protocol that includes semilandmarks placed on a series of equidistant cross-sections. The cross-sections increase the coverage of semilandmarks across the mesh topology, providing for greater precision in the analysis of morphology for the whole object. The evolution of this landmarking protocol represents a concerted effort to better comprehend the vagaries of morphological similarities and differences among Gahagan bifaces. While true that some landmarking protocols can be—and often are—recycled as new specimens are added, this particular research programme endeavours to achieve ever-greater accuracy and precision in each analytical iteration.
+
+Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh using the \textit{extract contour curves} command, which was used to detect and extract 3D contour curves from high-curvature areas of the mesh (Figure ~\ref{fig:fig-extractspline}). In reverse-engineering, \textit{extract contour curves} is regularly employed as the first step in building a patch network that is used to create a surface. The extracted feature curve is rendered as a spline, and follows the highest curvature contours around the periphery of the lateral and basal edges, following the highly variable sinuous edge morphology around the entirety of the biface (Figure ~\ref{fig:fig-extractspline}). The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{analysis/images/extractspline.pdf}
+\caption{Spline extracted along the highest contours of the projectile.}
+\label{fig:fig-extractspline}
+\end{figure}
+
+The characteristic points and tangents developed for this landmarking protocol were inspired by the work of \citet{RN11786}. The first landmark (LM1) is placed at the horizontal tangent on the tip of each Gahagan biface. The second and third splits (LM2 and LM3) occur at points of highest curvature, and LM2 is always split on the right side of the biface when oriented in 3D space following the alignment output of auto3dgm, which is illustrated in Figure 7a of the manuscript. To place the final landmark (LM4), a linear measurement was used to project a reference point equidistant between LM2 and LM3. The location of that point was leveraged in placing the reference plane used to cut the spline at the location of LM4.
+
+\subsubsection*{Spline split at location of LM1}
+
+The horizontal tangent is calculated by drawing a horizontal line above the tip of the biface using the tangent as a common constraint, and the horizontal as the independent constraint. To split the 3D spline at the location of the horizontal tangent, a reference point was inserted at the location of the tangent in the 2D sketch (Figure ~\ref{fig:figLM1}, left), followed by a reference plane (Figure ~\ref{fig:figLM1} in white, left and right) using the pick point and normal axis function where the reference point (h-tangent) was used as the pick point, and the Right plane as the normal axis (Figure ~\ref{fig:figLM1}, left). The 3D spline was then cut at the location where the reference plane intersected with the spline (Figure ~\ref{fig:figLM1}, right).
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{analysis/images/lm1.pdf}
+\caption{Horizontal tangent calculated, followed by insertion of reference point and reference plane (left). Reference plane used to cut spline at location of the horizontal tangent (right).}
+\label{fig:figLM1}
+\end{figure}
+
+\subsubsection*{Spline split at locations of LM2 and LM3}
+
+The point of highest curvature on either side of the basal edge was calculated using the curvature function in the Accuracy Analyser (Figure ~\ref{fig:fig-splinesplit}). This function displays the curvature flow as a continuous colour plot across the area of the curve. In this instance, curvature is defined as the amount by which a geometric shape deviates from being flat or straight in the case of a line. The curvature is displayed in different colours according to the local radius, and is calculated in only one direction (U or V) along the curve. Using this tool, the two points of highest curvature were located between the basal and lateral edges on either side of each biface where the local radius measure was largest (Figure ~\ref{fig:fig-splinesplit}). The alignment and orientation of each biface was dictated by the \textit{auto3dgm} output, and the landmarking protocol follows the mesh orientation in that figure, where LM2 was always placed on the right side of the basal edge, and LM3 on the left.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{analysis/images/splinesplit1.pdf}
+\caption{Points of highest curvature calculated (light blue) at left/right intersection of lateral and basal edges.}
+\label{fig:fig-splinesplit}
+\end{figure}
+
+\subsubsection*{Spline split at location of LM4}
+
+One additional landmark (LM4) was placed at the centre of the base. The location of this landmark was identified by calculating the linear distance between LM2 and LM3, and projecting a reference point (ctrl-div; below) equidistant between the two. A reference plane was added using the ctrl-div as the pick point, and the Right plane as the normal axis. The spline was then split at the intersection of the reference plane and the basal spline.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{analysis/images/lm4.pdf}
+\caption{Linear distance calculated between LM2 and LM3, reference plane inserted coplanar to Right plane equidistant between LM2 and LM3, and reference plane used to cut the spline.}
+\label{fig:fig-splinesplit}
+\end{figure}
+
+\subsection*{Final configuration}
+
+Through the preceding protocol, the initial spline was split into four discrete splines. These splines articulate with components of bifacial morphology that can be compartmentalised in the subsequent analyses (i.e., left/right [directional] asymmetry, blade/base morphological integration, etc.). The primary analytical gain achieved through this rigorous 3D landmarking protocol is the requisite foundation needed to carry out replicable analyses of Gahagan biface morphology in three dimensions, further increasing the precision of the geometric morphometric analysis. Landmarks 1-4 were placed at the location of each spline split (blue points, below). Equidistant semilandmarks were then added to each of the four splines; 20 between LM1 and LM2, five between LM2 and LM4, five between LM4 and LM3, and 20 between LM3 and LM1.
+
+Superficially, this constellation of landmarks and semilandmarks appears similar to those used in recent 2D studies. However, the rigourous protocol used in the application of landmarks and semilandmarks aids in capturing morphological variation that articulates with axial twisting introduced by knappers through the practice of beveling (Figure ~\ref{fig:fig5}). Thus, this constellation of landmarks and semilandmarks provides for greater precision in the geometric morphometric analysis, marking a substantive advancement in those analytical protocols used to achieve a more complete and holistic analysis of Gahagan biface morphology.
+
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{figbev}
 \caption{Landmark and semilandmark placement. Note the axial twisting associated with beveling when the biface is aligned to the plane that intersects the first three landmarks.}
@@ -250,15 +298,37 @@ Principal components analysis \citep{RN1746} was used to visualise shape variati
 
 \section*{Results}
 
-The mean consensus configuration and Procrustes residuals were calculated for each region by means of a generalised Procrustes analysis (GPA) \citep[Figure 3]{RN1720} (Figure ~\ref{fig:figGPA}). This initial view of these data demonstrates the mean shape and degree of variation that occurs in each region and across the whole sample. As an exploratory measure, GM methods---to include GPA---aid in clarifying shape differences associated with each population and in the production of novel \textit{a posteriori} hypotheses \citep{RN1720}.
+The mean consensus configuration and Procrustes residuals were calculated using a generalised Procrustes analysis (GPA) \citep[Figure 3]{RN1720} (Figure ~\ref{fig:FigGPA}). This initial view of the dataset demonstrates the degree of variation that occurs at each site and in the combined sample. As an exploratory measure, GM methods---to include GPA---aid in clarifying shape differences associated with each population and in the production of novel \textit{a posteriori} hypotheses \citep{RN1720}. Further information and detail related to the analytical outputs can be found in \citep{RN20850}.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{gpa3d}
+\caption{Results of generalised Procrustes analysis.}
+\label{fig:FigGPA}
+\end{figure}
+
+The mean consensus configuration for the sample from each region points toward a potentially significant difference in Gahagan biface morphology between the southern Caddo area and central Texas. The bifaces from Gahagan Mound generally include less recurve in the blade, and a base that is more convex than that of the bifaces from George C. Davis, where the mean consensus configuration of the base is slightly concave.
+
+Principal components analysis (PCA) was conducted on scaled, translated, and rotated landmarks, and demonstrates that the first two PCs account for 62.46 (PC1) and 14.48 (PC2) percent of the variation in Gahagan biface shape (Figure ~\ref{fig:FigPCA}) \citep{RN20850}. Together, PC1 and PC2 account for over 77 percent of shape variation for Gahagan bifaces, with each remaining PC representing less than six percent of the variation \citep{RN20850}. The first two PCs are plotted in Figure ~\ref{fig:FigPCA}, where warp grids represent the shape changes along PC1 and PC2. This plot indicates that shape changes associated with PC1 articulate most readily with blades that range from broader at the minimum to narrow at the maximum, and base shapes that range from more concave at the minimum to flat or slightly convex at the maximum. Those shape changes associated with PC2 are dominated by differences in base shapes that range from narrow at minimum to broad at maximum, and blade shapes that are broader at minimum to narrower at maximum.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{pca-warp-ref.pdf}
+\caption{Principal components analysis plot (PC1/PC2) for Gahagan bifaces by region, where blue triangles represent bifaces from central Texas, and red X's represent those from the southern Caddo area. Reference shapes include the consensus configuration in gray, and the extremes of PC1 and PC2 in black.}
+\label{fig:FigPCA}
+\end{figure}
 
 \section*{Discussion}
 
 
 
-\subsection*{A theoretical discrepancy in biface size}
+\subsection*{A theoretical discrepancy related to biface size}
 
+(Figure ~\ref{fig:FigBox-CSize})
 
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{box-csize.pdf}
+\caption{Boxplot of centroid size for Gahagan bifaces from central Texas (left), and the southern Caddo area (right).}
+\label{fig:FigBox-CSize}
+\end{figure}
 
 \subsection*{Hunter-gatherers or Prairie Caddo?}
 
@@ -285,11 +355,11 @@ Enlisting the reference geometry used in the development of the current landmark
 
 \section*{Data Accessibility Statement}
 
-Data and code can be accessed through the GitHub repository for this project (\href{https://github.com/aksel-blaise/gahaganmorph2}{https://github.com/aksel-blaise/gahaganmorph2}), are made available in the Open Science Framework (OSF) (\href{https://osf.io/2g95w/}{DOI: 10.17605/OSF.IO/2G95W}), and curated in Zenodo @ CERN. All 3D scan data (unprocessed and processed) are embargoed for a period of five years from the date of the last manuscript submission that employs them. The unprocessed 3D scan data were uploaded to the OSF, where the preprint of this paper and all supplementary materials are made available. Processed 3D scans are curated individually through Zenodo @ CERN, and each links back to the OSF project, the GitHub repository, and this article.
+Data and code associated with this analysis can be accessed through the GitHub repository (\href{https://github.com/aksel-blaise/gahaganmorph2}{https://github.com/aksel-blaise/gahaganmorph2}), which is digitally curated on the Open Science Framework (OSF) (\href{https://osf.io/2g95w/}{DOI: 10.17605/OSF.IO/2G95W}). All 3D scan data (unprocessed and processed) are embargoed for a period of five years from the date of the last manuscript submission that employs them. The unprocessed 3D scan data were uploaded to the OSF, where the preprint of this paper and all supplementary materials are made available \citep{RN20850}.
 
 \section*{Acknowledgments}
 
-We extend our gratitude to the Caddo Tribe of Oklahoma, the Williamson Museum at Northwestern State University, the Louisiana State Exhibit Museum, the Texas Archeological Research Laboratory at The University of Texas at Austin, the Brazos Valley Museum of Natural History, and the Texas Parks and Wildlife Department for the requisite permissions and access needed to generate the scans of Gahagan bifaces. Thanks to Harry J. Shafer, Jeffrey S. Girard, Hiram F. (Pete) Gregory, Julian A. Sitters, Timothy K. Perttula, and David K. Thulman for their comments on a draft of this manuscript. Thanks also to Dean C. Adams, Michael L. Collyer, Emma Sherratt, Lauren Butaric, and Kersten Bergstrom for their constructive criticisms, comments, and suggestions throughout the development of this research program, and to the editors and anonymous reviewers for their comments and constructive criticisms, which further improved the manuscript.
+We extend our gratitude to the Caddo Tribe of Oklahoma, the Williamson Museum at Northwestern State University, the Louisiana State Exhibit Museum, the Texas Archeological Research Laboratory at The University of Texas at Austin, the Brazos Valley Museum of Natural History, the Texas Parks and Wildlife Department, and the Sam Noble Oklahoma Museum of Natural Science for the requisite permissions and access needed to generate the scans of Gahagan bifaces. Thanks to Harry J. Shafer, Jeffrey S. Girard, Hiram F. (Pete) Gregory, Julian A. Sitters, Timothy K. Perttula, and David K. Thulman for their comments on a draft of this manuscript. Thanks also to Dean C. Adams, Michael L. Collyer, Emma Sherratt, Lauren Butaric, and Kersten Bergstrom for their constructive criticisms, comments, and suggestions throughout the development of this research program, and to the editors and anonymous reviewers for their comments and constructive criticisms, which further improved the manuscript.
 
 Components of this analytical work flow were developed and funded by a Preservation Technology and Training grant (P14AP00138) to RZS from the National Center for Preservation Technology and Training, and funding to scan the Gahagan bifaces at the Williamson Museum at Northwestern State University, Louisiana State Exhibit Museum, and Texas Archeological Research Laboratory at The University of Texas at Austin was provided to RZS by the Heritage Research Center at Stephen F. Austin State University.
 
