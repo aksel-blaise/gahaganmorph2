@@ -4,7 +4,7 @@ library(geomorph)
 
 # set working directory
 setwd(getwd())
-source('readmulti.csv.r')
+source('readmulti.csv.R')
 
 # read .csv files
 setwd("./data")
