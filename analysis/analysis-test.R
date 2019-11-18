@@ -24,6 +24,14 @@ globalIntegration(Y.gpa$coords)
 gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) # geomorph data frame
 csz<-Y.gpa$Csize # attribute for boxplot
 rgn<-qdata$region # attribute for boxplot
+# boxplot of central Texas and southern Caddo area Gahagan bifaces by centroid size
+boxplot(csz~rgn, 
+        main = "Centroid size of Gahagan bifaces by Region",
+        names = c("Central Texas", "Southern Caddo Area"),
+        xlab = "Region",
+        ylab = "Centroid Size",
+        col = c("dodgerblue4","indianred4")
+)
 # principal components analysis
 PCA<-gm.prcomp(Y.gpa$coords)
 summary(PCA)
@@ -37,3 +45,12 @@ shapes <- shapes[as.numeric(qdata$region)]
 # plotPCA
 PCAplot<-plot(PCA, col = colors, pch = shapes)
 picknplot.shape(PCAplot)
+
+#subset landmark coordinates to produce mean shapes for groups
+new.coords<-coords.subset(A = Y.gpa$coords, group = qdata$region)
+names(new.coords)
+#group shape means
+mean<-lapply(new.coords, mshape)
+plot(mean$CTX)
+plot(mean$SCA)
+plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
