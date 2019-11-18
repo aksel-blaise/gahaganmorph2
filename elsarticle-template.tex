@@ -238,6 +238,7 @@ Point04 & CentreBase & Equidistant between Points 2 and 3\\
 
 The final landmarking protocol developed for this study \citep{RN20850} enlisted \textit{Geomagic Design X (Build Version 2019.0.2 [Build Number: 78])} to generate a spline around the periphery of each biface, and to populate the landmarks and equidistant semilandmarks in a replicable manner using mathematically-defined criteria. The 3D landmark configuration increases both the precision and rigour of the study by including the z-dimension to capture those morphological characteristics associated with axial twisting that are introduced through the practice of bifacial beveling. This landmarking protocol represents an intermediate iteration between the previous 2D analysis \citep{RN11783}, and the forthcoming protocol that includes semilandmarks placed on a series of equidistant cross-sections. The cross-sections increase the coverage of semilandmarks across the mesh topology, providing for greater precision in the analysis of morphology for the whole object. The evolution of this landmarking protocol represents a concerted effort to better comprehend the vagaries of morphological similarities and differences among Gahagan bifaces. While true that some landmarking protocols can be—and often are—recycled as new specimens are added, this particular research programme endeavours to achieve ever-greater accuracy and precision in each analytical iteration.
 
+<<<<<<< HEAD
 Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh using the \textit{extract contour curves} command, which was used to detect and extract 3D contour curves from high-curvature areas of the mesh (Figure ~\ref{fig:fig-extractspline}). In reverse-engineering, \textit{extract contour curves} is regularly employed as the first step in building a patch network that is used to create a surface. The extracted feature curve is rendered as a spline, and follows the highest curvature contours around the periphery of the lateral and basal edges, following the highly variable sinuous edge morphology around the entirety of the biface (Figure ~\ref{fig:fig-extractspline}). The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
 
 \begin{figure}[ht]\centering
@@ -249,15 +250,27 @@ Unlike the previous study, where the outline of each Gahagan biface was projecte
 The characteristic points and tangents developed for this landmarking protocol were inspired by the work of \citet{RN11786}. The first landmark (LM1) is placed at the horizontal tangent on the tip of each Gahagan biface. The second and third splits (LM2 and LM3) occur at points of highest curvature, and LM2 is always split on the right side of the biface when oriented in 3D space following the alignment output of auto3dgm, which is illustrated in Figure 7a of the manuscript. To place the final landmark (LM4), a linear measurement was used to project a reference point equidistant between LM2 and LM3. The location of that point was leveraged in placing the reference plane used to cut the spline at the location of LM4.
 
 \subsubsection*{Spline split at location of LM1}
+=======
+Unlike the previous study, where the outline of each Gahagan biface was projected onto a 2D plane, this effort enlists a spline extracted from the surface geometry of the mesh using the \textit{extract contour curves} command, which was used to detect and extract 3D contour curves from high-curvature areas of the mesh. In reverse-engineering, \textit{extract contour curves} is regularly employed as the first step in building a patch network that is used to create a surface. The extracted feature curve is rendered as a spline, and follows the highest curvature contours around the periphery of the lateral and basal edges, following the highly variable sinuous edge morphology around the entirety of the biface. The remainder of the landmarking protocol is based upon this spline, which was subsequently split at four mathematically-defined locations.
+
+The characteristic points and tangents developed for this landmarking protocol were inspired by the work of \citet{RN11786}. The first landmark (LM1) is placed at the horizontal tangent on the tip of each Gahagan biface. The second and third splits (LM2 and LM3) occur at points of highest curvature, and LM2 is always split on the right side of the biface when oriented in 3D space following the alignment output of auto3dgm, which is illustrated in Figure 7a of the manuscript. To place the final landmark (LM4), a linear measurement was used to project a reference point equidistant between LM2 and LM3. The location of that point was leveraged in placing the reference plane used to cut the spline at the location of LM4.
+
+\subsubsection{Spline split at location of LM1}
+>>>>>>> master
 
 The horizontal tangent is calculated by drawing a horizontal line above the tip of the biface using the tangent as a common constraint, and the horizontal as the independent constraint. To split the 3D spline at the location of the horizontal tangent, a reference point was inserted at the location of the tangent in the 2D sketch (Figure ~\ref{fig:figLM1}, left), followed by a reference plane (Figure ~\ref{fig:figLM1} in white, left and right) using the pick point and normal axis function where the reference point (h-tangent) was used as the pick point, and the Right plane as the normal axis (Figure ~\ref{fig:figLM1}, left). The 3D spline was then cut at the location where the reference plane intersected with the spline (Figure ~\ref{fig:figLM1}, right).
 
 \begin{figure}[ht]\centering
+<<<<<<< HEAD
 \includegraphics[width=\linewidth]{analysis/images/lm1.pdf}
+=======
+\includegraphics[width=\linewidth]{analysis/images/splinesplit1.pdf}
+>>>>>>> master
 \caption{Horizontal tangent calculated, followed by insertion of reference point and reference plane (left). Reference plane used to cut spline at location of the horizontal tangent (right).}
 \label{fig:figLM1}
 \end{figure}
 
+<<<<<<< HEAD
 \subsubsection*{Spline split at locations of LM2 and LM3}
 
 The point of highest curvature on either side of the basal edge was calculated using the curvature function in the Accuracy Analyser (Figure ~\ref{fig:fig-splinesplit}). This function displays the curvature flow as a continuous colour plot across the area of the curve. In this instance, curvature is defined as the amount by which a geometric shape deviates from being flat or straight in the case of a line. The curvature is displayed in different colours according to the local radius, and is calculated in only one direction (U or V) along the curve. Using this tool, the two points of highest curvature were located between the basal and lateral edges on either side of each biface where the local radius measure was largest (Figure ~\ref{fig:fig-splinesplit}). The alignment and orientation of each biface was dictated by the \textit{auto3dgm} output, and the landmarking protocol follows the mesh orientation in that figure, where LM2 was always placed on the right side of the basal edge, and LM3 on the left.
@@ -284,6 +297,8 @@ Through the preceding protocol, the initial spline was split into four discrete 
 
 Superficially, this constellation of landmarks and semilandmarks appears similar to those used in recent 2D studies. However, the rigourous protocol used in the application of landmarks and semilandmarks aids in capturing morphological variation that articulates with axial twisting introduced by knappers through the practice of beveling (Figure ~\ref{fig:fig5}). Thus, this constellation of landmarks and semilandmarks provides for greater precision in the geometric morphometric analysis, marking a substantive advancement in those analytical protocols used to achieve a more complete and holistic analysis of Gahagan biface morphology.
 
+=======
+>>>>>>> master
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{figbev}
 \caption{Landmark and semilandmark placement. Note the axial twisting associated with beveling when the biface is aligned to the plane that intersects the first three landmarks.}
@@ -298,7 +313,11 @@ Principal components analysis \citep{RN1746} was used to visualise shape variati
 
 \section*{Results}
 
+<<<<<<< HEAD
 The mean consensus configuration and Procrustes residuals were calculated using a generalised Procrustes analysis (GPA) \citep[Figure 3]{RN1720} (Figure ~\ref{fig:FigGPA}). This initial view of the dataset demonstrates the degree of variation that occurs at each site and in the combined sample. As an exploratory measure, GM methods---to include GPA---aid in clarifying shape differences associated with each population and in the production of novel \textit{a posteriori} hypotheses \citep{RN1720}. Further information and detail related to the analytical outputs can be found in \citep{RN20850}.
+=======
+The mean consensus configuration and Procrustes residuals were calculated by means of a generalised Procrustes analysis (GPA) \citep[Figure 3]{RN1720} (Figure ~\ref{fig:FigGPA}). This initial view of the dataset demonstrates the degree of variation that occurs at each site and in the combined sample. As an exploratory measure, GM methods---to include GPA---aid in clarifying shape differences associated with each population and in the production of novel \textit{a posteriori} hypotheses \citep{RN1720}. Further information and detail related to the analytical outputs can be found in \citep{RN20850}.
+>>>>>>> master
 
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{gpa3d}
