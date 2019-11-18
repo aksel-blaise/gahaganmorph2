@@ -24,6 +24,14 @@ globalIntegration(Y.gpa$coords)
 gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) # geomorph data frame
 csz<-Y.gpa$Csize # attribute for boxplot
 rgn<-qdata$region # attribute for boxplot
+# boxplot of central Texas and southern Caddo area Gahagan bifaces by centroid size
+boxplot(csz~rgn, 
+        main = "Centroid size of Gahagan bifaces by Region",
+        names = c("Central Texas", "Southern Caddo Area"),
+        xlab = "Region",
+        ylab = "Centroid Size",
+        col = c("dodgerblue4","indianred4")
+)
 # principal components analysis
 PCA<-gm.prcomp(Y.gpa$coords)
 summary(PCA)
@@ -37,3 +45,37 @@ shapes <- shapes[as.numeric(qdata$region)]
 # plotPCA
 PCAplot<-plot(PCA, col = colors, pch = shapes)
 picknplot.shape(PCAplot)
+
+# define models
+fit.rsize<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
+fit.region<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
+
+anova(fit.rsize)
+
+# allometry: does shape change with size?  
+anova(fit.size)
+plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
+# common allometric component (Mitteroecker 2004)
+plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
+# size-shape PCA (Mitteroecker 2004)
+plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
+# do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
+form<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
+picknplot.shape(form)
+
+# ANOVA: do Gahagan biface shapes differ by region?
+anova(fit.region)
+
+# morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
+morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+
+#subset landmark coordinates to produce mean shapes for groups
+new.coords<-coords.subset(A = Y.gpa$coords, group = qdata$region)
+names(new.coords)
+#group shape means
+mean<-lapply(new.coords, mshape)
+plot(mean$CTX)
+plot(mean$SCA)
+plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
