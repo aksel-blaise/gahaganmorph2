@@ -401,8 +401,19 @@ morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress 
 ### Mean shapes
 
 ``` r
-shape<-Y.gpa$coords
-mean<-mshape(shape)
+#subset landmark coordinates to produce mean shapes for groups
+new.coords<-coords.subset(A = Y.gpa$coords, group = qdata$region)
+names(new.coords)
+```
+
+    ## [1] "CTX" "SCA"
+
+``` r
+#group shape means
+mean<-lapply(new.coords, mshape)
+plot(mean$CTX)
+plot(mean$SCA)
+plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
 ```
 
 ### References cited
