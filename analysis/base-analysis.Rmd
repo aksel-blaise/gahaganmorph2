@@ -134,6 +134,8 @@ anova(fit.shaperegion)
 ```{r m-disparity}
 # morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
 morphol.disparity(fit.shaperegion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+# morphological disparity: do either of the groups display greater size variation among individuals relative to the other group?
+morphol.disparity(fit.sizeregion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
 ### Mean shapes

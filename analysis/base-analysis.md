@@ -471,6 +471,37 @@ morphol.disparity(fit.shaperegion, groups = qdata$region, data = gdf, print.prog
     ## CTX 1.0000 0.7113
     ## SCA 0.7113 1.0000
 
+``` r
+# morphological disparity: do either of the groups display greater size variation among individuals relative to the other group?
+morphol.disparity(fit.sizeregion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+```
+
+    ## 
+    ## Call:
+    ## morphol.disparity(f1 = fit.sizeregion, groups = qdata$region,  
+    ##     iter = 9999, data = gdf, print.progress = FALSE) 
+    ## 
+    ## 
+    ## 
+    ## Randomized Residual Permutation Procedure Used
+    ## 10000 Permutations
+    ## 
+    ## Procrustes variances for defined groups
+    ##        CTX        SCA 
+    ##   688.7314 13181.3022 
+    ## 
+    ## 
+    ## Pairwise absolute differences between variances
+    ##          CTX      SCA
+    ## CTX     0.00 12492.57
+    ## SCA 12492.57     0.00
+    ## 
+    ## 
+    ## P-Values
+    ##        CTX    SCA
+    ## CTX 1.0000 0.0067
+    ## SCA 0.0067 1.0000
+
 ### Mean shapes
 
 ``` r
