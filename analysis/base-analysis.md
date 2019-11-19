@@ -36,8 +36,66 @@ fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Tex
 devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
 ```
 
-    ## Skipping install of 'geomorph' from a github remote, the SHA1 (e423f85f) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo geomorphR/geomorph@Stable
+
+    ## 
+    ##   
+      
+      
+       checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\RtmpgbL2BM\remotes20181347249e\geomorphR-geomorph-e423f85/DESCRIPTION' ...
+      
+       checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\RtmpgbL2BM\remotes20181347249e\geomorphR-geomorph-e423f85/DESCRIPTION' ... 
+      
+    v  checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\RtmpgbL2BM\remotes20181347249e\geomorphR-geomorph-e423f85/DESCRIPTION'
+    ## 
+      
+      
+      
+    -  preparing 'geomorph': (809ms)
+    ##    checking DESCRIPTION meta-information ...
+      
+    v  checking DESCRIPTION meta-information
+    ## 
+      
+      
+      
+    -  installing the package to build vignettes (521ms)
+    ## 
+      
+      
+      
+       creating vignettes ...
+      
+       creating vignettes ... 
+      
+    v  creating vignettes (1m 6.6s)
+    ## 
+      
+      
+      
+    -  checking for LF line-endings in source and make files and shell scripts
+    ## 
+      
+      
+      
+    -  checking for empty or unneeded directories
+    ## 
+      
+      
+      
+    -  looking to see if a 'data/datalist' file should be added
+    ## 
+      
+      
+      
+    -  building 'geomorph_3.1.3.tar.gz'
+    ## 
+      
+       
+    ## 
+
+    ## Installing package into 'C:/Users/seldenjrz/Documents/R/win-library/3.6'
+    ## (as 'lib' is unspecified)
 
 ``` r
 library(geomorph)
