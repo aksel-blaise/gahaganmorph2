@@ -14,6 +14,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This document includes supplemental materials for the article, "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." The study represents the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape. This effort follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852]. The analysis builds upon previous discussions and analyses conducted by Shafer [-@RN3684;-@RN20701;-@RN4924]. A succinct overview of the analytical procedures used in the analysis is provided in the manuscript, and the analytical code provided in this document can be used to reproduce the results exactly.
 
+```{r gahagan bifaces 2D}
+knitr::include_graphics('../images/fig02.png')
+fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Texas region (right)."
+```
+
+
 ### Load geomorph and data
 
 ```{r load geomorph, setwd, and load data, echo=TRUE}
@@ -87,8 +93,8 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 ```{r define-models}
 # define models
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
-fit.sizereg<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
-fit.region<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.sizeregion<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.shaperegion<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
@@ -101,7 +107,7 @@ plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$s
     # common allometric component (Mitteroecker 2004)
 plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
     # size-shape PCA (Mitteroecker 2004)
-plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
+plotAllometry(fit.shaperegion, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
     # do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
 extremes<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
 # max/min for each population in the above result accomplished manually using:
@@ -114,16 +120,16 @@ fig.cap="Measures of Gahagan biface morphology as a function of size for bifaces
 
 ```{r region}
 # ANOVA: does Gahagan biface size differ by region?
-anova(fit.sizereg)
+anova(fit.sizeregion)
 # ANOVA: do Gahagan biface shapes differ by region?
-anova(fit.region)
+anova(fit.shaperegion)
 ```
 
 ### Morphological disparity
 
 ```{r m-disparity}
 # morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
-morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+morphol.disparity(fit.shaperegion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
 ### Mean shapes
@@ -134,12 +140,11 @@ new.coords<-coords.subset(A = Y.gpa$coords, group = qdata$region)
 names(new.coords)
 #group shape means
 mean<-lapply(new.coords, mshape)
-plot(mean$CTX)
-plot(mean$SCA)
-plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
+# plot(mean$CTX)
+# plot(mean$SCA)
+# plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
 knitr::include_graphics('images/mshape-region.png')
-fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors. The central Texas region is represented by blue triangles, and the southern Caddo area by red X's."
+fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors."
 ```
 
 ### References cited
-

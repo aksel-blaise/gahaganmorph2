@@ -19,6 +19,16 @@ the analytical procedures used in the analysis is provided in the
 manuscript, and the analytical code provided in this document can be
 used to reproduce the results exactly.
 
+``` r
+knitr::include_graphics('../images/fig02.png')
+```
+
+![](../images/fig02.png)<!-- -->
+
+``` r
+fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Texas region (right)."
+```
+
 ### Load geomorph and data
 
 ``` r
@@ -246,8 +256,8 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 ``` r
 # define models
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
-fit.sizereg<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
-fit.region<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.sizeregion<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.shaperegion<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
@@ -290,7 +300,7 @@ plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = sha
 
 ``` r
     # size-shape PCA (Mitteroecker 2004)
-plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
+plotAllometry(fit.shaperegion, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
 ```
 
 ![](base-analysis_files/figure-gfm/allometry-3.png)<!-- -->
@@ -318,7 +328,7 @@ fig.cap="Measures of Gahagan biface morphology as a function of size for bifaces
 
 ``` r
 # ANOVA: does Gahagan biface size differ by region?
-anova(fit.sizereg)
+anova(fit.sizeregion)
 ```
 
     ## 
@@ -340,7 +350,7 @@ anova(fit.sizereg)
 
 ``` r
 # ANOVA: do Gahagan biface shapes differ by region?
-anova(fit.region)
+anova(fit.shaperegion)
 ```
 
     ## 
@@ -364,13 +374,13 @@ anova(fit.region)
 
 ``` r
 # morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
-morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+morphol.disparity(fit.shaperegion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
     ## 
     ## Call:
-    ## morphol.disparity(f1 = fit.region, groups = qdata$region, iter = 9999,  
-    ##     data = gdf, print.progress = FALSE) 
+    ## morphol.disparity(f1 = fit.shaperegion, groups = qdata$region,  
+    ##     iter = 9999, data = gdf, print.progress = FALSE) 
     ## 
     ## 
     ## 
@@ -406,16 +416,16 @@ names(new.coords)
 ``` r
 #group shape means
 mean<-lapply(new.coords, mshape)
-plot(mean$CTX)
-plot(mean$SCA)
-plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
+# plot(mean$CTX)
+# plot(mean$SCA)
+# plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
 knitr::include_graphics('images/mshape-region.png')
 ```
 
 ![](images/mshape-region.png)<!-- -->
 
 ``` r
-fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors. The central Texas region is represented by blue triangles, and the southern Caddo area by red X's."
+fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors."
 ```
 
 ### References cited
