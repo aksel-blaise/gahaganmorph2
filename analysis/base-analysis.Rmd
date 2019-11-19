@@ -95,7 +95,8 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
 fit.sizeregion<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.shaperegion<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
-fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999) # unique allometries
+fit.common<-procD.lm(shape ~ size + region, data = gdf, print.progress = FALSE, iter = 9999) # common allometries
 ```
 
 ### Allometry
@@ -103,6 +104,8 @@ fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, 
 ```{r allometry}
 # allometry: does shape change with size?  
 anova(fit.size)
+anova(fit.common)
+anova(fit.unique)
 plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
     # common allometric component (Mitteroecker 2004)
 plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
@@ -112,6 +115,7 @@ plotAllometry(fit.shaperegion, size = gdf$size, logsz = TRUE, method = "size.sha
 extremes<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
 # max/min for each population in the above result accomplished manually using:
 # picknplot.shape(extremes)
+anova(fit.common, fit.unique, print.progress = FALSE)
 knitr::include_graphics('images/gbiface-allom-form.png')
 fig.cap="Measures of Gahagan biface morphology as a function of size for bifaces from both regions, where small and large specimens from each region (black spheres) are contrasted with the consensus configuration (gray spheres)."
 ```

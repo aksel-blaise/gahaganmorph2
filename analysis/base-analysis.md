@@ -36,66 +36,8 @@ fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Tex
 devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
 ```
 
-    ## Downloading GitHub repo geomorphR/geomorph@Stable
-
-    ## 
-    ##   
-      
-      
-       checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\RtmpgbL2BM\remotes20181347249e\geomorphR-geomorph-e423f85/DESCRIPTION' ...
-      
-       checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\RtmpgbL2BM\remotes20181347249e\geomorphR-geomorph-e423f85/DESCRIPTION' ... 
-      
-    v  checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\RtmpgbL2BM\remotes20181347249e\geomorphR-geomorph-e423f85/DESCRIPTION'
-    ## 
-      
-      
-      
-    -  preparing 'geomorph': (809ms)
-    ##    checking DESCRIPTION meta-information ...
-      
-    v  checking DESCRIPTION meta-information
-    ## 
-      
-      
-      
-    -  installing the package to build vignettes (521ms)
-    ## 
-      
-      
-      
-       creating vignettes ...
-      
-       creating vignettes ... 
-      
-    v  creating vignettes (1m 6.6s)
-    ## 
-      
-      
-      
-    -  checking for LF line-endings in source and make files and shell scripts
-    ## 
-      
-      
-      
-    -  checking for empty or unneeded directories
-    ## 
-      
-      
-      
-    -  looking to see if a 'data/datalist' file should be added
-    ## 
-      
-      
-      
-    -  building 'geomorph_3.1.3.tar.gz'
-    ## 
-      
-       
-    ## 
-
-    ## Installing package into 'C:/Users/seldenjrz/Documents/R/win-library/3.6'
-    ## (as 'lib' is unspecified)
+    ## Skipping install of 'geomorph' from a github remote, the SHA1 (e423f85f) has not changed since last install.
+    ##   Use `force = TRUE` to force installation
 
 ``` r
 library(geomorph)
@@ -316,7 +258,8 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
 fit.sizeregion<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.shaperegion<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
-fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999) # unique allometries
+fit.common<-procD.lm(shape ~ size + region, data = gdf, print.progress = FALSE, iter = 9999) # common allometries
 ```
 
 ### Allometry
@@ -342,6 +285,53 @@ anova(fit.size)
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## Call: procD.lm(f1 = shape ~ size, iter = 9999, data = gdf, print.progress = FALSE)
+
+``` r
+anova(fit.common)
+```
+
+    ## 
+    ## Analysis of Variance, using Residual Randomization
+    ## Permutation procedure: Randomization of null model residuals 
+    ## Number of permutations: 10000 
+    ## Estimation method: Ordinary Least Squares 
+    ## Sums of Squares and Cross-products: Type I 
+    ## Effect sizes (Z) based on F distributions
+    ## 
+    ##            Df      SS       MS     Rsq      F      Z Pr(>F)    
+    ## size        1 0.04166 0.041664 0.07453 8.6482 3.1246  3e-04 ***
+    ## region      1 0.04038 0.040378 0.07223 8.3812 3.0905  1e-03 ** 
+    ## Residuals  99 0.47695 0.004818 0.85323                         
+    ## Total     101 0.55899                                          
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Call: procD.lm(f1 = shape ~ size + region, iter = 9999, data = gdf,  
+    ##     print.progress = FALSE)
+
+``` r
+anova(fit.unique)
+```
+
+    ## 
+    ## Analysis of Variance, using Residual Randomization
+    ## Permutation procedure: Randomization of null model residuals 
+    ## Number of permutations: 10000 
+    ## Estimation method: Ordinary Least Squares 
+    ## Sums of Squares and Cross-products: Type I 
+    ## Effect sizes (Z) based on F distributions
+    ## 
+    ##              Df      SS       MS     Rsq      F      Z Pr(>F)    
+    ## size          1 0.04166 0.041664 0.07453 8.7411 3.1377 0.0003 ***
+    ## region        1 0.04038 0.040378 0.07223 8.4711 3.1037 0.0010 ** 
+    ## size:region   1 0.00983 0.009831 0.01759 2.0625 1.3297 0.1052    
+    ## Residuals    98 0.46712 0.004766 0.83564                         
+    ## Total       101 0.55899                                          
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Call: procD.lm(f1 = shape ~ size * region, iter = 9999, data = gdf,  
+    ##     print.progress = FALSE)
 
 ``` r
 plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
@@ -373,6 +363,26 @@ extremes<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "Pre
 ``` r
 # max/min for each population in the above result accomplished manually using:
 # picknplot.shape(extremes)
+anova(fit.common, fit.unique, print.progress = FALSE)
+```
+
+    ## 
+    ## Analysis of Variance, using Residual Randomization
+    ## Permutation procedure: Randomization of null model residuals 
+    ## Number of permutations: 10000 
+    ## Estimation method: Ordinary Least Squares 
+    ## Effect sizes (Z) based on F distributions
+    ## 
+    ##                              ResDf Df     RSS        SS        MS      Rsq
+    ## shape ~ size + region (Null)    99  1 0.47695                     0.000000
+    ## shape ~ size * region           98  1 0.46712 0.0098311 0.0098311 0.017587
+    ## Total                          101    0.55899                             
+    ##                                   F      Z      P Pr(>F)
+    ## shape ~ size + region (Null)                            
+    ## shape ~ size * region        2.0625 1.3297 0.1052       
+    ## Total
+
+``` r
 knitr::include_graphics('images/gbiface-allom-form.png')
 ```
 
