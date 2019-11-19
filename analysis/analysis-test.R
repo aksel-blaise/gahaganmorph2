@@ -56,9 +56,10 @@ fit.rsize<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 99
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
 fit.region<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.common<-procD.lm(shape ~ size + region, data = gdf, print.progress = FALSE, iter = 9999)
 
-anova(fit.rsize)
-
+summary(fit.common)
+summary(fit.unique)
 # allometry: does shape change with size?  
 anova(fit.size)
 plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
@@ -69,6 +70,7 @@ plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", 
 # do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
 form<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
 picknplot.shape(form)
+anova(fit.common, fit.unique, print.progress = FALSE)
 
 # ANOVA: do Gahagan biface shapes differ by region?
 anova(fit.region)

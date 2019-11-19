@@ -258,7 +258,8 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
 fit.sizeregion<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.shaperegion<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
-fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999) # unique allometries
+fit.common<-procD.lm(shape ~ size + region, data = gdf, print.progress = FALSE, iter = 9999) # common allometries
 ```
 
 ### Allometry
@@ -284,6 +285,53 @@ anova(fit.size)
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## Call: procD.lm(f1 = shape ~ size, iter = 9999, data = gdf, print.progress = FALSE)
+
+``` r
+anova(fit.common)
+```
+
+    ## 
+    ## Analysis of Variance, using Residual Randomization
+    ## Permutation procedure: Randomization of null model residuals 
+    ## Number of permutations: 10000 
+    ## Estimation method: Ordinary Least Squares 
+    ## Sums of Squares and Cross-products: Type I 
+    ## Effect sizes (Z) based on F distributions
+    ## 
+    ##            Df      SS       MS     Rsq      F      Z Pr(>F)    
+    ## size        1 0.04166 0.041664 0.07453 8.6482 3.1246  3e-04 ***
+    ## region      1 0.04038 0.040378 0.07223 8.3812 3.0905  1e-03 ** 
+    ## Residuals  99 0.47695 0.004818 0.85323                         
+    ## Total     101 0.55899                                          
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Call: procD.lm(f1 = shape ~ size + region, iter = 9999, data = gdf,  
+    ##     print.progress = FALSE)
+
+``` r
+anova(fit.unique)
+```
+
+    ## 
+    ## Analysis of Variance, using Residual Randomization
+    ## Permutation procedure: Randomization of null model residuals 
+    ## Number of permutations: 10000 
+    ## Estimation method: Ordinary Least Squares 
+    ## Sums of Squares and Cross-products: Type I 
+    ## Effect sizes (Z) based on F distributions
+    ## 
+    ##              Df      SS       MS     Rsq      F      Z Pr(>F)    
+    ## size          1 0.04166 0.041664 0.07453 8.7411 3.1377 0.0003 ***
+    ## region        1 0.04038 0.040378 0.07223 8.4711 3.1037 0.0010 ** 
+    ## size:region   1 0.00983 0.009831 0.01759 2.0625 1.3297 0.1052    
+    ## Residuals    98 0.46712 0.004766 0.83564                         
+    ## Total       101 0.55899                                          
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Call: procD.lm(f1 = shape ~ size * region, iter = 9999, data = gdf,  
+    ##     print.progress = FALSE)
 
 ``` r
 plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$size), pch = shapes, col = colors)
@@ -315,6 +363,26 @@ extremes<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "Pre
 ``` r
 # max/min for each population in the above result accomplished manually using:
 # picknplot.shape(extremes)
+anova(fit.common, fit.unique, print.progress = FALSE)
+```
+
+    ## 
+    ## Analysis of Variance, using Residual Randomization
+    ## Permutation procedure: Randomization of null model residuals 
+    ## Number of permutations: 10000 
+    ## Estimation method: Ordinary Least Squares 
+    ## Effect sizes (Z) based on F distributions
+    ## 
+    ##                              ResDf Df     RSS        SS        MS      Rsq
+    ## shape ~ size + region (Null)    99  1 0.47695                     0.000000
+    ## shape ~ size * region           98  1 0.46712 0.0098311 0.0098311 0.017587
+    ## Total                          101    0.55899                             
+    ##                                   F      Z      P Pr(>F)
+    ## shape ~ size + region (Null)                            
+    ## shape ~ size * region        2.0625 1.3297 0.1052       
+    ## Total
+
+``` r
 knitr::include_graphics('images/gbiface-allom-form.png')
 ```
 
@@ -402,6 +470,37 @@ morphol.disparity(fit.shaperegion, groups = qdata$region, data = gdf, print.prog
     ##        CTX    SCA
     ## CTX 1.0000 0.7113
     ## SCA 0.7113 1.0000
+
+``` r
+# morphological disparity: do either of the groups display greater size variation among individuals relative to the other group?
+morphol.disparity(fit.sizeregion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+```
+
+    ## 
+    ## Call:
+    ## morphol.disparity(f1 = fit.sizeregion, groups = qdata$region,  
+    ##     iter = 9999, data = gdf, print.progress = FALSE) 
+    ## 
+    ## 
+    ## 
+    ## Randomized Residual Permutation Procedure Used
+    ## 10000 Permutations
+    ## 
+    ## Procrustes variances for defined groups
+    ##        CTX        SCA 
+    ##   688.7314 13181.3022 
+    ## 
+    ## 
+    ## Pairwise absolute differences between variances
+    ##          CTX      SCA
+    ## CTX     0.00 12492.57
+    ## SCA 12492.57     0.00
+    ## 
+    ## 
+    ## P-Values
+    ##        CTX    SCA
+    ## CTX 1.0000 0.0067
+    ## SCA 0.0067 1.0000
 
 ### Mean shapes
 
