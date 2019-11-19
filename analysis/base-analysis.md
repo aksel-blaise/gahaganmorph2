@@ -56,21 +56,8 @@ qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 ### Generalised Procrustes Analysis
 
 ``` r
-Y.gpa<-gpagen(coords, PrinAxes = TRUE)
-```
-
-    ## 
-      |                                                                       
-      |                                                                 |   0%
-      |                                                                       
-      |=============                                                    |  20%
-      |                                                                       
-      |==========================                                       |  40%
-      |                                                                       
-      |=================================================================| 100%
-
-``` r
-plot(Y.gpa)
+Y.gpa<-gpagen(coords, PrinAxes = TRUE, print.progress = FALSE)
+# plot(Y.gpa)
 # quantify global integration relative to self-similarity (Bookstein 2015)
 globalIntegration(Y.gpa$coords)
 ```
@@ -310,10 +297,22 @@ plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", 
 
 ``` r
     # do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
-test<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
+extremes<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
 ```
 
 ![](base-analysis_files/figure-gfm/allometry-4.png)<!-- -->
+
+``` r
+# max/min for each population in the above result accomplished manually using:
+# picknplot.shape(extremes)
+knitr::include_graphics('images/gbiface-allom-form.png')
+```
+
+![](images/gbiface-allom-form.png)<!-- -->
+
+``` r
+fig.cap="Measures of Gahagan biface morphology as a function of size for bifaces from both regions, where small and large specimens from each region (black spheres) are contrasted with the consensus configuration (gray spheres)."
+```
 
 ### Size/Shape \~ Region?
 
@@ -410,6 +409,13 @@ mean<-lapply(new.coords, mshape)
 plot(mean$CTX)
 plot(mean$SCA)
 plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
+knitr::include_graphics('images/mshape-region.png')
+```
+
+![](images/mshape-region.png)<!-- -->
+
+``` r
+fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors. The central Texas region is represented by blue triangles, and the southern Caddo area by red X's."
 ```
 
 ### References cited
