@@ -1,7 +1,7 @@
 ---
 title: "Geometric morphometric analysis of Gahagan bifaces"
 author: "Robert Z. Selden, Jr."
-date: "November 10, 2019"
+date: "November 19, 2019"
 output: github_document
 bibliography: gahagan.bib
 ---
@@ -13,6 +13,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Introduction
 
 This document includes supplemental materials for the article, "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." The study represents the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape. This effort follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852]. The analysis builds upon previous discussions and analyses conducted by Shafer [-@RN3684;-@RN20701;-@RN4924]. A succinct overview of the analytical procedures used in the analysis is provided in the manuscript, and the analytical code provided in this document can be used to reproduce the results exactly.
+
+```{r gahagan bifaces 2D}
+knitr::include_graphics('../images/fig02.png')
+fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Texas region (right)."
+```
+
 
 ### Load geomorph and data
 
@@ -39,8 +45,8 @@ qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 ### Generalised Procrustes Analysis
 
 ```{r gpa}
-Y.gpa<-gpagen(coords, PrinAxes = TRUE)
-plot(Y.gpa)
+Y.gpa<-gpagen(coords, PrinAxes = TRUE, print.progress = FALSE)
+# plot(Y.gpa)
 # quantify global integration relative to self-similarity (Bookstein 2015)
 globalIntegration(Y.gpa$coords)
 # geomorph data frame
@@ -87,8 +93,8 @@ fig.cap="Results of PCA with central Texas sample in blue triangles, and souther
 ```{r define-models}
 # define models
 fit.size<-procD.lm(shape ~ size, data = gdf, print.progress = FALSE, iter = 9999)
-fit.sizereg<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
-fit.region<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.sizeregion<-procD.lm(size ~ region, data = gdf, print.progress = FALSE, iter = 9999)
+fit.shaperegion<-procD.lm(shape ~ region, data = gdf, print.progress = FALSE, iter = 9999)
 fit.unique<-procD.lm(shape ~ size * region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
@@ -101,25 +107,29 @@ plot(fit.size, type = "regression", reg.type = "RegScore", predictor = log(gdf$s
     # common allometric component (Mitteroecker 2004)
 plotAllometry(fit.size, size = gdf$size, logsz = TRUE, method = "CAC", pch = shapes, col = colors)
     # size-shape PCA (Mitteroecker 2004)
-plotAllometry(fit.region, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
+plotAllometry(fit.shaperegion, size = gdf$size, logsz = TRUE, method = "size.shape", pch = shapes, col = colors)
     # do Gahagan biface forms from different regions express parallel, convergent, or divergent morphological characteristics?
-test<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
+extremes<-plotAllometry(fit.unique, size = gdf$size, logsz = TRUE, method = "PredLine", pch = shapes, col = colors)
+# max/min for each population in the above result accomplished manually using:
+# picknplot.shape(extremes)
+knitr::include_graphics('images/gbiface-allom-form.png')
+fig.cap="Measures of Gahagan biface morphology as a function of size for bifaces from both regions, where small and large specimens from each region (black spheres) are contrasted with the consensus configuration (gray spheres)."
 ```
 
 ### Size/Shape ~ Region?
 
 ```{r region}
 # ANOVA: does Gahagan biface size differ by region?
-anova(fit.sizereg)
+anova(fit.sizeregion)
 # ANOVA: do Gahagan biface shapes differ by region?
-anova(fit.region)
+anova(fit.shaperegion)
 ```
 
 ### Morphological disparity
 
 ```{r m-disparity}
 # morphological disparity: do either of the groups display greater shape variation among individuals relative to the other group?
-morphol.disparity(fit.region, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
+morphol.disparity(fit.shaperegion, groups = qdata$region, data = gdf, print.progress = FALSE, iter = 9999)
 ```
 
 ### Mean shapes
@@ -130,10 +140,17 @@ new.coords<-coords.subset(A = Y.gpa$coords, group = qdata$region)
 names(new.coords)
 #group shape means
 mean<-lapply(new.coords, mshape)
-plot(mean$CTX)
-plot(mean$SCA)
-plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
+# plot(mean$CTX)
+# plot(mean$SCA)
+# plotRefToTarget(mean$SCA,mean$CTX, method="vector",mag=2)
+knitr::include_graphics('images/mshape-region.png')
+fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors."
 ```
 
-### References cited
+### Acknowledgments
 
+We extend our gratitude to the Caddo Tribe of Oklahoma, the Williamson Museum at Northwestern State University, the Louisiana State Exhibit Museum, the Texas Archeological Research Laboratory at The University of Texas at Austin, the Brazos Valley Museum of Natural History, the Texas Parks and Wildlife Department, and the Sam Noble Oklahoma Museum of Natural Science for the requisite permissions and access needed to generate the scans of Gahagan bifaces. Thanks to Harry J. Shafer, Jeffrey S. Girard, Hiram F. (Pete) Gregory, Julian A. Sitters, Timothy K. Perttula, and David K. Thulman for their comments on a draft of this manuscript. Thanks also to Dean C. Adams, Michael L. Collyer, Emma Sherratt, Lauren Butaric, and Kersten Bergstrom for their constructive criticisms, comments, and suggestions throughout the development of this research programme, and to the editors and anonymous reviewers for their comments and constructive criticisms, which further improved the manuscript.
+
+Components of this analytical work flow were developed and funded by a Preservation Technology and Training grant (P14AP00138) to RZS from the National Center for Preservation Technology and Training, and funding to scan the Gahagan bifaces at the Williamson Museum at Northwestern State University, Louisiana State Exhibit Museum, Texas Archeological Research Laboratory at The University of Texas at Austin, and Sam Noble Oklahoma Museum of Natural Science was provided to RZS by the Heritage Research Center at Stephen F. Austin State University.
+
+### References cited

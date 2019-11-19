@@ -18,6 +18,11 @@ qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 
 Y.gpa<-gpagen(coords, PrinAxes = TRUE)
 plot(Y.gpa)
+# plot consensus configuration in 2D to illustrate axial twisting
+par(mfrow=c(1,3))
+plot(Y.gpa$consensus[,c("Y", "X")], pch=20)
+plot(Y.gpa$consensus[,c("Z", "X")], pch=20)
+plot(Y.gpa$consensus[,c("Z", "Y")], pch=20)
 # quantify global integration relative to self-similarity (Bookstein 2015)
 globalIntegration(Y.gpa$coords)
 ### analyses
