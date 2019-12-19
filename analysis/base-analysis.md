@@ -11,7 +11,7 @@ morphology.” The study represents the first formal morphological
 analysis to assess inter-regional variability in Gahagan biface shape.
 This effort follows a recent 2D analysis of Gahagan biface shapes within
 the southern Caddo area (Selden Jr., Dockall, and Shafer 2018), where
-Gahgagan bifaces were found to differ in shape across the same geography
+Gahagan bifaces were found to differ in shape across the same geography
 as the Smithport Plain and Hickory Engraved bottles (Selden Jr. 2018a,
 2018b, 2019a, 2019b). The analysis builds upon previous discussions and
 analyses conducted by Shafer (1973, 1974, 2006). A succinct overview of
