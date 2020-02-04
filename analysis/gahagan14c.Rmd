@@ -1,7 +1,7 @@
 ---
 title: "Temporal dynamics of Gahagan bifaces"
 author: "Robert Z. Selden, Jr."
-date: "October 27, 2019"
+date: "January 31, 2020"
 output: github_document
 ---
 
@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Loading the oxcAAR package
 
-This document includes supplemental materials for paper: "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." Further information regarding the radiocarbon dates discussed below can be found in the text of the article.
+This document includes supplemental materials for paper: "A quantitative assessment of intraspecific morphological variation in Gahagan bifaces." Further information regarding the radiocarbon dates discussed below can be found in the text of the article.
 
 ```{r install}
 if(!require('devtools')) install.packages('devtools')
@@ -69,43 +69,98 @@ plot(moundsplcal)
 calcurve_plot(moundsplcal)
 ```
 
-### Chronological model for Caddo contexts with Gahagan bifaces
+### Calibration and plots for dates from AU2 at the J. B. White site
+
+Seventeen dates (Beta-176624, UGA-12500, UGA-12509, UGA-12497, UGA-12498, UGA-12505, UGA-12495, Beta-176625, Beta-176623, UGA-12494, UGA-12503, UGA-12499, Beta-176620, Beta-176627, Beta-176628, UGA-12493, Beta-176630) were reported from AU2 at the J. B. White site. More information about these dates can be found in the text, and in those works cited in the text of the article.
+
+```{r jbwcal, echo=TRUE}
+jbw<-data.frame(bp=c(1190,1090,1090,1050,1030,990,980,980,970,970,950,920,910,890,880,860,710),
+                     std=c(50,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40),
+                     names=c("Beta-176624","UGA-12500","UGA-12509","UGA-12497","UGA-12498", "UGA-12505","UGA-12495","Beta-176625","Beta-176623","UGA-12494","UGA-12503","UGA-12499","Beta-176620","Beta-176627","Beta-176628","UGA-12493","Beta-176630")
+)
+jbwcal<-oxcalCalibrate(jbw$bp,jbw$std,jbw$names)
+jbwcal
+plot(jbwcal)
+calcurve_plot(jbwcal)
+```
+
+### Calibration and plots for the dates from the Baker site
+
+Three dates (D-AMS 035170, D-AMS 035169, D-AMS 035290) were reported from Features 119 and 134, respectively. More information about these dates can be found in the text, and in those works cited in the text of the article.
+
+```{r bkrcal, echo=TRUE}
+bkr<-data.frame(bp=c(667,648,624),
+                std=c(24,22,28),
+                names=c("D-AMS 035170","D-AMS 035169","D-AMS 035290")
+)
+bkrcal<-oxcalCalibrate(bkr$bp,bkr$std,bkr$names)
+bkrcal
+plot(bkrcal)
+calcurve_plot(bkrcal)
+```
+
+### Chronological model for Caddo contexts yielding Gahagan bifaces
 
 For reasons explained in the text, Tx-1206 and Tx-56 are included in the model as outliers. The script that appears below achieves the same results in R and in OxCal. While Figure 3 in the article was produced using this script in OxCal 4.3.2 for aesthetic purposes, the chronological model was created using the oxcAAR package.
 
 ```{r chronmod, echo=TRUE}
 knitr::opts_chunk$set(cache=TRUE)
 bgahagan <- 'Plot()
-{
-  Phase()
+ {
+  Phase("Contexts yielding Gahagan Bifaces")
   {
-    Sequence("Gahagan Bifaces")
+   Sequence("Gahagan Bifaces")
+   {
+    Boundary("start Gahagan Bifaces SCA");
+    Phase("southern Caddo area")
     {
-      Boundary("start Gahagan Bifaces");
-      Phase()
-      {
-        R_Date("Tx-1206", 475, 100)
-        {
-          Outlier();
-        };
-        R_Date("Tx-913", 1150, 80);
-        R_Date("UGA-12296", 1000, 40);
-        R_Date("ISGS-A0466", 950, 40);
-        R_Date("ISGS-A0465", 910, 35);
-        R_Combine("Log 1")
-        {
-          R_Date("Tx-55", 860, 120);
-          R_Date("M-1466", 900, 100);
-        };
-        R_Date("Tx-56", 475, 100)
-        {
-          Outlier();
-        };
-      };
-      Boundary("end Ghagan Bifaces");
+     R_Date("Tx-913", 1150, 80);
+     R_Date("UGA-12296", 1000, 40);
+     R_Date("Tx-1206", 986, 90)
+     {
+      Outlier();
+     };
+     R_Date("ISGS-A0466", 950, 40);
+     R_Date("ISGS-A0465", 910, 35);
+     R_Combine("Log 1")
+     {
+      R_Date("M-1466", 900, 100);
+      R_Date("Tx-55", 860, 120);
+     };
+     R_Date("Tx-56", 475, 100)
+     {
+      Outlier();
+     };
     };
+    Boundary("end Gahagan bifaces SCA");
+    Boundary("start Gahagan bifaces CTX");
+    Phase("central Texas")
+    {
+     R_Date("Beta-176624", 1190, 50);
+     R_Date("UGA-12500", 1090, 40);
+     R_Date("UGA-12509", 1090, 40);
+     R_Date("UGA-12497", 1050, 40);
+     R_Date("UGA-12498", 1030, 40);
+     R_Date("UGA-12505", 990, 40);
+     R_Date("UGA-12495", 980, 40);
+     R_Date("Beta-176625", 980, 40);
+     R_Date("Beta-176623", 970, 40);
+     R_Date("UGA-12494", 970, 40);
+     R_Date("UGA-12503", 950, 40);
+     R_Date("UGA-12499", 920, 40);
+     R_Date("Beta-176620", 910, 40);
+     R_Date("Beta-176627", 890, 40);
+     R_Date("Beta-176628", 880, 40);
+     R_Date("UGA-12493", 860, 40);
+     R_Date("Beta-176630", 710, 40);
+     R_Date("D-AMS 035170", 667, 24);
+     R_Date("D-AMS 035169", 648, 22);
+     R_Date("D-AMS 035290", 624, 28);
+    };
+    Boundary("end Ghagan Bifaces CTX");
+   };
   };
-};
+ };
 '
   
   bgahagan_results <- executeOxcalScript(bgahagan) 
