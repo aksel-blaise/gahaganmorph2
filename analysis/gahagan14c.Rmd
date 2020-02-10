@@ -118,7 +118,7 @@ sumall.cal <- sumall %>% executeOxcalScript() %>% readOxcalOutput() %>% parseOxc
 str(sumall.cal)
 plot(sumall.cal)
 
-#simulate spd using the same date range, number of dates, and mean error
+#simulate spd using the same date range, number of dates, and mean error. timeframe_begin (760) was calculated by subtracting 1190 from 1950, timeframe_end by subtracting 624 from 1950, with n = the same number of dates in the original sample, and stds = the average of the standard deviations within the original sample.
 sum_sim<-oxcalSumSim(
   timeframe_begin = 760,
   timeframe_end = 1326,
