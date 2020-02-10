@@ -1,7 +1,7 @@
 ---
 title: "Temporal dynamics of Gahagan bifaces"
 author: "Robert Z. Selden, Jr."
-date: "January 31, 2020"
+date: "February 10, 2020"
 output: github_document
 ---
 
@@ -26,7 +26,7 @@ quickSetupOxcal()
 
 ### Calibration and plots for dates from Burial Pit 2 at the Gahagan Mound site
 
-Three AMS dates (UGA12296, ISGS A0465, and ISGS A0466) were reported from Burial Pit 2 at the Gahagan Mound site. More information about these dates can be found in the text, and in those works cited in the text of the article.
+Three AMS dates (UGA12296, ISGS A0465, and ISGS A0466) were reported from Burial Pit 2 at the Gahagan Mound site. More information about these dates can be found in the text, and those works cited within the text of the manuscript.
 
 ```{r gahagancal, echo=TRUE}
 gahagan<-data.frame(bp=c(1000,950,910),
@@ -41,7 +41,7 @@ calcurve_plot(gahagancal)
 
 ### Calibration and plots for the dates from F119 and F134 at the George C. Davis site
 
-Two dates (Tx-913 and Tx-1206) were reported from Features 119 and 134, respectively. More information about these dates can be found in the text, and in those works cited in the text of the article.
+Two dates (Tx-913 and Tx-1206) were reported from Features 119 and 134, respectively. More information about these dates can be found in the text, and those works cited within the text of the manuscript.
 
 ```{r GCDcal, echo=TRUE}
 gcd<-data.frame(bp=c(1150,986),
@@ -56,7 +56,7 @@ calcurve_plot(gcdcal)
 
 ### Calibration and plots for dates from Burial Pit 5 at the Mounds Plantation site
 
-Three dates (Tx-55, Tx-56, and M-1466) were reported from Burial Pit 5 at the Mounds Plantation site. More information about these dates can be found in the text, and in those works cited in the text of the article.
+Three dates (Tx-55, Tx-56, and M-1466) were reported from Burial Pit 5 at the Mounds Plantation site. More information about these dates can be found in the text, and those works cited within the text of the manuscript.
 
 ```{r mplcal, echo=TRUE}
 moundspl<-data.frame(bp=c(860,900),
@@ -71,7 +71,7 @@ calcurve_plot(moundsplcal)
 
 ### Calibration and plots for dates from AU2 at the J. B. White site
 
-Seventeen dates (Beta-176624, UGA-12500, UGA-12509, UGA-12497, UGA-12498, UGA-12505, UGA-12495, Beta-176625, Beta-176623, UGA-12494, UGA-12503, UGA-12499, Beta-176620, Beta-176627, Beta-176628, UGA-12493, Beta-176630) were reported from AU2 at the J. B. White site. More information about these dates can be found in the text, and in those works cited in the text of the article.
+Seventeen dates (Beta-176624, UGA-12500, UGA-12509, UGA-12497, UGA-12498, UGA-12505, UGA-12495, Beta-176625, Beta-176623, UGA-12494, UGA-12503, UGA-12499, Beta-176620, Beta-176627, Beta-176628, UGA-12493, Beta-176630) were reported from AU2 at the J. B. White site. More information about these dates can be found in the text, and those works cited within the text of the manuscript.
 
 ```{r jbwcal, echo=TRUE}
 jbw<-data.frame(bp=c(1190,1090,1090,1050,1030,990,980,980,970,970,950,920,910,890,880,860,710),
@@ -86,7 +86,7 @@ calcurve_plot(jbwcal)
 
 ### Calibration and plots for the dates from the Baker site
 
-Three dates (D-AMS 035170, D-AMS 035169, D-AMS 035290) were reported from Features 119 and 134, respectively. More information about these dates can be found in the text, and in those works cited in the text of the article.
+Three dates (D-AMS 035170, D-AMS 035169, D-AMS 035290) were reported from the Baker site. More information about these dates can be found in the text, and those works cited within the text of the manuscript.
 
 ```{r bkrcal, echo=TRUE}
 bkr<-data.frame(bp=c(667,648,624),
@@ -99,13 +99,44 @@ plot(bkrcal)
 calcurve_plot(bkrcal)
 ```
 
+### Summed probability distributions for contexts yielding Gahagan bifaces
+
+A summed probability distribution is presented for all dates, then each site. Those dates from the same wood specimen at the Mounds Plantation site (M-1466 and Tx-55) were not combined for these distributions. Outliers mentioned in the text of the article are omitted from the summed probability distributions for contexts yielding Gahagan bifaces listed below.
+
+```{r sumcal, echo=TRUE}
+# plot spd for all contexts yielding Gahagan bifaces
+spdall<-R_Date(c("Beta-176624","Tx-913","UGA-12500","UGA-12509","UGA-12497","UGA-12498","UGA-12296","UGA-12505","UGA-12495","Beta-176625","Beta-176623","UGA-12494","UGA-12503","ISGS-A0466","UGA-12499","Beta-176620","ISGS-A0465","M-1466","Tx-55","Beta-176627","Beta-176628","UGA-12493","Beta-176630","D-AMS 035170","D-AMS 035169","D-AMS 035290"), c(1190,1150,1090,1090,1050,1030,1000,990,980,980,970,970,950,950,920,910,910,900,860,890,880,860,710,667,648,624), c(50,80,40,40,40,40,40,40,40,40,40,40,40,40,40,40,35,100,120,40,40,40,40,24,22,28))
+cat(spdall)
+sumall<-oxcal_Sum(spdall)
+
+cat(sumall)
+
+library(magrittr)
+
+sumall.cal <- sumall %>% executeOxcalScript() %>% readOxcalOutput() %>% parseOxcalOutput(first = T, only.R_Date = F)
+
+str(sumall.cal)
+plot(sumall.cal)
+
+#simulate spd using the same date range, number of dates, and mean error. timeframe_begin (760) was calculated by subtracting 1190 from 1950, timeframe_end by subtracting 624 from 1950, with n = the same number of dates in the original sample, and stds = the average of the standard deviations within the original sample.
+sum_sim<-oxcalSumSim(
+  timeframe_begin = 760,
+  timeframe_end = 1326,
+  n = 26,
+  stds = 45,
+  date_distribution = "uniform"
+)
+str(sum_sim)
+plot(sum_sim)
+```
+
 ### Chronological model for Caddo contexts yielding Gahagan bifaces
 
 For reasons explained in the text, Tx-1206 and Tx-56 are included in the model as outliers. The script that appears below achieves the same results in R and in OxCal. While Figure 3 in the article was produced using this script in OxCal 4.3.2 for aesthetic purposes, the chronological model was created using the oxcAAR package.
 
 ```{r chronmod, echo=TRUE}
 knitr::opts_chunk$set(cache=TRUE)
-bgahagan <- 'Plot()
+gahaganmod <- 'Plot()
  {
   Phase("Contexts yielding Gahagan Bifaces")
   {
@@ -162,14 +193,18 @@ bgahagan <- 'Plot()
   };
  };
 '
-  
-  bgahagan_results <- executeOxcalScript(bgahagan) 
-  bgahagan_text <- readOxcalOutput(bgahagan_results)
-  bgahagan_result_data <- parseOxcalOutput(bgahagan_text, only.R_Date = F)
-  str(bgahagan_result_data)
-  print(bgahagan_result_data)
-  plot(bgahagan_result_data)
-  # end of script
+  gahaganmod_results <- executeOxcalScript(gahaganmod) 
+  gahaganmod_text <- readOxcalOutput(gahaganmod_results)
+  gahaganmod_result_data <- parseOxcalOutput(gahaganmod_text, only.R_Date = F)
+  str(gahaganmod_result_data)
+  print(gahaganmod_result_data)
+  plot(gahaganmod_result_data)
+# plot start/end boundaries for contexts yielding gahagan bifaces in sca and ctx
+  gahaganmod_result_data %>%
+    sapply(function(x) x$type %in% c("Boundary")) %>%
+    gahaganmod_result_data[.] %>%
+    oxcAAR:::plot.oxcAARCalibratedDatesList()
+# end of script
 ```
 
 ### Acknowledgments
