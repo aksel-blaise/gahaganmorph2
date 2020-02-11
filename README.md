@@ -23,7 +23,7 @@ Morphological attributes associated with axial twisting and beveling hold substa
 
 ![](./analysis/images/gpa3d.png)
 
-Chronometric dates were aggregated, where available, from contexts where Gahagan bifaces have been found. These dates were [recalibrated and modeled](analysis/gahagan14c.md) using the [_oxcAAR package_](https://github.com/ISAAKiel/oxcAAR). Unfortunately, none of these dates come from contexts associated with the central Texas sample. However, there are dated contexts in central Texas where Gahagan bifaces have been found, which will be integrated when those Gahagan bifaces are added to the analysis in a subsequent iteration.
+Chronometric dates were aggregated, where available, from contexts where Gahagan bifaces have been found. These dates were [recalibrated and modeled](analysis/gahagan14c.md) using the [_oxcAAR package_](https://github.com/ISAAKiel/oxcAAR). Due to recovery from a context that does not directly articulate with the Gahagan biface at the Baker site, two models were produced. One (top) includes the Baker site dates, and the other (bottom) does not.
 
 ![](/fig03.png)
 
