@@ -136,10 +136,7 @@ For reasons explained in the text, Tx-1206 and Tx-56 are included in the model a
 
 ```{r chronmod1, echo=TRUE}
 knitr::opts_chunk$set(cache=TRUE)
-<<<<<<< HEAD
 # chronological model with Baker site dates
-=======
->>>>>>> fb83f570528441442f9d61cc2dc53f1f4e6c0faf
 gahaganmod <- 'Plot()
  {
   Phase("Contexts yielding Gahagan Bifaces")
@@ -203,7 +200,7 @@ gahaganmod <- 'Plot()
   str(gahaganmod_result_data)
   print(gahaganmod_result_data)
   plot(gahaganmod_result_data)
-  # plot of temporal boundaries for SCA and CTX contexts yielding Gahagan bifaces
+# plot start/end boundaries for contexts yielding gahagan bifaces in sca and ctx with Baker site dates
   gahaganmod_result_data %>%
     sapply(function(x) x$type %in% c("Boundary")) %>%
     gahaganmod_result_data[.] %>%
@@ -274,10 +271,10 @@ gahaganmod2 <- 'Plot()
   str(gahaganmod2_result_data)
   print(gahaganmod2_result_data)
   plot(gahaganmod2_result_data)
-# plot start/end boundaries for contexts yielding gahagan bifaces in sca and ctx
-  gahaganmod_result_data %>%
+# plot start/end boundaries for contexts yielding gahagan bifaces in sca and ctx without Baker site dates
+  gahaganmod2_result_data %>%
     sapply(function(x) x$type %in% c("Boundary")) %>%
-    gahaganmod_result_data[.] %>%
+    gahaganmod2_result_data[.] %>%
     oxcAAR:::plot.oxcAARCalibratedDatesList()
 # end of script
 ```
