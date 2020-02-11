@@ -25,7 +25,7 @@ Morphological attributes associated with axial twisting and beveling hold substa
 
 Chronometric dates were aggregated, where available, from contexts where Gahagan bifaces have been found. These dates were [recalibrated and modeled](analysis/gahagan14c.md) using the [_oxcAAR package_](https://github.com/ISAAKiel/oxcAAR). Unfortunately, none of these dates come from contexts associated with the central Texas sample. However, there are dated contexts in central Texas where Gahagan bifaces have been found, which will be integrated when those Gahagan bifaces are added to the analysis in a subsequent iteration.
 
-![](/fig03.pdf)
+![](/fig03.png)
 
 Although not a component of the current analysis, it is thought that attributes associated with retouch may also articulate with beveling. Previously published methods of codifying and analysing retouch are being integrated into this analytical programme, and another measure is under active development. Further work is needed to refine the latter approach; however, the measure is introduced here as it may hold value for studies that are currently planned or underway.
 
