@@ -23,8 +23,23 @@ library(devtools)
 install_github('ISAAKiel/oxcAAR')
 ```
 
-    ## Skipping install of 'oxcAAR' from a github remote, the SHA1 (20344f04) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo ISAAKiel/oxcAAR@master
+
+    ## 
+    ##          checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\Rtmp82OfSW\remotes32c82bec2428\ISAAKiel-oxcAAR-ab94508/DESCRIPTION' ...  v  checking for file 'C:\Users\seldenjrz\AppData\Local\Temp\Rtmp82OfSW\remotes32c82bec2428\ISAAKiel-oxcAAR-ab94508/DESCRIPTION'
+    ##       -  preparing 'oxcAAR':
+    ##    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+    ##       -  excluding invalid files
+    ##    Subdirectory 'R' contains invalid file names:
+    ##      'not_implemented_yet.txt'
+    ##       -  checking for LF line-endings in source and make files and shell scripts
+    ##       -  checking for empty or unneeded directories
+    ##       -  building 'oxcAAR_1.0.0.tar.gz'
+    ##      
+    ## 
+
+    ## Installing package into 'C:/Users/seldenjrz/Documents/R/win-library/3.6'
+    ## (as 'lib' is unspecified)
 
 ``` r
 # load oxcAAR and OxCal
@@ -34,7 +49,7 @@ quickSetupOxcal()
 
     ## Oxcal doesn't seem to be installed. Downloading it now:
 
-    ## Oxcal download to C:\Users\seldenjrz\AppData\Local\Temp\RtmpaS40k2 successful!
+    ## Oxcal download to C:\Users\seldenjrz\AppData\Local\Temp\Rtmp82OfSW successful!
 
     ## Oxcal path set!
 
@@ -990,9 +1005,9 @@ str(sum_sim)
     ##   ..$ one_sigma  : logi NA
     ##   ..$ two_sigma  : logi NA
     ##   ..$ three_sigma: logi NA
-    ##  $ raw_probabilities      :'data.frame': 189 obs. of  2 variables:
-    ##   ..$ dates        : num [1:189] 526 530 536 540 546 ...
-    ##   ..$ probabilities: num [1:189] 0.00 0.00 0.00 2.50e-09 7.49e-09 ...
+    ##  $ raw_probabilities      :'data.frame': 207 obs. of  2 variables:
+    ##   ..$ dates        : num [1:207] 600 606 610 616 620 ...
+    ##   ..$ probabilities: num [1:207] 0.00 0.00 2.94e-09 5.87e-09 8.81e-09 ...
     ##  $ posterior_sigma_ranges :List of 3
     ##   ..$ one_sigma  : logi NA
     ##   ..$ two_sigma  : logi NA
@@ -1100,19 +1115,19 @@ gahaganmod <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 988
-    ##   .. .. ..$ end        : num 1002
+    ##   .. .. ..$ end        : num 1001
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 970
-    ##   .. .. ..$ end        : num 1009
+    ##   .. .. ..$ start      : num 972
+    ##   .. .. ..$ end        : num 1008
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 892 934
-    ##   .. .. ..$ end        : num [1:2] 919 1030
-    ##   .. .. ..$ probability: num [1:2] 1.1 98.6
-    ##   ..$ posterior_probabilities:'data.frame':  40 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:40] 860 866 870 876 880 ...
-    ##   .. ..$ probabilities: num [1:40] 0.00 6.70e-06 1.38e-05 2.46e-05 6.29e-05 ...
+    ##   .. .. ..$ start      : num [1:2] 896 930
+    ##   .. .. ..$ end        : num [1:2] 920 1028
+    ##   .. .. ..$ probability: num [1:2] 0.7 99
+    ##   ..$ posterior_probabilities:'data.frame':  44 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:44] 870 876 880 886 890 ...
+    ##   .. ..$ probabilities: num [1:44] 0.00 5.40e-06 1.29e-05 1.59e-05 3.00e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Tx-913                           :List of 9
     ##   ..$ name                   : chr "Tx-913"
@@ -1147,16 +1162,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1004
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 978
+    ##   .. .. ..$ start      : num 980
     ##   .. .. ..$ end        : num 1010
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 897 948
-    ##   .. .. ..$ end        : num [1:2] 924 1035
-    ##   .. .. ..$ probability: num [1:2] 1 98.7
+    ##   .. .. ..$ start      : num [1:2] 902 944
+    ##   .. .. ..$ end        : num [1:2] 926 1034
+    ##   .. .. ..$ probability: num [1:2] 0.6 99.1
     ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:46] 866 870 876 880 886 ...
-    ##   .. ..$ probabilities: num [1:46] 0.00 8.07e-07 2.94e-06 5.80e-06 1.37e-05 ...
+    ##   .. ..$ dates        : num [1:46] 876 880 886 890 896 ...
+    ##   .. ..$ probabilities: num [1:46] 0.00 4.53e-07 8.31e-07 3.78e-06 7.48e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12296                        :List of 9
     ##   ..$ name                   : chr "UGA-12296"
@@ -1191,16 +1206,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1003
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 982
-    ##   .. .. ..$ end        : num 1010
+    ##   .. .. ..$ start      : num 984
+    ##   .. .. ..$ end        : num 1009
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 901 967
-    ##   .. .. ..$ end        : num [1:2] 920 1035
-    ##   .. .. ..$ probability: num [1:2] 1 98.7
-    ##   ..$ posterior_probabilities:'data.frame':  47 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:47] 870 876 880 886 890 ...
-    ##   .. ..$ probabilities: num [1:47] 0.00 0.00 0.00 3.91e-07 2.50e-06 ...
+    ##   .. .. ..$ start      : num [1:2] 902 966
+    ##   .. .. ..$ end        : num [1:2] 920 1037
+    ##   .. .. ..$ probability: num [1:2] 0.6 99.1
+    ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:46] 880 886 890 896 900 ...
+    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 0.00 1.29e-06 1.20e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Tx-1206                          :List of 9
     ##   ..$ name                   : chr "Tx-1206"
@@ -1231,20 +1246,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:170] 0.00 4.55e-09 4.55e-09 9.09e-09 1.36e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 978
-    ##   .. .. ..$ end        : num 1162
+    ##   .. .. ..$ start      : num 976
+    ##   .. .. ..$ end        : num 1161
     ##   .. .. ..$ probability: num 68.2
-    ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 876
-    ##   .. .. ..$ end        : num 1256
-    ##   .. .. ..$ probability: num 95.4
+    ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:2] 784 878
+    ##   .. .. ..$ end        : num [1:2] 786 1255
+    ##   .. .. ..$ probability: num [1:2] 0.1 95.3
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:2] 722 766
-    ##   .. .. ..$ end        : num [1:2] 742 1280
-    ##   .. .. ..$ probability: num [1:2] 0.1 99.6
-    ##   ..$ posterior_probabilities:'data.frame':  149 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:149] 656 660 666 670 676 ...
-    ##   .. ..$ probabilities: num [1:149] 0.00 2.92e-06 5.83e-06 7.92e-06 7.92e-06 ...
+    ##   .. .. ..$ end        : num [1:2] 742 1278
+    ##   .. .. ..$ probability: num [1:2] 0.2 99.5
+    ##   ..$ posterior_probabilities:'data.frame':  148 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:148] 660 666 670 676 680 ...
+    ##   .. ..$ probabilities: num [1:148] 0.00 1.67e-06 4.58e-06 8.75e-06 1.50e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ ISGS-A0466                       :List of 9
     ##   ..$ name                   : chr "ISGS-A0466"
@@ -1279,16 +1294,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1003
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 984
-    ##   .. .. ..$ end        : num 1010
+    ##   .. .. ..$ start      : num 986
+    ##   .. .. ..$ end        : num 1009
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 901 970
-    ##   .. .. ..$ end        : num [1:2] 920 1041
-    ##   .. .. ..$ probability: num [1:2] 1 98.7
+    ##   .. .. ..$ start      : num [1:2] 902 970
+    ##   .. .. ..$ end        : num [1:2] 920 1040
+    ##   .. .. ..$ probability: num [1:2] 0.6 99.1
     ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:46] 880 886 890 896 900 ...
-    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 1.28e-06 5.82e-06 5.25e-05 ...
+    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 0.00 8.24e-07 9.98e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ ISGS-A0465                       :List of 9
     ##   ..$ name                   : chr "ISGS-A0465"
@@ -1324,15 +1339,15 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 986
-    ##   .. .. ..$ end        : num 1009
+    ##   .. .. ..$ end        : num 1008
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:2] 903 974
-    ##   .. .. ..$ end        : num [1:2] 918 1033
-    ##   .. .. ..$ probability: num [1:2] 1.1 98.6
-    ##   ..$ posterior_probabilities:'data.frame':  44 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:44] 890 896 900 906 910 ...
-    ##   .. ..$ probabilities: num [1:44] 0 0 0 0.000403 0.001074 ...
+    ##   .. .. ..$ end        : num [1:2] 918 1019
+    ##   .. .. ..$ probability: num [1:2] 0.6 99.1
+    ##   ..$ posterior_probabilities:'data.frame':  43 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:43] 890 896 900 906 910 ...
+    ##   .. ..$ probabilities: num [1:43] 0 0 0 0.000153 0.000545 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Log 1                            :List of 9
     ##   ..$ name                   : chr "Log 1"
@@ -1367,16 +1382,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1003
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 982
+    ##   .. .. ..$ start      : num 984
     ##   .. .. ..$ end        : num 1010
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 900 964
-    ##   .. .. ..$ end        : num [1:2] 922 1041
-    ##   .. .. ..$ probability: num [1:2] 1 98.7
-    ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:46] 876 880 886 890 896 ...
-    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 3.87e-07 2.48e-06 1.75e-05 ...
+    ##   .. .. ..$ start      : num [1:2] 902 961
+    ##   .. .. ..$ end        : num [1:2] 922 1044
+    ##   .. .. ..$ probability: num [1:2] 0.6 99.1
+    ##   ..$ posterior_probabilities:'data.frame':  47 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:47] 880 886 890 896 900 ...
+    ##   .. ..$ probabilities: num [1:47] 0.00 0.00 4.00e-07 5.03e-06 1.58e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Tx-56                            :List of 9
     ##   ..$ name                   : chr "Tx-56"
@@ -1407,20 +1422,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:190] 0.00 0.00 0.00 1.14e-08 2.86e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1317 1390 1594
-    ##   .. .. ..$ end        : num [1:3] 1354 1517 1618
-    ##   .. .. ..$ probability: num [1:3] 10.8 50.7 6.7
+    ##   .. .. ..$ start      : num [1:3] 1315 1389 1596
+    ##   .. .. ..$ end        : num [1:3] 1354 1519 1620
+    ##   .. .. ..$ probability: num [1:3] 11.7 50.2 6.3
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1296
-    ##   .. .. ..$ end        : num 1638
+    ##   .. .. ..$ start      : num 1297
+    ##   .. .. ..$ end        : num 1637
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1248 1761 1936
-    ##   .. .. ..$ end        : num [1:3] 1684 1804 1953
-    ##   .. .. ..$ probability: num [1:3] 99.1 0.4 0.1
-    ##   ..$ posterior_probabilities:'data.frame':  188 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:188] 1030 1036 1040 1046 1050 ...
-    ##   .. ..$ probabilities: num [1:188] 0.00 0.00 0.00 8.32e-07 0.00 ...
+    ##   .. .. ..$ start      : num [1:3] 1246 1747 1938
+    ##   .. .. ..$ end        : num [1:3] 1683 1805 1953
+    ##   .. .. ..$ probability: num [1:3] 99.1 0.5 0.1
+    ##   ..$ posterior_probabilities:'data.frame':  165 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:165] 1146 1150 1156 1160 1166 ...
+    ##   .. ..$ probabilities: num [1:165] 0.00 0.00 1.25e-06 2.08e-06 2.50e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ southern Caddo area              :List of 9
     ##   ..$ name                   : chr "southern Caddo area"
@@ -1466,16 +1481,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1005
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 988
-    ##   .. .. ..$ end        : num 1011
+    ##   .. .. ..$ start      : num 989
+    ##   .. .. ..$ end        : num 1010
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 903 976
-    ##   .. .. ..$ end        : num [1:2] 930 1052
-    ##   .. .. ..$ probability: num [1:2] 1 98.7
-    ##   ..$ posterior_probabilities:'data.frame':  45 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:45] 890 896 900 906 910 ...
-    ##   .. ..$ probabilities: num [1:45] 0.00 0.00 0.00 7.46e-05 4.43e-04 ...
+    ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:3] 906 977 1046
+    ##   .. .. ..$ end        : num [1:3] 930 1022 1066
+    ##   .. .. ..$ probability: num [1:3] 0.5 99 0.2
+    ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:46] 890 896 900 906 910 ...
+    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 0.00 3.75e-05 2.40e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ start Gahagan bifaces CTX        :List of 9
     ##   ..$ name                   : chr "start Gahagan bifaces CTX"
@@ -1495,20 +1510,20 @@ gahaganmod <- 'Plot()
     ##   ..$ raw_probabilities      : logi NA
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 997
-    ##   .. .. ..$ end        : num 1010
+    ##   .. .. ..$ start      : num 998
+    ##   .. .. ..$ end        : num 1009
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 990
-    ##   .. .. ..$ end        : num 1016
+    ##   .. .. ..$ start      : num 992
+    ##   .. .. ..$ end        : num 1014
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 914
-    ##   .. .. ..$ end        : num 1035
-    ##   .. .. ..$ probability: num 99.7
+    ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:3] 916 980 1066
+    ##   .. .. ..$ end        : num [1:3] 964 1024 1094
+    ##   .. .. ..$ probability: num [1:3] 0.5 99 0.2
     ##   ..$ posterior_probabilities:'data.frame':  48 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:48] 890 896 900 906 910 ...
-    ##   .. ..$ probabilities: num [1:48] 0.00 0.00 0.00 2.49e-06 1.46e-05 ...
+    ##   .. ..$ probabilities: num [1:48] 0.00 0.00 0.00 4.44e-07 2.21e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176624                      :List of 9
     ##   ..$ name                   : chr "Beta-176624"
@@ -1544,15 +1559,15 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
-    ##   .. .. ..$ end        : num 1026
+    ##   .. .. ..$ end        : num 1024
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 932 1097
-    ##   .. .. ..$ end        : num [1:2] 1041 1120
-    ##   .. .. ..$ probability: num [1:2] 99.4 0.3
+    ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:3] 932 981 1094
+    ##   .. .. ..$ end        : num [1:3] 975 1040 1120
+    ##   .. .. ..$ probability: num [1:3] 0.4 99 0.3
     ##   ..$ posterior_probabilities:'data.frame':  53 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:53] 906 910 916 920 926 ...
-    ##   .. ..$ probabilities: num [1:53] 0.00 0.00 4.27e-07 1.13e-05 3.58e-05 ...
+    ##   .. ..$ probabilities: num [1:53] 0.00 0.00 0.00 4.18e-06 1.75e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12500                        :List of 9
     ##   ..$ name                   : chr "UGA-12500"
@@ -1591,12 +1606,12 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1030
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 947 1085 1136
-    ##   .. .. ..$ end        : num [1:3] 1050 1125 1150
-    ##   .. .. ..$ probability: num [1:3] 98.4 1.1 0.2
-    ##   ..$ posterior_probabilities:'data.frame':  55 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:55] 900 906 910 916 920 ...
-    ##   .. ..$ probabilities: num [1:55] 0.00 0.00 0.00 2.08e-06 1.21e-05 ...
+    ##   .. .. ..$ start      : num [1:3] 956 1086 1136
+    ##   .. .. ..$ end        : num [1:3] 1050 1126 1152
+    ##   .. .. ..$ probability: num [1:3] 98.5 1 0.2
+    ##   ..$ posterior_probabilities:'data.frame':  56 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:56] 900 906 910 916 920 ...
+    ##   .. ..$ probabilities: num [1:56] 0.00 0.00 0.00 2.06e-06 1.65e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12509                        :List of 9
     ##   ..$ name                   : chr "UGA-12509"
@@ -1628,19 +1643,19 @@ gahaganmod <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1004
-    ##   .. .. ..$ end        : num 1020
+    ##   .. .. ..$ end        : num 1019
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
     ##   .. .. ..$ end        : num 1030
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 948 1086 1136
+    ##   .. .. ..$ start      : num [1:3] 958 1086 1136
     ##   .. .. ..$ end        : num [1:3] 1050 1126 1150
     ##   .. .. ..$ probability: num [1:3] 98.5 1 0.2
-    ##   ..$ posterior_probabilities:'data.frame':  55 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:55] 900 906 910 916 920 ...
-    ##   .. ..$ probabilities: num [1:55] 0.00 0.00 0.00 5.84e-06 9.60e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  57 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:57] 896 900 906 910 916 ...
+    ##   .. ..$ probabilities: num [1:57] 0.00 0.00 0.00 1.25e-06 9.19e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12497                        :List of 9
     ##   ..$ name                   : chr "UGA-12497"
@@ -1675,16 +1690,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1024
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 993 1094 1142
-    ##   .. .. ..$ end        : num [1:3] 1046 1121 1146
-    ##   .. .. ..$ probability: num [1:3] 90.2 4.7 0.5
+    ##   .. .. ..$ start      : num [1:3] 994 1095 1144
+    ##   .. .. ..$ end        : num [1:3] 1046 1120 1146
+    ##   .. .. ..$ probability: num [1:3] 90.4 4.6 0.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 979
+    ##   .. .. ..$ start      : num 987
     ##   .. .. ..$ end        : num 1156
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  63 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:63] 900 906 910 916 920 ...
-    ##   .. ..$ probabilities: num [1:63] 0.00 0.00 0.00 1.27e-06 1.27e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  58 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:58] 906 910 916 920 926 ...
+    ##   .. ..$ probabilities: num [1:58] 0.00 0.00 0.00 3.74e-06 8.41e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12498                        :List of 9
     ##   ..$ name                   : chr "UGA-12498"
@@ -1719,16 +1734,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1036
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 995 1084 1136
-    ##   .. .. ..$ end        : num [1:3] 1050 1127 1152
-    ##   .. .. ..$ probability: num [1:3] 78.9 13.1 3.4
+    ##   .. .. ..$ start      : num [1:3] 996 1084 1136
+    ##   .. .. ..$ end        : num [1:3] 1051 1126 1152
+    ##   .. .. ..$ probability: num [1:3] 79.1 12.9 3.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 984
-    ##   .. .. ..$ end        : num 1160
+    ##   .. .. ..$ start      : num 990
+    ##   .. .. ..$ end        : num 1159
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  66 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:66] 900 906 910 916 920 ...
-    ##   .. ..$ probabilities: num [1:66] 0.00 0.00 0.00 8.26e-07 2.51e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  65 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:65] 900 906 910 916 920 ...
+    ##   .. ..$ probabilities: num [1:65] 0.00 0.00 0.00 1.67e-06 1.67e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12505                        :List of 9
     ##   ..$ name                   : chr "UGA-12505"
@@ -1759,9 +1774,9 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:104] 0.0 0.0 0.0 2.6e-08 3.0e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1011 1090 1140
+    ##   .. .. ..$ start      : num [1:3] 1010 1090 1140
     ##   .. .. ..$ end        : num [1:3] 1047 1122 1148
-    ##   .. .. ..$ probability: num [1:3] 38.2 24.6 5.4
+    ##   .. .. ..$ probability: num [1:3] 38.3 24.6 5.3
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1002
     ##   .. .. ..$ end        : num 1155
@@ -1770,9 +1785,9 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ start      : num 992
     ##   .. .. ..$ end        : num 1184
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  65 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:65] 920 926 930 936 940 ...
-    ##   .. ..$ probabilities: num [1:65] 0.00 0.00 0.00 4.14e-07 0.00 ...
+    ##   ..$ posterior_probabilities:'data.frame':  64 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:64] 930 936 940 946 950 ...
+    ##   .. ..$ probabilities: num [1:64] 0.00 0.00 0.00 4.20e-07 8.39e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12495                        :List of 9
     ##   ..$ name                   : chr "UGA-12495"
@@ -1803,20 +1818,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:103] 0.00 0.00 0.00 8.99e-08 1.46e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1016 1085 1136
+    ##   .. .. ..$ start      : num [1:3] 1016 1086 1137
     ##   .. .. ..$ end        : num [1:3] 1050 1125 1150
-    ##   .. .. ..$ probability: num [1:3] 29.7 29.4 9
+    ##   .. .. ..$ probability: num [1:3] 30.3 29.1 8.8
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1007
+    ##   .. .. ..$ start      : num 1006
     ##   .. .. ..$ end        : num 1156
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 994
     ##   .. .. ..$ end        : num 1190
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  65 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:65] 940 946 950 956 960 ...
-    ##   .. ..$ probabilities: num [1:65] 0.00 4.16e-07 4.16e-07 1.66e-06 8.32e-07 ...
+    ##   ..$ posterior_probabilities:'data.frame':  62 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:62] 950 956 960 966 970 ...
+    ##   .. ..$ probabilities: num [1:62] 0.00 0.00 0.00 8.36e-07 1.25e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176625                      :List of 9
     ##   ..$ name                   : chr "Beta-176625"
@@ -1847,20 +1862,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:103] 0.00 0.00 0.00 8.99e-08 1.46e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1016 1085 1137
+    ##   .. .. ..$ start      : num [1:3] 1016 1085 1136
     ##   .. .. ..$ end        : num [1:3] 1050 1125 1150
-    ##   .. .. ..$ probability: num [1:3] 29.9 29.5 8.8
+    ##   .. .. ..$ probability: num [1:3] 30 29.2 9
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1006
+    ##   .. .. ..$ start      : num 1007
     ##   .. .. ..$ end        : num 1156
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 994
-    ##   .. .. ..$ end        : num 1190
+    ##   .. .. ..$ start      : num 995
+    ##   .. .. ..$ end        : num 1189
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:61] 940 946 950 956 960 ...
-    ##   .. ..$ probabilities: num [1:61] 0.00 4.18e-07 0.00 4.18e-07 8.36e-07 ...
+    ##   ..$ posterior_probabilities:'data.frame':  68 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:68] 930 936 940 946 950 ...
+    ##   .. ..$ probabilities: num [1:68] 0.00 0.00 0.00 4.14e-07 0.00 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176623                      :List of 9
     ##   ..$ name                   : chr "Beta-176623"
@@ -1893,18 +1908,18 @@ gahaganmod <- 'Plot()
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:3] 1020 1084 1136
     ##   .. .. ..$ end        : num [1:3] 1050 1126 1150
-    ##   .. .. ..$ probability: num [1:3] 25.7 32.4 10.1
+    ##   .. .. ..$ probability: num [1:3] 25.5 32.4 10.3
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1012
-    ##   .. .. ..$ end        : num 1159
+    ##   .. .. ..$ end        : num 1158
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
     ##   .. .. ..$ end        : num 1206
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  65 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:65] 940 946 950 956 960 ...
-    ##   .. ..$ probabilities: num [1:65] 0.00 0.00 0.00 4.18e-07 0.00 ...
+    ##   ..$ posterior_probabilities:'data.frame':  66 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:66] 946 950 956 960 966 ...
+    ##   .. ..$ probabilities: num [1:66] 0.00 0.00 0.00 4.16e-07 4.16e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12494                        :List of 9
     ##   ..$ name                   : chr "UGA-12494"
@@ -1936,19 +1951,19 @@ gahaganmod <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:3] 1020 1084 1136
-    ##   .. .. ..$ end        : num [1:3] 1050 1127 1151
-    ##   .. .. ..$ probability: num [1:3] 25.1 32.6 10.4
+    ##   .. .. ..$ end        : num [1:3] 1050 1126 1150
+    ##   .. .. ..$ probability: num [1:3] 25.3 32.5 10.4
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1012
-    ##   .. .. ..$ end        : num 1158
+    ##   .. .. ..$ end        : num 1159
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
     ##   .. .. ..$ end        : num 1206
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  59 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:59] 960 966 970 976 980 ...
-    ##   .. ..$ probabilities: num [1:59] 0.00 0.00 0.00 2.92e-06 2.92e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  63 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:63] 956 960 966 970 976 ...
+    ##   .. ..$ probabilities: num [1:63] 0.00 0.00 0.00 4.15e-07 1.25e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12503                        :List of 9
     ##   ..$ name                   : chr "UGA-12503"
@@ -1979,9 +1994,9 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:85] 0.00 0.00 7.97e-09 1.59e-08 1.19e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1029 1082
-    ##   .. .. ..$ end        : num [1:2] 1052 1152
-    ##   .. .. ..$ probability: num [1:2] 16.7 51.5
+    ##   .. .. ..$ start      : num [1:2] 1030 1082
+    ##   .. .. ..$ end        : num [1:2] 1050 1152
+    ##   .. .. ..$ probability: num [1:2] 15.9 52.3
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1016
     ##   .. .. ..$ end        : num 1170
@@ -1990,9 +2005,9 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ start      : num 1002
     ##   .. .. ..$ end        : num 1214
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  69 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:69] 936 940 946 950 956 ...
-    ##   .. ..$ probabilities: num [1:69] 0.00 0.00 0.00 4.17e-07 4.17e-07 ...
+    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:61] 966 970 976 980 986 ...
+    ##   .. ..$ probabilities: num [1:61] 0.00 0.00 0.00 1.67e-06 8.37e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12499                        :List of 9
     ##   ..$ name                   : chr "UGA-12499"
@@ -2023,20 +2038,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:84] 0.00 0.00 0.00 2.09e-08 1.26e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1043 1118
+    ##   .. .. ..$ start      : num [1:2] 1042 1117
     ##   .. .. ..$ end        : num [1:2] 1106 1159
-    ##   .. .. ..$ probability: num [1:2] 41.2 27
+    ##   .. .. ..$ probability: num [1:2] 41.1 27.1
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1026
-    ##   .. .. ..$ end        : num 1204
+    ##   .. .. ..$ end        : num 1206
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1013
+    ##   .. .. ..$ start      : num 1014
     ##   .. .. ..$ end        : num 1246
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  63 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:63] 976 980 986 990 996 ...
-    ##   .. ..$ probabilities: num [1:63] 0.00 0.00 0.00 2.08e-06 8.33e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  62 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:62] 976 980 986 990 996 ...
+    ##   .. ..$ probabilities: num [1:62] 0.00 0.00 0.00 8.30e-07 6.25e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176620                      :List of 9
     ##   ..$ name                   : chr "Beta-176620"
@@ -2067,20 +2082,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:83] 0.00 0.00 7.09e-09 4.26e-08 1.42e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1043 1117
-    ##   .. .. ..$ end        : num [1:2] 1106 1166
-    ##   .. .. ..$ probability: num [1:2] 38.9 29.3
+    ##   .. .. ..$ start      : num [1:2] 1043 1118
+    ##   .. .. ..$ end        : num [1:2] 1106 1165
+    ##   .. .. ..$ probability: num [1:2] 39.4 28.8
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1030
     ##   .. .. ..$ end        : num 1210
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1018
-    ##   .. .. ..$ end        : num 1248
+    ##   .. .. ..$ end        : num 1249
     ##   .. .. ..$ probability: num 99.7
     ##   ..$ posterior_probabilities:'data.frame':  62 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:62] 980 986 990 996 1000 ...
-    ##   .. ..$ probabilities: num [1:62] 0.00 0.00 0.00 2.92e-06 1.46e-05 ...
+    ##   .. ..$ probabilities: num [1:62] 0.00 0.00 0.00 3.33e-06 1.25e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176627                      :List of 9
     ##   ..$ name                   : chr "Beta-176627"
@@ -2111,20 +2126,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:84] 0.00 0.00 7.67e-09 1.53e-08 2.30e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1050 1124 1150
+    ##   .. .. ..$ start      : num [1:3] 1050 1125 1150
     ##   .. .. ..$ end        : num [1:3] 1086 1137 1208
-    ##   .. .. ..$ probability: num [1:3] 23.2 7 38
+    ##   .. .. ..$ probability: num [1:3] 23.3 6.8 38.1
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1034
+    ##   .. .. ..$ start      : num 1036
     ##   .. .. ..$ end        : num 1220
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1024
-    ##   .. .. ..$ end        : num 1258
+    ##   .. .. ..$ end        : num 1257
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  59 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:59] 996 1000 1006 1010 1016 ...
-    ##   .. ..$ probabilities: num [1:59] 0.00 2.08e-06 5.84e-06 1.12e-05 1.92e-05 ...
+    ##   ..$ posterior_probabilities:'data.frame':  63 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:63] 976 980 986 990 996 ...
+    ##   .. ..$ probabilities: num [1:63] 0.00 0.00 0.00 4.13e-07 4.13e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176628                      :List of 9
     ##   ..$ name                   : chr "Beta-176628"
@@ -2155,20 +2170,20 @@ gahaganmod <- 'Plot()
     ##   .. ..$ probabilities: num [1:83] 0.00 0.00 8.14e-09 8.14e-09 8.14e-09 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1050 1126 1151
+    ##   .. .. ..$ start      : num [1:3] 1050 1127 1151
     ##   .. .. ..$ end        : num [1:3] 1084 1136 1216
-    ##   .. .. ..$ probability: num [1:3] 18.6 4.5 45.1
+    ##   .. .. ..$ probability: num [1:3] 18.6 4 45.7
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1037 1234
-    ##   .. .. ..$ end        : num [1:2] 1226 1242
+    ##   .. .. ..$ start      : num [1:2] 1037 1235
+    ##   .. .. ..$ end        : num [1:2] 1226 1243
     ##   .. .. ..$ probability: num [1:2] 94.1 1.3
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1026
     ##   .. .. ..$ end        : num 1262
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  62 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:62] 986 990 996 1000 1006 ...
-    ##   .. ..$ probabilities: num [1:62] 0.00 0.00 0.00 1.66e-06 2.09e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:60] 996 1000 1006 1010 1016 ...
+    ##   .. ..$ probabilities: num [1:60] 0.00 8.35e-07 1.67e-06 3.75e-06 6.66e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12493                        :List of 9
     ##   ..$ name                   : chr "UGA-12493"
@@ -2198,21 +2213,21 @@ gahaganmod <- 'Plot()
     ##   .. ..$ dates        : num [1:86] 970 976 980 986 990 ...
     ##   .. ..$ probabilities: num [1:86] 0.00 0.00 9.25e-09 1.85e-08 1.48e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
-    ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1058 1154
-    ##   .. .. ..$ end        : num [1:2] 1076 1225
-    ##   .. .. ..$ probability: num [1:2] 7.6 60.6
+    ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:3] 1058 1154 1238
+    ##   .. .. ..$ end        : num [1:3] 1076 1225 1242
+    ##   .. .. ..$ probability: num [1:3] 7.8 58.8 1.6
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1045 1120
-    ##   .. .. ..$ end        : num [1:2] 1097 1261
-    ##   .. .. ..$ probability: num [1:2] 16.4 79
+    ##   .. .. ..$ start      : num [1:2] 1044 1119
+    ##   .. .. ..$ end        : num [1:2] 1099 1260
+    ##   .. .. ..$ probability: num [1:2] 17 78.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1030
+    ##   .. .. ..$ start      : num 1031
     ##   .. .. ..$ end        : num 1270
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 1010 1016 1020 1026 1030 ...
-    ##   .. ..$ probabilities: num [1:60] 0.00 1.67e-06 1.71e-05 9.29e-05 2.66e-04 ...
+    ##   ..$ posterior_probabilities:'data.frame':  58 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:58] 1010 1016 1020 1026 1030 ...
+    ##   .. ..$ probabilities: num [1:58] 0.00 8.32e-07 1.12e-05 1.03e-04 2.69e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176630                      :List of 9
     ##   ..$ name                   : chr "Beta-176630"
@@ -2247,16 +2262,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1296
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1224
-    ##   .. .. ..$ end        : num 1313
+    ##   .. .. ..$ start      : num 1222
+    ##   .. .. ..$ end        : num 1314
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1204 1343
+    ##   .. .. ..$ start      : num [1:2] 1206 1342
     ##   .. .. ..$ end        : num [1:2] 1330 1390
-    ##   .. .. ..$ probability: num [1:2] 97.5 2.2
-    ##   ..$ posterior_probabilities:'data.frame':  53 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:53] 1150 1156 1160 1166 1170 ...
-    ##   .. ..$ probabilities: num [1:53] 0.00 4.28e-07 2.50e-06 1.67e-05 2.87e-05 ...
+    ##   .. .. ..$ probability: num [1:2] 97.2 2.5
+    ##   ..$ posterior_probabilities:'data.frame':  72 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:72] 1050 1056 1060 1066 1070 ...
+    ##   .. ..$ probabilities: num [1:72] 0.00 0.00 0.00 8.19e-07 0.00 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ D-AMS 035170                     :List of 9
     ##   ..$ name                   : chr "D-AMS 035170"
@@ -2291,16 +2306,16 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ end        : num 1302
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1275 1367
-    ##   .. .. ..$ end        : num [1:2] 1318 1377
-    ##   .. .. ..$ probability: num [1:2] 93.1 2.3
+    ##   .. .. ..$ start      : num [1:2] 1274 1366
+    ##   .. .. ..$ end        : num [1:2] 1318 1378
+    ##   .. .. ..$ probability: num [1:2] 92.7 2.7
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1268 1349
-    ##   .. .. ..$ end        : num [1:2] 1326 1390
-    ##   .. .. ..$ probability: num [1:2] 94.3 5.4
-    ##   ..$ posterior_probabilities:'data.frame':  33 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:33] 1250 1256 1260 1266 1270 ...
-    ##   .. ..$ probabilities: num [1:33] 0.00 4.02e-07 6.65e-06 6.67e-05 3.98e-04 ...
+    ##   .. .. ..$ start      : num [1:2] 1268 1348
+    ##   .. .. ..$ end        : num [1:2] 1327 1390
+    ##   .. .. ..$ probability: num [1:2] 94 5.7
+    ##   ..$ posterior_probabilities:'data.frame':  35 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:35] 1246 1250 1256 1260 1266 ...
+    ##   .. ..$ probabilities: num [1:35] 0.00 0.00 3.97e-07 5.82e-06 7.87e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ D-AMS 035169                     :List of 9
     ##   ..$ name                   : chr "D-AMS 035169"
@@ -2332,19 +2347,19 @@ gahaganmod <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1288
-    ##   .. .. ..$ end        : num 1309
+    ##   .. .. ..$ end        : num 1310
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1280 1360
-    ##   .. .. ..$ end        : num [1:2] 1324 1378
-    ##   .. .. ..$ probability: num [1:2] 91.4 4
+    ##   .. .. ..$ start      : num [1:2] 1280 1359
+    ##   .. .. ..$ end        : num [1:2] 1324 1379
+    ##   .. .. ..$ probability: num [1:2] 90.5 4.9
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:2] 1276 1341
     ##   .. .. ..$ end        : num [1:2] 1332 1392
-    ##   .. .. ..$ probability: num [1:2] 92.3 7.4
-    ##   ..$ posterior_probabilities:'data.frame':  34 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:34] 1256 1260 1266 1270 1276 ...
-    ##   .. ..$ probabilities: num [1:34] 0.00 0.00 0.00 1.59e-05 1.52e-04 ...
+    ##   .. .. ..$ probability: num [1:2] 91.8 7.9
+    ##   ..$ posterior_probabilities:'data.frame':  33 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:33] 1256 1260 1266 1270 1276 ...
+    ##   .. ..$ probabilities: num [1:33] 0.00 0.00 4.13e-07 1.33e-05 1.69e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ D-AMS 035290                     :List of 9
     ##   ..$ name                   : chr "D-AMS 035290"
@@ -2376,11 +2391,11 @@ gahaganmod <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1291
-    ##   .. .. ..$ end        : num 1317
+    ##   .. .. ..$ end        : num 1318
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1282
-    ##   .. .. ..$ end        : num 1367
+    ##   .. .. ..$ end        : num 1368
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1278
@@ -2388,7 +2403,7 @@ gahaganmod <- 'Plot()
     ##   .. .. ..$ probability: num 99.7
     ##   ..$ posterior_probabilities:'data.frame':  35 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:35] 1256 1260 1266 1270 1276 ...
-    ##   .. ..$ probabilities: num [1:35] 0.00 4.27e-07 2.10e-06 1.50e-05 1.10e-04 ...
+    ##   .. ..$ probabilities: num [1:35] 0.00 0.00 1.27e-06 1.33e-05 9.00e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ central Texas                    :List of 9
     ##   ..$ name                   : chr "central Texas"
@@ -2431,19 +2446,19 @@ gahaganmod <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1300
-    ##   .. .. ..$ end        : num 1336
+    ##   .. .. ..$ end        : num 1338
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1294
-    ##   .. .. ..$ end        : num 1397
+    ##   .. .. ..$ end        : num 1398
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1286
-    ##   .. .. ..$ end        : num 1451
+    ##   .. .. ..$ start      : num 1287
+    ##   .. .. ..$ end        : num 1453
     ##   .. .. ..$ probability: num 99.7
     ##   ..$ posterior_probabilities:'data.frame':  59 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:59] 1276 1280 1286 1290 1296 ...
-    ##   .. ..$ probabilities: num [1:59] 0.00 0.00 1.29e-05 4.88e-04 3.08e-03 ...
+    ##   .. ..$ probabilities: num [1:59] 0.00 0.00 8.75e-06 3.86e-04 3.27e-03 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Gahagan Bifaces                  :List of 9
     ##   ..$ name                   : chr "Gahagan Bifaces"
@@ -2505,14 +2520,14 @@ gahaganmod <- 'Plot()
     ##                                posterior:
     ## 
     ##                                one sigma
-    ##                                988 AD - 1002 AD (68.2%)
+    ##                                988 AD - 1001 AD (68.2%)
     ## 
     ##                                two sigma
-    ##                                970 AD - 1009 AD (95.4%)
+    ##                                972 AD - 1008 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                892 AD - 919 AD (1.1%)
-    ##                                934 AD - 1030 AD (98.6%)
+    ##                                896 AD - 920 AD (0.7%)
+    ##                                930 AD - 1028 AD (99%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2532,12 +2547,12 @@ gahaganmod <- 'Plot()
     ## 801 AD - 970 AD (62.2%)        
     ## 
     ## two sigma                      two sigma
-    ## 689 AD - 753 AD (9.8%)         978 AD - 1010 AD (95.4%)
+    ## 689 AD - 753 AD (9.8%)         980 AD - 1010 AD (95.4%)
     ## 759 AD - 1020 AD (85.6%)       
     ## 
     ## three sigma                    three sigma
-    ## 652 AD - 1052 AD (98.9%)       897 AD - 924 AD (1%)
-    ## 1081 AD - 1152 AD (0.8%)       948 AD - 1035 AD (98.7%)
+    ## 652 AD - 1052 AD (98.9%)       902 AD - 926 AD (0.6%)
+    ## 1081 AD - 1152 AD (0.8%)       944 AD - 1034 AD (99.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2558,11 +2573,11 @@ gahaganmod <- 'Plot()
     ## 1142 AD - 1147 AD (2.6%)       
     ## 
     ## two sigma                      two sigma
-    ## 975 AD - 1155 AD (95.4%)       982 AD - 1010 AD (95.4%)
+    ## 975 AD - 1155 AD (95.4%)       984 AD - 1009 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 894 AD - 930 AD (1.5%)         901 AD - 920 AD (1%)
-    ## 938 AD - 1168 AD (98.2%)       967 AD - 1035 AD (98.7%)
+    ## 894 AD - 930 AD (1.5%)         902 AD - 920 AD (0.6%)
+    ## 938 AD - 1168 AD (98.2%)       966 AD - 1037 AD (99.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2578,14 +2593,15 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 978 AD - 1162 AD (68.2%)       978 AD - 1162 AD (68.2%)
+    ## 978 AD - 1162 AD (68.2%)       976 AD - 1161 AD (68.2%)
     ## 
     ## two sigma                      two sigma
-    ## 879 AD - 1254 AD (95.4%)       876 AD - 1256 AD (95.4%)
+    ## 879 AD - 1254 AD (95.4%)       784 AD - 786 AD (0.1%)
+    ##                                878 AD - 1255 AD (95.3%)
     ## 
     ## three sigma                    three sigma
-    ## 722 AD - 740 AD (0.1%)         722 AD - 742 AD (0.1%)
-    ## 767 AD - 1278 AD (99.6%)       766 AD - 1280 AD (99.6%)
+    ## 722 AD - 740 AD (0.1%)         722 AD - 742 AD (0.2%)
+    ## 767 AD - 1278 AD (99.6%)       766 AD - 1278 AD (99.5%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2605,11 +2621,11 @@ gahaganmod <- 'Plot()
     ## 1082 AD - 1152 AD (51.1%)      
     ## 
     ## two sigma                      two sigma
-    ## 1016 AD - 1184 AD (95.4%)      984 AD - 1010 AD (95.4%)
+    ## 1016 AD - 1184 AD (95.4%)      986 AD - 1009 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 989 AD - 1215 AD (99.7%)       901 AD - 920 AD (1%)
-    ##                                970 AD - 1041 AD (98.7%)
+    ## 989 AD - 1215 AD (99.7%)       902 AD - 920 AD (0.6%)
+    ##                                970 AD - 1040 AD (99.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2629,11 +2645,11 @@ gahaganmod <- 'Plot()
     ## 1119 AD - 1164 AD (28.7%)      
     ## 
     ## two sigma                      two sigma
-    ## 1032 AD - 1206 AD (95.4%)      986 AD - 1009 AD (95.4%)
+    ## 1032 AD - 1206 AD (95.4%)      986 AD - 1008 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1020 AD - 1225 AD (99.7%)      903 AD - 918 AD (1.1%)
-    ##                                974 AD - 1033 AD (98.6%)
+    ## 1020 AD - 1225 AD (99.7%)      903 AD - 918 AD (0.6%)
+    ##                                974 AD - 1019 AD (99.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2653,11 +2669,11 @@ gahaganmod <- 'Plot()
     ## 1119 AD - 1219 AD (43.6%)      
     ## 
     ## two sigma                      two sigma
-    ## 1020 AD - 1268 AD (95.4%)      982 AD - 1010 AD (95.4%)
+    ## 1020 AD - 1268 AD (95.4%)      984 AD - 1010 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 899 AD - 924 AD (0.2%)         900 AD - 922 AD (1%)
-    ## 946 AD - 1297 AD (99.5%)       964 AD - 1041 AD (98.7%)
+    ## 899 AD - 924 AD (0.2%)         902 AD - 922 AD (0.6%)
+    ## 946 AD - 1297 AD (99.5%)       961 AD - 1044 AD (99.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2673,17 +2689,17 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1316 AD - 1355 AD (11.5%)      1317 AD - 1354 AD (10.8%)
-    ## 1390 AD - 1517 AD (50.4%)      1390 AD - 1517 AD (50.7%)
-    ## 1596 AD - 1618 AD (6.3%)       1594 AD - 1618 AD (6.7%)
+    ## 1316 AD - 1355 AD (11.5%)      1315 AD - 1354 AD (11.7%)
+    ## 1390 AD - 1517 AD (50.4%)      1389 AD - 1519 AD (50.2%)
+    ## 1596 AD - 1618 AD (6.3%)       1596 AD - 1620 AD (6.3%)
     ## 
     ## two sigma                      two sigma
-    ## 1297 AD - 1638 AD (95.4%)      1296 AD - 1638 AD (95.4%)
+    ## 1297 AD - 1638 AD (95.4%)      1297 AD - 1637 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1246 AD - 1682 AD (99.2%)      1248 AD - 1684 AD (99.1%)
-    ## 1762 AD - 1804 AD (0.4%)       1761 AD - 1804 AD (0.4%)
-    ## 1937 AD - NA (0.1%)            1936 AD - 1953 AD (0.1%)
+    ## 1246 AD - 1682 AD (99.2%)      1246 AD - 1683 AD (99.1%)
+    ## 1762 AD - 1804 AD (0.4%)       1747 AD - 1805 AD (0.5%)
+    ## 1937 AD - NA (0.1%)            1938 AD - 1953 AD (0.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2707,11 +2723,12 @@ gahaganmod <- 'Plot()
     ##                                994 AD - 1005 AD (68.2%)
     ## 
     ##                                two sigma
-    ##                                988 AD - 1011 AD (95.4%)
+    ##                                989 AD - 1010 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                903 AD - 930 AD (1%)
-    ##                                976 AD - 1052 AD (98.7%)
+    ##                                906 AD - 930 AD (0.5%)
+    ##                                977 AD - 1022 AD (99%)
+    ##                                1046 AD - 1066 AD (0.2%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2724,13 +2741,15 @@ gahaganmod <- 'Plot()
     ##                                posterior:
     ## 
     ##                                one sigma
-    ##                                997 AD - 1010 AD (68.2%)
+    ##                                998 AD - 1009 AD (68.2%)
     ## 
     ##                                two sigma
-    ##                                990 AD - 1016 AD (95.4%)
+    ##                                992 AD - 1014 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                914 AD - 1035 AD (99.7%)
+    ##                                916 AD - 964 AD (0.5%)
+    ##                                980 AD - 1024 AD (99%)
+    ##                                1066 AD - 1094 AD (0.2%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2750,12 +2769,13 @@ gahaganmod <- 'Plot()
     ## 933 AD - 937 AD (1.4%)         
     ## 
     ## two sigma                      two sigma
-    ## 691 AD - 750 AD (11.9%)        996 AD - 1026 AD (95.4%)
+    ## 691 AD - 750 AD (11.9%)        996 AD - 1024 AD (95.4%)
     ## 762 AD - 970 AD (83.5%)        
     ## 
     ## three sigma                    three sigma
-    ## 668 AD - 993 AD (99.7%)        932 AD - 1041 AD (99.4%)
-    ##                                1097 AD - 1120 AD (0.3%)
+    ## 668 AD - 993 AD (99.7%)        932 AD - 975 AD (0.4%)
+    ##                                981 AD - 1040 AD (99%)
+    ##                                1094 AD - 1120 AD (0.3%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2779,9 +2799,9 @@ gahaganmod <- 'Plot()
     ## 876 AD - 1024 AD (94.8%)       
     ## 
     ## three sigma                    three sigma
-    ## 776 AD - 1030 AD (99.7%)       947 AD - 1050 AD (98.4%)
-    ##                                1085 AD - 1125 AD (1.1%)
-    ##                                1136 AD - 1150 AD (0.2%)
+    ## 776 AD - 1030 AD (99.7%)       956 AD - 1050 AD (98.5%)
+    ##                                1086 AD - 1126 AD (1%)
+    ##                                1136 AD - 1152 AD (0.2%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2797,7 +2817,7 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 896 AD - 928 AD (25.6%)        1004 AD - 1020 AD (68.2%)
+    ## 896 AD - 928 AD (25.6%)        1004 AD - 1019 AD (68.2%)
     ## 940 AD - 994 AD (42.6%)        
     ## 
     ## two sigma                      two sigma
@@ -2805,7 +2825,7 @@ gahaganmod <- 'Plot()
     ## 876 AD - 1024 AD (94.8%)       
     ## 
     ## three sigma                    three sigma
-    ## 776 AD - 1030 AD (99.7%)       948 AD - 1050 AD (98.5%)
+    ## 776 AD - 1030 AD (99.7%)       958 AD - 1050 AD (98.5%)
     ##                                1086 AD - 1126 AD (1%)
     ##                                1136 AD - 1150 AD (0.2%)
     ## 
@@ -2827,12 +2847,12 @@ gahaganmod <- 'Plot()
     ## 968 AD - 1024 AD (62.8%)       
     ## 
     ## two sigma                      two sigma
-    ## 892 AD - 1036 AD (95.4%)       993 AD - 1046 AD (90.2%)
-    ##                                1094 AD - 1121 AD (4.7%)
-    ##                                1142 AD - 1146 AD (0.5%)
+    ## 892 AD - 1036 AD (95.4%)       994 AD - 1046 AD (90.4%)
+    ##                                1095 AD - 1120 AD (4.6%)
+    ##                                1144 AD - 1146 AD (0.4%)
     ## 
     ## three sigma                    three sigma
-    ## 778 AD - 790 AD (0.1%)         979 AD - 1156 AD (99.7%)
+    ## 778 AD - 790 AD (0.1%)         987 AD - 1156 AD (99.7%)
     ## 866 AD - 1155 AD (99.6%)       
     ## 
     ## Calibrated with:
@@ -2852,13 +2872,13 @@ gahaganmod <- 'Plot()
     ## 974 AD - 1032 AD (68.2%)       1000 AD - 1036 AD (68.2%)
     ## 
     ## two sigma                      two sigma
-    ## 896 AD - 928 AD (7.7%)         995 AD - 1050 AD (78.9%)
-    ## 940 AD - 1049 AD (80.1%)       1084 AD - 1127 AD (13.1%)
+    ## 896 AD - 928 AD (7.7%)         996 AD - 1051 AD (79.1%)
+    ## 940 AD - 1049 AD (80.1%)       1084 AD - 1126 AD (12.9%)
     ## 1087 AD - 1124 AD (6.1%)       1136 AD - 1152 AD (3.4%)
     ## 1138 AD - 1150 AD (1.6%)       
     ## 
     ## three sigma                    three sigma
-    ## 888 AD - 1156 AD (99.7%)       984 AD - 1160 AD (99.7%)
+    ## 888 AD - 1156 AD (99.7%)       990 AD - 1159 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -2874,9 +2894,9 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 996 AD - 1047 AD (42.3%)       1011 AD - 1047 AD (38.2%)
+    ## 996 AD - 1047 AD (42.3%)       1010 AD - 1047 AD (38.3%)
     ## 1091 AD - 1122 AD (21%)        1090 AD - 1122 AD (24.6%)
-    ## 1140 AD - 1148 AD (4.9%)       1140 AD - 1148 AD (5.4%)
+    ## 1140 AD - 1148 AD (4.9%)       1140 AD - 1148 AD (5.3%)
     ## 
     ## two sigma                      two sigma
     ## 986 AD - 1156 AD (95.4%)       1002 AD - 1155 AD (95.4%)
@@ -2899,12 +2919,12 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1016 AD - 1050 AD (29.4%)      1016 AD - 1050 AD (29.7%)
-    ## 1084 AD - 1126 AD (29.5%)      1085 AD - 1125 AD (29.4%)
-    ## 1136 AD - 1151 AD (9.4%)       1136 AD - 1150 AD (9%)
+    ## 1016 AD - 1050 AD (29.4%)      1016 AD - 1050 AD (30.3%)
+    ## 1084 AD - 1126 AD (29.5%)      1086 AD - 1125 AD (29.1%)
+    ## 1136 AD - 1151 AD (9.4%)       1137 AD - 1150 AD (8.8%)
     ## 
     ## two sigma                      two sigma
-    ## 992 AD - 1156 AD (95.4%)       1007 AD - 1156 AD (95.4%)
+    ## 992 AD - 1156 AD (95.4%)       1006 AD - 1156 AD (95.4%)
     ## 
     ## three sigma                    three sigma
     ## 902 AD - 920 AD (0.2%)         994 AD - 1190 AD (99.7%)
@@ -2924,15 +2944,15 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1016 AD - 1050 AD (29.4%)      1016 AD - 1050 AD (29.9%)
-    ## 1084 AD - 1126 AD (29.5%)      1085 AD - 1125 AD (29.5%)
-    ## 1136 AD - 1151 AD (9.4%)       1137 AD - 1150 AD (8.8%)
+    ## 1016 AD - 1050 AD (29.4%)      1016 AD - 1050 AD (30%)
+    ## 1084 AD - 1126 AD (29.5%)      1085 AD - 1125 AD (29.2%)
+    ## 1136 AD - 1151 AD (9.4%)       1136 AD - 1150 AD (9%)
     ## 
     ## two sigma                      two sigma
-    ## 992 AD - 1156 AD (95.4%)       1006 AD - 1156 AD (95.4%)
+    ## 992 AD - 1156 AD (95.4%)       1007 AD - 1156 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 902 AD - 920 AD (0.2%)         994 AD - 1190 AD (99.7%)
+    ## 902 AD - 920 AD (0.2%)         995 AD - 1189 AD (99.7%)
     ## 964 AD - 1210 AD (99.5%)       
     ## 
     ## Calibrated with:
@@ -2949,12 +2969,12 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1020 AD - 1050 AD (25.4%)      1020 AD - 1050 AD (25.7%)
+    ## 1020 AD - 1050 AD (25.4%)      1020 AD - 1050 AD (25.5%)
     ## 1084 AD - 1126 AD (32.3%)      1084 AD - 1126 AD (32.4%)
-    ## 1136 AD - 1151 AD (10.5%)      1136 AD - 1150 AD (10.1%)
+    ## 1136 AD - 1151 AD (10.5%)      1136 AD - 1150 AD (10.3%)
     ## 
     ## two sigma                      two sigma
-    ## 996 AD - 1160 AD (95.4%)       1012 AD - 1159 AD (95.4%)
+    ## 996 AD - 1160 AD (95.4%)       1012 AD - 1158 AD (95.4%)
     ## 
     ## three sigma                    three sigma
     ## 972 AD - 1212 AD (99.7%)       996 AD - 1206 AD (99.7%)
@@ -2973,12 +2993,12 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1020 AD - 1050 AD (25.4%)      1020 AD - 1050 AD (25.1%)
-    ## 1084 AD - 1126 AD (32.3%)      1084 AD - 1127 AD (32.6%)
-    ## 1136 AD - 1151 AD (10.5%)      1136 AD - 1151 AD (10.4%)
+    ## 1020 AD - 1050 AD (25.4%)      1020 AD - 1050 AD (25.3%)
+    ## 1084 AD - 1126 AD (32.3%)      1084 AD - 1126 AD (32.5%)
+    ## 1136 AD - 1151 AD (10.5%)      1136 AD - 1150 AD (10.4%)
     ## 
     ## two sigma                      two sigma
-    ## 996 AD - 1160 AD (95.4%)       1012 AD - 1158 AD (95.4%)
+    ## 996 AD - 1160 AD (95.4%)       1012 AD - 1159 AD (95.4%)
     ## 
     ## three sigma                    three sigma
     ## 972 AD - 1212 AD (99.7%)       996 AD - 1206 AD (99.7%)
@@ -2997,8 +3017,8 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1028 AD - 1052 AD (17.1%)      1029 AD - 1052 AD (16.7%)
-    ## 1082 AD - 1152 AD (51.1%)      1082 AD - 1152 AD (51.5%)
+    ## 1028 AD - 1052 AD (17.1%)      1030 AD - 1050 AD (15.9%)
+    ## 1082 AD - 1152 AD (51.1%)      1082 AD - 1152 AD (52.3%)
     ## 
     ## two sigma                      two sigma
     ## 1016 AD - 1184 AD (95.4%)      1016 AD - 1170 AD (95.4%)
@@ -3020,14 +3040,14 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1043 AD - 1106 AD (41.6%)      1043 AD - 1106 AD (41.2%)
-    ## 1118 AD - 1159 AD (26.6%)      1118 AD - 1159 AD (27%)
+    ## 1043 AD - 1106 AD (41.6%)      1042 AD - 1106 AD (41.1%)
+    ## 1118 AD - 1159 AD (26.6%)      1117 AD - 1159 AD (27.1%)
     ## 
     ## two sigma                      two sigma
-    ## 1026 AD - 1206 AD (95.4%)      1026 AD - 1204 AD (95.4%)
+    ## 1026 AD - 1206 AD (95.4%)      1026 AD - 1206 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1014 AD - 1250 AD (99.7%)      1013 AD - 1246 AD (99.7%)
+    ## 1014 AD - 1250 AD (99.7%)      1014 AD - 1246 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3043,14 +3063,14 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1043 AD - 1106 AD (39.6%)      1043 AD - 1106 AD (38.9%)
-    ## 1118 AD - 1165 AD (28.6%)      1117 AD - 1166 AD (29.3%)
+    ## 1043 AD - 1106 AD (39.6%)      1043 AD - 1106 AD (39.4%)
+    ## 1118 AD - 1165 AD (28.6%)      1118 AD - 1165 AD (28.8%)
     ## 
     ## two sigma                      two sigma
     ## 1030 AD - 1210 AD (95.4%)      1030 AD - 1210 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1018 AD - 1250 AD (99.7%)      1018 AD - 1248 AD (99.7%)
+    ## 1018 AD - 1250 AD (99.7%)      1018 AD - 1249 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3066,15 +3086,15 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1049 AD - 1086 AD (23.4%)      1050 AD - 1086 AD (23.2%)
-    ## 1124 AD - 1138 AD (7.2%)       1124 AD - 1137 AD (7%)
-    ## 1150 AD - 1209 AD (37.5%)      1150 AD - 1208 AD (38%)
+    ## 1049 AD - 1086 AD (23.4%)      1050 AD - 1086 AD (23.3%)
+    ## 1124 AD - 1138 AD (7.2%)       1125 AD - 1137 AD (6.8%)
+    ## 1150 AD - 1209 AD (37.5%)      1150 AD - 1208 AD (38.1%)
     ## 
     ## two sigma                      two sigma
-    ## 1034 AD - 1220 AD (95.4%)      1034 AD - 1220 AD (95.4%)
+    ## 1034 AD - 1220 AD (95.4%)      1036 AD - 1220 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1024 AD - 1258 AD (99.7%)      1024 AD - 1258 AD (99.7%)
+    ## 1024 AD - 1258 AD (99.7%)      1024 AD - 1257 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3091,12 +3111,12 @@ gahaganmod <- 'Plot()
     ## 
     ## one sigma                      one sigma
     ## 1050 AD - 1083 AD (18.6%)      1050 AD - 1084 AD (18.6%)
-    ## 1127 AD - 1136 AD (4%)         1126 AD - 1136 AD (4.5%)
-    ## 1152 AD - 1216 AD (45.6%)      1151 AD - 1216 AD (45.1%)
+    ## 1127 AD - 1136 AD (4%)         1127 AD - 1136 AD (4%)
+    ## 1152 AD - 1216 AD (45.6%)      1151 AD - 1216 AD (45.7%)
     ## 
     ## two sigma                      two sigma
     ## 1036 AD - 1226 AD (93.3%)      1037 AD - 1226 AD (94.1%)
-    ## 1232 AD - 1245 AD (2.1%)       1234 AD - 1242 AD (1.3%)
+    ## 1232 AD - 1245 AD (2.1%)       1235 AD - 1243 AD (1.3%)
     ## 
     ## three sigma                    three sigma
     ## 1026 AD - 1262 AD (99.7%)      1026 AD - 1262 AD (99.7%)
@@ -3115,16 +3135,16 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1058 AD - 1076 AD (7.9%)       1058 AD - 1076 AD (7.6%)
-    ## 1154 AD - 1224 AD (59.2%)      1154 AD - 1225 AD (60.6%)
-    ## 1238 AD - 1241 AD (1%)         
+    ## 1058 AD - 1076 AD (7.9%)       1058 AD - 1076 AD (7.8%)
+    ## 1154 AD - 1224 AD (59.2%)      1154 AD - 1225 AD (58.8%)
+    ## 1238 AD - 1241 AD (1%)         1238 AD - 1242 AD (1.6%)
     ## 
     ## two sigma                      two sigma
-    ## 1045 AD - 1098 AD (16.8%)      1045 AD - 1097 AD (16.4%)
-    ## 1120 AD - 1260 AD (78.6%)      1120 AD - 1261 AD (79%)
+    ## 1045 AD - 1098 AD (16.8%)      1044 AD - 1099 AD (17%)
+    ## 1120 AD - 1260 AD (78.6%)      1119 AD - 1260 AD (78.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1030 AD - 1270 AD (99.7%)      1030 AD - 1270 AD (99.7%)
+    ## 1030 AD - 1270 AD (99.7%)      1031 AD - 1270 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3144,12 +3164,12 @@ gahaganmod <- 'Plot()
     ## 1370 AD - 1380 AD (7.7%)       
     ## 
     ## two sigma                      two sigma
-    ## 1224 AD - 1316 AD (77.7%)      1224 AD - 1313 AD (95.4%)
+    ## 1224 AD - 1316 AD (77.7%)      1222 AD - 1314 AD (95.4%)
     ## 1356 AD - 1390 AD (17.7%)      
     ## 
     ## three sigma                    three sigma
-    ## 1211 AD - 1400 AD (99.7%)      1204 AD - 1330 AD (97.5%)
-    ##                                1343 AD - 1390 AD (2.2%)
+    ## 1211 AD - 1400 AD (99.7%)      1206 AD - 1330 AD (97.2%)
+    ##                                1342 AD - 1390 AD (2.5%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3169,12 +3189,12 @@ gahaganmod <- 'Plot()
     ## 1367 AD - 1383 AD (30%)        
     ## 
     ## two sigma                      two sigma
-    ## 1278 AD - 1316 AD (52.2%)      1275 AD - 1318 AD (93.1%)
-    ## 1356 AD - 1390 AD (43.2%)      1367 AD - 1377 AD (2.3%)
+    ## 1278 AD - 1316 AD (52.2%)      1274 AD - 1318 AD (92.7%)
+    ## 1356 AD - 1390 AD (43.2%)      1366 AD - 1378 AD (2.7%)
     ## 
     ## three sigma                    three sigma
-    ## 1270 AD - 1328 AD (54.3%)      1268 AD - 1326 AD (94.3%)
-    ## 1342 AD - 1396 AD (45.4%)      1349 AD - 1390 AD (5.4%)
+    ## 1270 AD - 1328 AD (54.3%)      1268 AD - 1327 AD (94%)
+    ## 1342 AD - 1396 AD (45.4%)      1348 AD - 1390 AD (5.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3190,16 +3210,16 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1291 AD - 1309 AD (27.3%)      1288 AD - 1309 AD (68.2%)
+    ## 1291 AD - 1309 AD (27.3%)      1288 AD - 1310 AD (68.2%)
     ## 1362 AD - 1386 AD (40.9%)      
     ## 
     ## two sigma                      two sigma
-    ## 1284 AD - 1320 AD (41.6%)      1280 AD - 1324 AD (91.4%)
-    ## 1350 AD - 1392 AD (53.8%)      1360 AD - 1378 AD (4%)
+    ## 1284 AD - 1320 AD (41.6%)      1280 AD - 1324 AD (90.5%)
+    ## 1350 AD - 1392 AD (53.8%)      1359 AD - 1379 AD (4.9%)
     ## 
     ## three sigma                    three sigma
-    ## 1278 AD - 1332 AD (43.6%)      1276 AD - 1332 AD (92.3%)
-    ## 1337 AD - 1399 AD (56.1%)      1341 AD - 1392 AD (7.4%)
+    ## 1278 AD - 1332 AD (43.6%)      1276 AD - 1332 AD (91.8%)
+    ## 1337 AD - 1399 AD (56.1%)      1341 AD - 1392 AD (7.9%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3215,12 +3235,12 @@ gahaganmod <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1299 AD - 1320 AD (26.6%)      1291 AD - 1317 AD (68.2%)
+    ## 1299 AD - 1320 AD (26.6%)      1291 AD - 1318 AD (68.2%)
     ## 1350 AD - 1372 AD (26.4%)      
     ## 1378 AD - 1392 AD (15.2%)      
     ## 
     ## two sigma                      two sigma
-    ## 1290 AD - 1400 AD (95.4%)      1282 AD - 1367 AD (95.4%)
+    ## 1290 AD - 1400 AD (95.4%)      1282 AD - 1368 AD (95.4%)
     ## 
     ## three sigma                    three sigma
     ## 1282 AD - 1410 AD (99.7%)      1278 AD - 1393 AD (99.7%)
@@ -3244,13 +3264,13 @@ gahaganmod <- 'Plot()
     ##                                posterior:
     ## 
     ##                                one sigma
-    ##                                1300 AD - 1336 AD (68.2%)
+    ##                                1300 AD - 1338 AD (68.2%)
     ## 
     ##                                two sigma
-    ##                                1294 AD - 1397 AD (95.4%)
+    ##                                1294 AD - 1398 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                1286 AD - 1451 AD (99.7%)
+    ##                                1287 AD - 1453 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -3371,20 +3391,20 @@ gahaganmod2 <- 'Plot()
     ##   ..$ raw_probabilities      : logi NA
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 989
+    ##   .. .. ..$ start      : num 988
     ##   .. .. ..$ end        : num 1002
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 972
-    ##   .. .. ..$ end        : num 1011
+    ##   .. .. ..$ start      : num 971
+    ##   .. .. ..$ end        : num 1010
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 886 936
-    ##   .. .. ..$ end        : num [1:2] 910 1032
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  52 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:52] 800 806 810 816 820 ...
-    ##   .. ..$ probabilities: num [1:52] 0.00 4.22e-07 0.00 1.69e-06 4.22e-07 ...
+    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
+    ##   .. .. ..$ start      : num 933
+    ##   .. .. ..$ end        : num 1030
+    ##   .. .. ..$ probability: num 99.7
+    ##   ..$ posterior_probabilities:'data.frame':  37 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:37] 876 880 886 890 896 ...
+    ##   .. ..$ probabilities: num [1:37] 0.00 6.32e-06 1.13e-05 1.42e-05 2.51e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Tx-913                           :List of 9
     ##   ..$ name                   : chr "Tx-913"
@@ -3422,13 +3442,13 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ start      : num 982
     ##   .. .. ..$ end        : num 1012
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 896 950
-    ##   .. .. ..$ end        : num [1:2] 920 1034
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  51 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:51] 850 856 860 866 870 ...
-    ##   .. ..$ probabilities: num [1:51] 0.00 8.19e-07 0.00 0.00 2.12e-06 ...
+    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
+    ##   .. .. ..$ start      : num 950
+    ##   .. .. ..$ end        : num 1034
+    ##   .. .. ..$ probability: num 99.7
+    ##   ..$ posterior_probabilities:'data.frame':  44 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:44] 880 886 890 896 900 ...
+    ##   .. ..$ probabilities: num [1:44] 0.00 7.48e-07 3.40e-07 2.45e-06 4.15e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12296                        :List of 9
     ##   ..$ name                   : chr "UGA-12296"
@@ -3464,15 +3484,15 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 986
-    ##   .. .. ..$ end        : num 1012
+    ##   .. .. ..$ end        : num 1011
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 901 970
-    ##   .. .. ..$ end        : num [1:2] 918 1034
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  47 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:47] 876 880 886 890 896 ...
-    ##   .. ..$ probabilities: num [1:47] 0.00 0.00 0.00 3.36e-06 2.21e-05 ...
+    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
+    ##   .. .. ..$ start      : num 970
+    ##   .. .. ..$ end        : num 1033
+    ##   .. .. ..$ probability: num 99.7
+    ##   ..$ posterior_probabilities:'data.frame':  43 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:43] 886 890 896 900 906 ...
+    ##   .. ..$ probabilities: num [1:43] 0.00 0.00 1.45e-07 1.66e-06 1.66e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Tx-1206                          :List of 9
     ##   ..$ name                   : chr "Tx-1206"
@@ -3507,16 +3527,16 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ end        : num 1162
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 876
+    ##   .. .. ..$ start      : num 878
     ##   .. .. ..$ end        : num 1256
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 724 767
-    ##   .. .. ..$ end        : num [1:2] 743 1278
-    ##   .. .. ..$ probability: num [1:2] 0.1 99.6
-    ##   ..$ posterior_probabilities:'data.frame':  148 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:148] 660 666 670 676 680 ...
-    ##   .. ..$ probabilities: num [1:148] 0.00 1.25e-06 4.58e-06 4.58e-06 1.08e-05 ...
+    ##   .. .. ..$ start      : num [1:2] 720 766
+    ##   .. .. ..$ end        : num [1:2] 740 1280
+    ##   .. .. ..$ probability: num [1:2] 0.2 99.5
+    ##   ..$ posterior_probabilities:'data.frame':  151 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:151] 650 656 660 666 670 ...
+    ##   .. ..$ probabilities: num [1:151] 0.00 1.54e-07 1.85e-06 4.47e-06 8.95e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ ISGS-A0466                       :List of 9
     ##   ..$ name                   : chr "ISGS-A0466"
@@ -3552,15 +3572,15 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 986
-    ##   .. .. ..$ end        : num 1012
+    ##   .. .. ..$ end        : num 1011
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 900 972
-    ##   .. .. ..$ end        : num [1:2] 920 1036
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  48 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:48] 876 880 886 890 896 ...
-    ##   .. ..$ probabilities: num [1:48] 0.00 0.00 0.00 8.32e-07 4.99e-06 ...
+    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
+    ##   .. .. ..$ start      : num 973
+    ##   .. .. ..$ end        : num 1039
+    ##   .. .. ..$ probability: num 99.7
+    ##   ..$ posterior_probabilities:'data.frame':  43 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:43] 890 896 900 906 910 ...
+    ##   .. ..$ probabilities: num [1:43] 0.00 1.51e-07 3.02e-07 9.05e-07 4.45e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ ISGS-A0465                       :List of 9
     ##   ..$ name                   : chr "ISGS-A0465"
@@ -3598,13 +3618,13 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ start      : num 987
     ##   .. .. ..$ end        : num 1010
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 903 978
-    ##   .. .. ..$ end        : num [1:2] 918 1032
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  43 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:43] 890 896 900 906 910 ...
-    ##   .. ..$ probabilities: num [1:43] 0 0 0 0.00029 0.000584 ...
+    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
+    ##   .. .. ..$ start      : num 976
+    ##   .. .. ..$ end        : num 1050
+    ##   .. .. ..$ probability: num 99.7
+    ##   ..$ posterior_probabilities:'data.frame':  44 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:44] 890 896 900 906 910 ...
+    ##   .. ..$ probabilities: num [1:44] 0.00 0.00 0.00 1.35e-06 5.72e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Log 1                            :List of 9
     ##   ..$ name                   : chr "Log 1"
@@ -3640,15 +3660,15 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 986
-    ##   .. .. ..$ end        : num 1012
+    ##   .. .. ..$ end        : num 1011
     ##   .. .. ..$ probability: num 95.4
-    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 898 964
-    ##   .. .. ..$ end        : num [1:2] 921 1036
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  50 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:50] 866 870 876 880 886 ...
-    ##   .. ..$ probabilities: num [1:50] 0.00 4.37e-07 0.00 4.37e-07 8.02e-07 ...
+    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
+    ##   .. .. ..$ start      : num 966
+    ##   .. .. ..$ end        : num 1050
+    ##   .. .. ..$ probability: num 99.7
+    ##   ..$ posterior_probabilities:'data.frame':  44 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:44] 886 890 896 900 906 ...
+    ##   .. ..$ probabilities: num [1:44] 0.00 0.00 7.94e-07 1.37e-06 3.10e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Tx-56                            :List of 9
     ##   ..$ name                   : chr "Tx-56"
@@ -3679,20 +3699,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:190] 0.00 0.00 0.00 1.14e-08 2.86e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1316 1389 1595
-    ##   .. .. ..$ end        : num [1:3] 1354 1518 1619
-    ##   .. .. ..$ probability: num [1:3] 11.2 50.5 6.5
+    ##   .. .. ..$ start      : num [1:3] 1316 1390 1596
+    ##   .. .. ..$ end        : num [1:3] 1355 1518 1619
+    ##   .. .. ..$ probability: num [1:3] 11.6 50.3 6.3
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1298
     ##   .. .. ..$ end        : num 1638
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1250 1741 1936
-    ##   .. .. ..$ end        : num [1:3] 1684 1805 1953
-    ##   .. .. ..$ probability: num [1:3] 99.1 0.5 0.1
-    ##   ..$ posterior_probabilities:'data.frame':  183 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:183] 1056 1060 1066 1070 1076 ...
-    ##   .. ..$ probabilities: num [1:183] 0.00 4.18e-07 4.18e-07 4.18e-07 1.67e-06 ...
+    ##   .. .. ..$ start      : num [1:3] 1244 1762 1937
+    ##   .. .. ..$ end        : num [1:3] 1681 1805 1954
+    ##   .. .. ..$ probability: num [1:3] 99.2 0.4 0.1
+    ##   ..$ posterior_probabilities:'data.frame':  169 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:169] 1126 1130 1136 1140 1146 ...
+    ##   .. ..$ probabilities: num [1:169] 0.00 1.55e-07 4.65e-07 6.20e-07 1.55e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ southern Caddo area              :List of 9
     ##   ..$ name                   : chr "southern Caddo area"
@@ -3742,12 +3762,12 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ end        : num 1014
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 906 979
-    ##   .. .. ..$ end        : num [1:2] 935 1036
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  47 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:47] 890 896 900 906 910 ...
-    ##   .. ..$ probabilities: num [1:47] 0.00 0.00 0.00 3.25e-05 2.03e-04 ...
+    ##   .. .. ..$ start      : num [1:2] 980 1048
+    ##   .. .. ..$ end        : num [1:2] 1031 1068
+    ##   .. .. ..$ probability: num [1:2] 99.5 0.2
+    ##   ..$ posterior_probabilities:'data.frame':  48 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:48] 896 900 906 910 916 ...
+    ##   .. ..$ probabilities: num [1:48] 0.00 0.00 0.00 1.54e-06 0.00 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ start Gahagan bifaces CTX        :List of 9
     ##   ..$ name                   : chr "start Gahagan bifaces CTX"
@@ -3771,16 +3791,16 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ end        : num 1012
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 994
-    ##   .. .. ..$ end        : num 1018
+    ##   .. .. ..$ start      : num 995
+    ##   .. .. ..$ end        : num 1016
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 919 982
-    ##   .. .. ..$ end        : num [1:2] 966 1036
-    ##   .. .. ..$ probability: num [1:2] 0.5 99.2
-    ##   ..$ posterior_probabilities:'data.frame':  47 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:47] 896 900 906 910 916 ...
-    ##   .. ..$ probabilities: num [1:47] 0.00 0.00 0.00 1.08e-05 3.92e-05 ...
+    ##   .. .. ..$ start      : num [1:2] 986 1080
+    ##   .. .. ..$ end        : num [1:2] 1032 1102
+    ##   .. .. ..$ probability: num [1:2] 99.5 0.2
+    ##   ..$ posterior_probabilities:'data.frame':  45 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:45] 926 930 936 940 946 ...
+    ##   .. ..$ probabilities: num [1:45] 0.00 0.00 0.00 1.52e-07 6.06e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176624                      :List of 9
     ##   ..$ name                   : chr "Beta-176624"
@@ -3815,16 +3835,16 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ end        : num 1019
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 998
+    ##   .. .. ..$ start      : num 999
     ##   .. .. ..$ end        : num 1025
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 940 1104
+    ##   .. .. ..$ start      : num [1:2] 989 1102
     ##   .. .. ..$ end        : num [1:2] 1044 1120
     ##   .. .. ..$ probability: num [1:2] 99.5 0.2
-    ##   ..$ posterior_probabilities:'data.frame':  53 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:53] 906 910 916 920 926 ...
-    ##   .. ..$ probabilities: num [1:53] 0.00 0.00 0.00 3.33e-06 9.99e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  48 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:48] 930 936 940 946 950 ...
+    ##   .. ..$ probabilities: num [1:48] 0.00 0.00 0.00 1.41e-07 0.00 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12500                        :List of 9
     ##   ..$ name                   : chr "UGA-12500"
@@ -3856,19 +3876,19 @@ gahaganmod2 <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1006
-    ##   .. .. ..$ end        : num 1021
+    ##   .. .. ..$ end        : num 1020
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 998
     ##   .. .. ..$ end        : num 1029
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 961 1091
-    ##   .. .. ..$ end        : num [1:2] 1051 1122
-    ##   .. .. ..$ probability: num [1:2] 99.3 0.4
-    ##   ..$ posterior_probabilities:'data.frame':  54 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:54] 910 916 920 926 930 ...
-    ##   .. ..$ probabilities: num [1:54] 0.00 0.00 0.00 1.46e-05 8.33e-06 ...
+    ##   .. .. ..$ start      : num [1:2] 990 1092
+    ##   .. .. ..$ end        : num [1:2] 1050 1123
+    ##   .. .. ..$ probability: num [1:2] 99.1 0.6
+    ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:46] 950 956 960 966 970 ...
+    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 0.00 1.24e-07 1.24e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12509                        :List of 9
     ##   ..$ name                   : chr "UGA-12509"
@@ -3904,15 +3924,15 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 998
-    ##   .. .. ..$ end        : num 1030
+    ##   .. .. ..$ end        : num 1029
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 961 1088
+    ##   .. .. ..$ start      : num [1:2] 990 1094
     ##   .. .. ..$ end        : num [1:2] 1050 1122
-    ##   .. .. ..$ probability: num [1:2] 99.3 0.4
-    ##   ..$ posterior_probabilities:'data.frame':  55 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:55] 900 906 910 916 920 ...
-    ##   .. ..$ probabilities: num [1:55] 0.00 0.00 0.00 1.69e-06 2.50e-06 ...
+    ##   .. .. ..$ probability: num [1:2] 99.1 0.6
+    ##   ..$ posterior_probabilities:'data.frame':  49 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:49] 930 936 940 946 950 ...
+    ##   .. ..$ probabilities: num [1:49] 0.00 0.00 0.00 1.26e-07 0.00 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12497                        :List of 9
     ##   ..$ name                   : chr "UGA-12497"
@@ -3948,15 +3968,15 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:2] 996 1110
-    ##   .. .. ..$ end        : num [1:2] 1050 1114
-    ##   .. .. ..$ probability: num [1:2] 95 0.4
-    ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 988
-    ##   .. .. ..$ end        : num 1153
-    ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 906 910 916 920 926 ...
-    ##   .. ..$ probabilities: num [1:60] 0.00 0.00 0.00 4.56e-06 8.73e-06 ...
+    ##   .. .. ..$ end        : num [1:2] 1048 1115
+    ##   .. .. ..$ probability: num [1:2] 94.9 0.5
+    ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:2] 991 1078
+    ##   .. .. ..$ end        : num [1:2] 1064 1152
+    ##   .. .. ..$ probability: num [1:2] 96.1 3.6
+    ##   ..$ posterior_probabilities:'data.frame':  46 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:46] 960 966 970 976 980 ...
+    ##   .. ..$ probabilities: num [1:46] 0.00 0.00 0.00 4.48e-07 1.24e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12498                        :List of 9
     ##   ..$ name                   : chr "UGA-12498"
@@ -3990,17 +4010,17 @@ gahaganmod2 <- 'Plot()
     ##   .. .. ..$ start      : num 1006
     ##   .. .. ..$ end        : num 1030
     ##   .. .. ..$ probability: num 68.2
-    ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 996 1090
-    ##   .. .. ..$ end        : num [1:2] 1055 1120
-    ##   .. .. ..$ probability: num [1:2] 91.7 3.7
+    ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:3] 996 1090 1144
+    ##   .. .. ..$ end        : num [1:3] 1054 1120 1146
+    ##   .. .. ..$ probability: num [1:3] 90.7 4.4 0.3
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 992
-    ##   .. .. ..$ end        : num 1154
+    ##   .. .. ..$ start      : num 994
+    ##   .. .. ..$ end        : num 1152
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  63 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:63] 906 910 916 920 926 ...
-    ##   .. ..$ probabilities: num [1:63] 0.00 0.00 0.00 1.65e-06 2.07e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  53 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:53] 956 960 966 970 976 ...
+    ##   .. ..$ probabilities: num [1:53] 0.0 0.0 0.0 1.5e-07 1.5e-07 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12505                        :List of 9
     ##   ..$ name                   : chr "UGA-12505"
@@ -4031,20 +4051,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:104] 0.0 0.0 0.0 2.6e-08 3.0e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1009
-    ##   .. .. ..$ end        : num 1051
+    ##   .. .. ..$ start      : num 1006
+    ##   .. .. ..$ end        : num 1054
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1001 1139
-    ##   .. .. ..$ end        : num [1:2] 1123 1148
-    ##   .. .. ..$ probability: num [1:2] 93.4 2
+    ##   .. .. ..$ start      : num [1:2] 1001 1136
+    ##   .. .. ..$ end        : num [1:2] 1125 1150
+    ##   .. .. ..$ probability: num [1:2] 92.3 3.1
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
-    ##   .. .. ..$ end        : num 1162
+    ##   .. .. ..$ end        : num 1163
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 930 936 940 946 950 ...
-    ##   .. ..$ probabilities: num [1:60] 0.00 0.00 0.00 8.30e-07 4.15e-07 ...
+    ##   ..$ posterior_probabilities:'data.frame':  54 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:54] 970 976 980 986 990 ...
+    ##   .. ..$ probabilities: num [1:54] 0.00 0.00 1.43e-07 6.19e-07 9.58e-06 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12495                        :List of 9
     ##   ..$ name                   : chr "UGA-12495"
@@ -4076,19 +4096,19 @@ gahaganmod2 <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1010
-    ##   .. .. ..$ end        : num 1059
+    ##   .. .. ..$ end        : num 1060
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1002 1137
-    ##   .. .. ..$ end        : num [1:2] 1125 1150
-    ##   .. .. ..$ probability: num [1:2] 92.7 2.7
+    ##   .. .. ..$ start      : num [1:2] 1003 1136
+    ##   .. .. ..$ end        : num [1:2] 1126 1150
+    ##   .. .. ..$ probability: num [1:2] 92 3.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
-    ##   .. .. ..$ end        : num 1168
+    ##   .. .. ..$ end        : num 1170
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:61] 936 940 946 950 956 ...
-    ##   .. ..$ probabilities: num [1:61] 0.00 0.00 0.00 4.19e-07 0.00 ...
+    ##   ..$ posterior_probabilities:'data.frame':  51 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:51] 980 986 990 996 1000 ...
+    ##   .. ..$ probabilities: num [1:51] 0.00 0.00 4.93e-06 1.15e-04 8.94e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176625                      :List of 9
     ##   ..$ name                   : chr "Beta-176625"
@@ -4120,19 +4140,19 @@ gahaganmod2 <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1010
-    ##   .. .. ..$ end        : num 1059
+    ##   .. .. ..$ end        : num 1061
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1002 1138
-    ##   .. .. ..$ end        : num [1:2] 1125 1150
-    ##   .. .. ..$ probability: num [1:2] 92.8 2.6
+    ##   .. .. ..$ start      : num [1:2] 1003 1136
+    ##   .. .. ..$ end        : num [1:2] 1126 1150
+    ##   .. .. ..$ probability: num [1:2] 91.9 3.5
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 996
-    ##   .. .. ..$ end        : num 1168
+    ##   .. .. ..$ start      : num 995
+    ##   .. .. ..$ end        : num 1170
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  62 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:62] 930 936 940 946 950 ...
-    ##   .. ..$ probabilities: num [1:62] 0.00 0.00 0.00 8.36e-07 0.00 ...
+    ##   ..$ posterior_probabilities:'data.frame':  65 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:65] 950 956 960 966 970 ...
+    ##   .. ..$ probabilities: num [1:65] 0.0 0.0 0.0 1.5e-07 0.0 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176623                      :List of 9
     ##   ..$ name                   : chr "Beta-176623"
@@ -4163,20 +4183,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:104] 0.00 0.00 0.00 1.97e-08 3.94e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1015
-    ##   .. .. ..$ end        : num 1066
+    ##   .. .. ..$ start      : num 1014
+    ##   .. .. ..$ end        : num 1069
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:2] 1006 1136
-    ##   .. .. ..$ end        : num [1:2] 1126 1150
-    ##   .. .. ..$ probability: num [1:2] 92.3 3.1
+    ##   .. .. ..$ end        : num [1:2] 1128 1150
+    ##   .. .. ..$ probability: num [1:2] 91.6 3.8
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
     ##   .. .. ..$ end        : num 1182
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:61] 940 946 950 956 960 ...
-    ##   .. ..$ probabilities: num [1:61] 0.00 0.00 0.00 4.09e-07 0.00 ...
+    ##   ..$ posterior_probabilities:'data.frame':  55 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:55] 976 980 986 990 996 ...
+    ##   .. ..$ probabilities: num [1:55] 0.00 0.00 1.59e-07 2.93e-06 6.62e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12494                        :List of 9
     ##   ..$ name                   : chr "UGA-12494"
@@ -4207,20 +4227,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:104] 0.00 0.00 0.00 1.97e-08 3.94e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1015
-    ##   .. .. ..$ end        : num 1065
+    ##   .. .. ..$ start      : num 1014
+    ##   .. .. ..$ end        : num 1069
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:2] 1006 1136
-    ##   .. .. ..$ end        : num [1:2] 1127 1150
-    ##   .. .. ..$ probability: num [1:2] 92.3 3.1
+    ##   .. .. ..$ end        : num [1:2] 1128 1151
+    ##   .. .. ..$ probability: num [1:2] 91.5 3.9
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 996
-    ##   .. .. ..$ end        : num 1179
+    ##   .. .. ..$ end        : num 1182
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  57 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:57] 960 966 970 976 980 ...
-    ##   .. ..$ probabilities: num [1:57] 0.00 0.00 0.00 4.12e-07 2.93e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  54 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:54] 980 986 990 996 1000 ...
+    ##   .. ..$ probabilities: num [1:54] 0.00 0.00 3.55e-06 6.59e-05 5.34e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12503                        :List of 9
     ##   ..$ name                   : chr "UGA-12503"
@@ -4252,19 +4272,19 @@ gahaganmod2 <- 'Plot()
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1020
-    ##   .. .. ..$ end        : num 1072
+    ##   .. .. ..$ end        : num 1074
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1014
-    ##   .. .. ..$ end        : num 1151
+    ##   .. .. ..$ start      : num 1016
+    ##   .. .. ..$ end        : num 1152
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1000
-    ##   .. .. ..$ end        : num 1192
+    ##   .. .. ..$ end        : num 1204
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 966 970 976 980 986 ...
-    ##   .. ..$ probabilities: num [1:60] 0.00 0.00 0.00 1.67e-06 1.67e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  56 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:56] 980 986 990 996 1000 ...
+    ##   .. ..$ probabilities: num [1:56] 0.00 0.00 1.55e-06 2.45e-05 1.90e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12499                        :List of 9
     ##   ..$ name                   : chr "UGA-12499"
@@ -4295,20 +4315,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:84] 0.00 0.00 0.00 2.09e-08 1.26e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1028
-    ##   .. .. ..$ end        : num 1076
+    ##   .. .. ..$ start      : num 1026
+    ##   .. .. ..$ end        : num 1080
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1020
-    ##   .. .. ..$ end        : num 1162
+    ##   .. .. ..$ start      : num 1019
+    ##   .. .. ..$ end        : num 1166
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1010
+    ##   .. .. ..$ start      : num 1012
     ##   .. .. ..$ end        : num 1216
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 976 980 986 990 996 ...
-    ##   .. ..$ probabilities: num [1:60] 0.00 0.00 0.00 8.37e-07 2.09e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  58 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:58] 986 990 996 1000 1006 ...
+    ##   .. ..$ probabilities: num [1:58] 0.00 1.52e-07 4.01e-06 2.92e-05 1.05e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176620                      :List of 9
     ##   ..$ name                   : chr "Beta-176620"
@@ -4339,20 +4359,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:83] 0.00 0.00 7.09e-09 4.26e-08 1.42e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1030
-    ##   .. .. ..$ end        : num 1076
+    ##   .. .. ..$ start      : num 1028
+    ##   .. .. ..$ end        : num 1080
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1020
-    ##   .. .. ..$ end        : num 1176
+    ##   .. .. ..$ start      : num 1021
+    ##   .. .. ..$ end        : num 1180
     ##   .. .. ..$ probability: num 95.4
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1013
-    ##   .. .. ..$ end        : num 1220
+    ##   .. .. ..$ end        : num 1221
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 980 986 990 996 1000 ...
-    ##   .. ..$ probabilities: num [1:60] 0.00 0.00 0.00 1.66e-06 1.75e-05 ...
+    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:61] 980 986 990 996 1000 ...
+    ##   .. ..$ probabilities: num [1:61] 0.00 0.00 0.00 1.70e-06 1.67e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176627                      :List of 9
     ##   ..$ name                   : chr "Beta-176627"
@@ -4383,20 +4403,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:84] 0.00 0.00 7.67e-09 1.53e-08 2.30e-08 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1033
-    ##   .. .. ..$ end        : num 1079
+    ##   .. .. ..$ start      : num 1030
+    ##   .. .. ..$ end        : num 1084
     ##   .. .. ..$ probability: num 68.2
-    ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1024 1120 1146
-    ##   .. .. ..$ end        : num [1:3] 1106 1142 1206
-    ##   .. .. ..$ probability: num [1:3] 80.5 3.8 11.1
+    ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:2] 1024 1119
+    ##   .. .. ..$ end        : num [1:2] 1106 1206
+    ##   .. .. ..$ probability: num [1:2] 77.8 17.6
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1016
-    ##   .. .. ..$ end        : num 1240
+    ##   .. .. ..$ start      : num 1017
+    ##   .. .. ..$ end        : num 1241
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:61] 980 986 990 996 1000 ...
-    ##   .. ..$ probabilities: num [1:61] 0.00 0.00 0.00 8.40e-07 3.33e-06 ...
+    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:60] 990 996 1000 1006 1010 ...
+    ##   .. ..$ probabilities: num [1:60] 0.00 1.60e-07 4.93e-06 1.47e-05 2.55e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176628                      :List of 9
     ##   ..$ name                   : chr "Beta-176628"
@@ -4427,20 +4447,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:83] 0.00 0.00 8.14e-09 8.14e-09 8.14e-09 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1034
-    ##   .. .. ..$ end        : num 1080
+    ##   .. .. ..$ start      : num 1030
+    ##   .. .. ..$ end        : num 1086
     ##   .. .. ..$ probability: num 68.2
     ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1024 1120 1148
-    ##   .. .. ..$ end        : num [1:3] 1104 1140 1214
-    ##   .. .. ..$ probability: num [1:3] 78.6 3 13.8
+    ##   .. .. ..$ start      : num [1:3] 1026 1120 1148
+    ##   .. .. ..$ end        : num [1:3] 1104 1141 1216
+    ##   .. .. ..$ probability: num [1:3] 75.7 3.6 16.2
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1018
-    ##   .. .. ..$ end        : num 1244
+    ##   .. .. ..$ start      : num 1020
+    ##   .. .. ..$ end        : num 1245
     ##   .. .. ..$ probability: num 99.7
-    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:61] 986 990 996 1000 1006 ...
-    ##   .. ..$ probabilities: num [1:61] 0.00 0.00 0.00 3.74e-06 1.08e-05 ...
+    ##   ..$ posterior_probabilities:'data.frame':  58 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:58] 996 1000 1006 1010 1016 ...
+    ##   .. ..$ probabilities: num [1:58] 0.00 1.40e-06 8.33e-06 1.57e-05 4.31e-05 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ UGA-12493                        :List of 9
     ##   ..$ name                   : chr "UGA-12493"
@@ -4470,21 +4490,21 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ dates        : num [1:86] 970 976 980 986 990 ...
     ##   .. ..$ probabilities: num [1:86] 0.00 0.00 9.25e-09 1.85e-08 1.48e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
-    ##   .. ..$ one_sigma  :'data.frame':   1 obs. of  3 variables:
-    ##   .. .. ..$ start      : num 1036
-    ##   .. .. ..$ end        : num 1082
-    ##   .. .. ..$ probability: num 68.2
+    ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
+    ##   .. .. ..$ start      : num [1:2] 1034 1167
+    ##   .. .. ..$ end        : num [1:2] 1083 1172
+    ##   .. .. ..$ probability: num [1:2] 66.1 2.1
     ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:3] 1026 1122 1149
-    ##   .. .. ..$ end        : num [1:3] 1100 1138 1226
-    ##   .. .. ..$ probability: num [1:3] 75.3 1.7 18.4
+    ##   .. .. ..$ start      : num [1:3] 1026 1121 1148
+    ##   .. .. ..$ end        : num [1:3] 1102 1140 1228
+    ##   .. .. ..$ probability: num [1:3] 71.6 2.3 21.6
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1022
-    ##   .. .. ..$ end        : num 1254
+    ##   .. .. ..$ end        : num 1255
     ##   .. .. ..$ probability: num 99.7
     ##   ..$ posterior_probabilities:'data.frame':  59 obs. of  2 variables:
     ##   .. ..$ dates        : num [1:59] 1000 1006 1010 1016 1020 ...
-    ##   .. ..$ probabilities: num [1:59] 0.00 2.92e-06 3.76e-06 1.33e-05 1.17e-04 ...
+    ##   .. ..$ probabilities: num [1:59] 0.00 2.00e-06 3.09e-06 1.10e-05 1.10e-04 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Beta-176630                      :List of 9
     ##   ..$ name                   : chr "Beta-176630"
@@ -4515,20 +4535,20 @@ gahaganmod2 <- 'Plot()
     ##   .. ..$ probabilities: num [1:82] 0.00 0.00 0.00 4.98e-08 1.49e-07 ...
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1048 1224
-    ##   .. .. ..$ end        : num [1:2] 1078 1228
-    ##   .. .. ..$ probability: num [1:2] 65.9 2.3
+    ##   .. .. ..$ start      : num [1:2] 1048 1221
+    ##   .. .. ..$ end        : num [1:2] 1079 1234
+    ##   .. .. ..$ probability: num [1:2] 60.5 7.7
     ##   .. ..$ two_sigma  :'data.frame':   3 obs. of  3 variables:
     ##   .. .. ..$ start      : num [1:3] 1048 1163 1212
-    ##   .. .. ..$ end        : num [1:3] 1084 1198 1286
-    ##   .. .. ..$ probability: num [1:3] 68.4 7.9 19.1
+    ##   .. .. ..$ end        : num [1:3] 1084 1199 1285
+    ##   .. .. ..$ probability: num [1:3] 64.1 8.8 22.5
     ##   .. ..$ three_sigma:'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1048 1155
-    ##   .. .. ..$ end        : num [1:2] 1088 1300
-    ##   .. .. ..$ probability: num [1:2] 69.5 30.2
-    ##   ..$ posterior_probabilities:'data.frame':  60 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:60] 1036 1040 1046 1050 1056 ...
-    ##   .. ..$ probabilities: num [1:60] 0 0 0 0.0145 0.0338 ...
+    ##   .. .. ..$ start      : num [1:2] 1048 1156
+    ##   .. .. ..$ end        : num [1:2] 1088 1301
+    ##   .. .. ..$ probability: num [1:2] 64.8 34.9
+    ##   ..$ posterior_probabilities:'data.frame':  61 obs. of  2 variables:
+    ##   .. ..$ dates        : num [1:61] 1036 1040 1046 1050 1056 ...
+    ##   .. ..$ probabilities: num [1:61] 0 0 0 0.0132 0.0319 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ central Texas                    :List of 9
     ##   ..$ name                   : chr "central Texas"
@@ -4570,20 +4590,20 @@ gahaganmod2 <- 'Plot()
     ##   ..$ raw_probabilities      : logi NA
     ##   ..$ posterior_sigma_ranges :List of 3
     ##   .. ..$ one_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1052 1226
-    ##   .. .. ..$ end        : num [1:2] 1100 1242
-    ##   .. .. ..$ probability: num [1:2] 62.4 5.8
+    ##   .. .. ..$ start      : num [1:2] 1052 1224
+    ##   .. .. ..$ end        : num [1:2] 1100 1251
+    ##   .. .. ..$ probability: num [1:2] 57.8 10.4
     ##   .. ..$ two_sigma  :'data.frame':   2 obs. of  3 variables:
-    ##   .. .. ..$ start      : num [1:2] 1048 1170
-    ##   .. .. ..$ end        : num [1:2] 1114 1300
-    ##   .. .. ..$ probability: num [1:2] 67.4 28
+    ##   .. .. ..$ start      : num [1:2] 1050 1168
+    ##   .. .. ..$ end        : num [1:2] 1116 1302
+    ##   .. .. ..$ probability: num [1:2] 62.6 32.8
     ##   .. ..$ three_sigma:'data.frame':   1 obs. of  3 variables:
     ##   .. .. ..$ start      : num 1048
-    ##   .. .. ..$ end        : num 1335
+    ##   .. .. ..$ end        : num 1336
     ##   .. .. ..$ probability: num 99.7
     ##   ..$ posterior_probabilities:'data.frame':  76 obs. of  2 variables:
-    ##   .. ..$ dates        : num [1:76] 1036 1040 1046 1050 1056 ...
-    ##   .. ..$ probabilities: num [1:76] 0 0 0 0.00153 0.00809 ...
+    ##   .. ..$ dates        : num [1:76] 1040 1046 1050 1056 1060 ...
+    ##   .. ..$ probabilities: num [1:76] 0 0 0.00113 0.00807 0.0175 ...
     ##   ..- attr(*, "class")= chr "oxcAARCalibratedDate"
     ##  $ Gahagan Bifaces                  :List of 9
     ##   ..$ name                   : chr "Gahagan Bifaces"
@@ -4645,14 +4665,13 @@ gahaganmod2 <- 'Plot()
     ##                                posterior:
     ## 
     ##                                one sigma
-    ##                                989 AD - 1002 AD (68.2%)
+    ##                                988 AD - 1002 AD (68.2%)
     ## 
     ##                                two sigma
-    ##                                972 AD - 1011 AD (95.4%)
+    ##                                971 AD - 1010 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                886 AD - 910 AD (0.5%)
-    ##                                936 AD - 1032 AD (99.2%)
+    ##                                933 AD - 1030 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4676,8 +4695,8 @@ gahaganmod2 <- 'Plot()
     ## 759 AD - 1020 AD (85.6%)       
     ## 
     ## three sigma                    three sigma
-    ## 652 AD - 1052 AD (98.9%)       896 AD - 920 AD (0.5%)
-    ## 1081 AD - 1152 AD (0.8%)       950 AD - 1034 AD (99.2%)
+    ## 652 AD - 1052 AD (98.9%)       950 AD - 1034 AD (99.7%)
+    ## 1081 AD - 1152 AD (0.8%)       
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4698,11 +4717,11 @@ gahaganmod2 <- 'Plot()
     ## 1142 AD - 1147 AD (2.6%)       
     ## 
     ## two sigma                      two sigma
-    ## 975 AD - 1155 AD (95.4%)       986 AD - 1012 AD (95.4%)
+    ## 975 AD - 1155 AD (95.4%)       986 AD - 1011 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 894 AD - 930 AD (1.5%)         901 AD - 918 AD (0.5%)
-    ## 938 AD - 1168 AD (98.2%)       970 AD - 1034 AD (99.2%)
+    ## 894 AD - 930 AD (1.5%)         970 AD - 1033 AD (99.7%)
+    ## 938 AD - 1168 AD (98.2%)       
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4721,11 +4740,11 @@ gahaganmod2 <- 'Plot()
     ## 978 AD - 1162 AD (68.2%)       978 AD - 1162 AD (68.2%)
     ## 
     ## two sigma                      two sigma
-    ## 879 AD - 1254 AD (95.4%)       876 AD - 1256 AD (95.4%)
+    ## 879 AD - 1254 AD (95.4%)       878 AD - 1256 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 722 AD - 740 AD (0.1%)         724 AD - 743 AD (0.1%)
-    ## 767 AD - 1278 AD (99.6%)       767 AD - 1278 AD (99.6%)
+    ## 722 AD - 740 AD (0.1%)         720 AD - 740 AD (0.2%)
+    ## 767 AD - 1278 AD (99.6%)       766 AD - 1280 AD (99.5%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4745,11 +4764,10 @@ gahaganmod2 <- 'Plot()
     ## 1082 AD - 1152 AD (51.1%)      
     ## 
     ## two sigma                      two sigma
-    ## 1016 AD - 1184 AD (95.4%)      986 AD - 1012 AD (95.4%)
+    ## 1016 AD - 1184 AD (95.4%)      986 AD - 1011 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 989 AD - 1215 AD (99.7%)       900 AD - 920 AD (0.5%)
-    ##                                972 AD - 1036 AD (99.2%)
+    ## 989 AD - 1215 AD (99.7%)       973 AD - 1039 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4772,8 +4790,7 @@ gahaganmod2 <- 'Plot()
     ## 1032 AD - 1206 AD (95.4%)      987 AD - 1010 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1020 AD - 1225 AD (99.7%)      903 AD - 918 AD (0.5%)
-    ##                                978 AD - 1032 AD (99.2%)
+    ## 1020 AD - 1225 AD (99.7%)      976 AD - 1050 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4793,11 +4810,11 @@ gahaganmod2 <- 'Plot()
     ## 1119 AD - 1219 AD (43.6%)      
     ## 
     ## two sigma                      two sigma
-    ## 1020 AD - 1268 AD (95.4%)      986 AD - 1012 AD (95.4%)
+    ## 1020 AD - 1268 AD (95.4%)      986 AD - 1011 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 899 AD - 924 AD (0.2%)         898 AD - 921 AD (0.5%)
-    ## 946 AD - 1297 AD (99.5%)       964 AD - 1036 AD (99.2%)
+    ## 899 AD - 924 AD (0.2%)         966 AD - 1050 AD (99.7%)
+    ## 946 AD - 1297 AD (99.5%)       
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4813,17 +4830,17 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1316 AD - 1355 AD (11.5%)      1316 AD - 1354 AD (11.2%)
-    ## 1390 AD - 1517 AD (50.4%)      1389 AD - 1518 AD (50.5%)
-    ## 1596 AD - 1618 AD (6.3%)       1595 AD - 1619 AD (6.5%)
+    ## 1316 AD - 1355 AD (11.5%)      1316 AD - 1355 AD (11.6%)
+    ## 1390 AD - 1517 AD (50.4%)      1390 AD - 1518 AD (50.3%)
+    ## 1596 AD - 1618 AD (6.3%)       1596 AD - 1619 AD (6.3%)
     ## 
     ## two sigma                      two sigma
     ## 1297 AD - 1638 AD (95.4%)      1298 AD - 1638 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1246 AD - 1682 AD (99.2%)      1250 AD - 1684 AD (99.1%)
-    ## 1762 AD - 1804 AD (0.4%)       1741 AD - 1805 AD (0.5%)
-    ## 1937 AD - NA (0.1%)            1936 AD - 1953 AD (0.1%)
+    ## 1246 AD - 1682 AD (99.2%)      1244 AD - 1681 AD (99.2%)
+    ## 1762 AD - 1804 AD (0.4%)       1762 AD - 1805 AD (0.4%)
+    ## 1937 AD - NA (0.1%)            1937 AD - 1954 AD (0.1%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4850,8 +4867,8 @@ gahaganmod2 <- 'Plot()
     ##                                990 AD - 1014 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                906 AD - 935 AD (0.5%)
-    ##                                979 AD - 1036 AD (99.2%)
+    ##                                980 AD - 1031 AD (99.5%)
+    ##                                1048 AD - 1068 AD (0.2%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4867,11 +4884,11 @@ gahaganmod2 <- 'Plot()
     ##                                1000 AD - 1012 AD (68.2%)
     ## 
     ##                                two sigma
-    ##                                994 AD - 1018 AD (95.4%)
+    ##                                995 AD - 1016 AD (95.4%)
     ## 
     ##                                three sigma
-    ##                                919 AD - 966 AD (0.5%)
-    ##                                982 AD - 1036 AD (99.2%)
+    ##                                986 AD - 1032 AD (99.5%)
+    ##                                1080 AD - 1102 AD (0.2%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4891,12 +4908,12 @@ gahaganmod2 <- 'Plot()
     ## 933 AD - 937 AD (1.4%)         
     ## 
     ## two sigma                      two sigma
-    ## 691 AD - 750 AD (11.9%)        998 AD - 1025 AD (95.4%)
+    ## 691 AD - 750 AD (11.9%)        999 AD - 1025 AD (95.4%)
     ## 762 AD - 970 AD (83.5%)        
     ## 
     ## three sigma                    three sigma
-    ## 668 AD - 993 AD (99.7%)        940 AD - 1044 AD (99.5%)
-    ##                                1104 AD - 1120 AD (0.2%)
+    ## 668 AD - 993 AD (99.7%)        989 AD - 1044 AD (99.5%)
+    ##                                1102 AD - 1120 AD (0.2%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4912,7 +4929,7 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 896 AD - 928 AD (25.6%)        1006 AD - 1021 AD (68.2%)
+    ## 896 AD - 928 AD (25.6%)        1006 AD - 1020 AD (68.2%)
     ## 940 AD - 994 AD (42.6%)        
     ## 
     ## two sigma                      two sigma
@@ -4920,8 +4937,8 @@ gahaganmod2 <- 'Plot()
     ## 876 AD - 1024 AD (94.8%)       
     ## 
     ## three sigma                    three sigma
-    ## 776 AD - 1030 AD (99.7%)       961 AD - 1051 AD (99.3%)
-    ##                                1091 AD - 1122 AD (0.4%)
+    ## 776 AD - 1030 AD (99.7%)       990 AD - 1050 AD (99.1%)
+    ##                                1092 AD - 1123 AD (0.6%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4941,12 +4958,12 @@ gahaganmod2 <- 'Plot()
     ## 940 AD - 994 AD (42.6%)        
     ## 
     ## two sigma                      two sigma
-    ## 780 AD - 788 AD (0.6%)         998 AD - 1030 AD (95.4%)
+    ## 780 AD - 788 AD (0.6%)         998 AD - 1029 AD (95.4%)
     ## 876 AD - 1024 AD (94.8%)       
     ## 
     ## three sigma                    three sigma
-    ## 776 AD - 1030 AD (99.7%)       961 AD - 1050 AD (99.3%)
-    ##                                1088 AD - 1122 AD (0.4%)
+    ## 776 AD - 1030 AD (99.7%)       990 AD - 1050 AD (99.1%)
+    ##                                1094 AD - 1122 AD (0.6%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4966,12 +4983,12 @@ gahaganmod2 <- 'Plot()
     ## 968 AD - 1024 AD (62.8%)       
     ## 
     ## two sigma                      two sigma
-    ## 892 AD - 1036 AD (95.4%)       996 AD - 1050 AD (95%)
-    ##                                1110 AD - 1114 AD (0.4%)
+    ## 892 AD - 1036 AD (95.4%)       996 AD - 1048 AD (94.9%)
+    ##                                1110 AD - 1115 AD (0.5%)
     ## 
     ## three sigma                    three sigma
-    ## 778 AD - 790 AD (0.1%)         988 AD - 1153 AD (99.7%)
-    ## 866 AD - 1155 AD (99.6%)       
+    ## 778 AD - 790 AD (0.1%)         991 AD - 1064 AD (96.1%)
+    ## 866 AD - 1155 AD (99.6%)       1078 AD - 1152 AD (3.6%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -4990,13 +5007,13 @@ gahaganmod2 <- 'Plot()
     ## 974 AD - 1032 AD (68.2%)       1006 AD - 1030 AD (68.2%)
     ## 
     ## two sigma                      two sigma
-    ## 896 AD - 928 AD (7.7%)         996 AD - 1055 AD (91.7%)
-    ## 940 AD - 1049 AD (80.1%)       1090 AD - 1120 AD (3.7%)
-    ## 1087 AD - 1124 AD (6.1%)       
+    ## 896 AD - 928 AD (7.7%)         996 AD - 1054 AD (90.7%)
+    ## 940 AD - 1049 AD (80.1%)       1090 AD - 1120 AD (4.4%)
+    ## 1087 AD - 1124 AD (6.1%)       1144 AD - 1146 AD (0.3%)
     ## 1138 AD - 1150 AD (1.6%)       
     ## 
     ## three sigma                    three sigma
-    ## 888 AD - 1156 AD (99.7%)       992 AD - 1154 AD (99.7%)
+    ## 888 AD - 1156 AD (99.7%)       994 AD - 1152 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5012,16 +5029,16 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 996 AD - 1047 AD (42.3%)       1009 AD - 1051 AD (68.2%)
+    ## 996 AD - 1047 AD (42.3%)       1006 AD - 1054 AD (68.2%)
     ## 1091 AD - 1122 AD (21%)        
     ## 1140 AD - 1148 AD (4.9%)       
     ## 
     ## two sigma                      two sigma
-    ## 986 AD - 1156 AD (95.4%)       1001 AD - 1123 AD (93.4%)
-    ##                                1139 AD - 1148 AD (2%)
+    ## 986 AD - 1156 AD (95.4%)       1001 AD - 1125 AD (92.3%)
+    ##                                1136 AD - 1150 AD (3.1%)
     ## 
     ## three sigma                    three sigma
-    ## 898 AD - 924 AD (0.6%)         996 AD - 1162 AD (99.7%)
+    ## 898 AD - 924 AD (0.6%)         996 AD - 1163 AD (99.7%)
     ## 944 AD - 1188 AD (99.1%)       
     ## 
     ## Calibrated with:
@@ -5038,16 +5055,16 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1016 AD - 1050 AD (29.4%)      1010 AD - 1059 AD (68.2%)
+    ## 1016 AD - 1050 AD (29.4%)      1010 AD - 1060 AD (68.2%)
     ## 1084 AD - 1126 AD (29.5%)      
     ## 1136 AD - 1151 AD (9.4%)       
     ## 
     ## two sigma                      two sigma
-    ## 992 AD - 1156 AD (95.4%)       1002 AD - 1125 AD (92.7%)
-    ##                                1137 AD - 1150 AD (2.7%)
+    ## 992 AD - 1156 AD (95.4%)       1003 AD - 1126 AD (92%)
+    ##                                1136 AD - 1150 AD (3.4%)
     ## 
     ## three sigma                    three sigma
-    ## 902 AD - 920 AD (0.2%)         996 AD - 1168 AD (99.7%)
+    ## 902 AD - 920 AD (0.2%)         996 AD - 1170 AD (99.7%)
     ## 964 AD - 1210 AD (99.5%)       
     ## 
     ## Calibrated with:
@@ -5064,16 +5081,16 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1016 AD - 1050 AD (29.4%)      1010 AD - 1059 AD (68.2%)
+    ## 1016 AD - 1050 AD (29.4%)      1010 AD - 1061 AD (68.2%)
     ## 1084 AD - 1126 AD (29.5%)      
     ## 1136 AD - 1151 AD (9.4%)       
     ## 
     ## two sigma                      two sigma
-    ## 992 AD - 1156 AD (95.4%)       1002 AD - 1125 AD (92.8%)
-    ##                                1138 AD - 1150 AD (2.6%)
+    ## 992 AD - 1156 AD (95.4%)       1003 AD - 1126 AD (91.9%)
+    ##                                1136 AD - 1150 AD (3.5%)
     ## 
     ## three sigma                    three sigma
-    ## 902 AD - 920 AD (0.2%)         996 AD - 1168 AD (99.7%)
+    ## 902 AD - 920 AD (0.2%)         995 AD - 1170 AD (99.7%)
     ## 964 AD - 1210 AD (99.5%)       
     ## 
     ## Calibrated with:
@@ -5090,13 +5107,13 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1020 AD - 1050 AD (25.4%)      1015 AD - 1066 AD (68.2%)
+    ## 1020 AD - 1050 AD (25.4%)      1014 AD - 1069 AD (68.2%)
     ## 1084 AD - 1126 AD (32.3%)      
     ## 1136 AD - 1151 AD (10.5%)      
     ## 
     ## two sigma                      two sigma
-    ## 996 AD - 1160 AD (95.4%)       1006 AD - 1126 AD (92.3%)
-    ##                                1136 AD - 1150 AD (3.1%)
+    ## 996 AD - 1160 AD (95.4%)       1006 AD - 1128 AD (91.6%)
+    ##                                1136 AD - 1150 AD (3.8%)
     ## 
     ## three sigma                    three sigma
     ## 972 AD - 1212 AD (99.7%)       996 AD - 1182 AD (99.7%)
@@ -5115,16 +5132,16 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1020 AD - 1050 AD (25.4%)      1015 AD - 1065 AD (68.2%)
+    ## 1020 AD - 1050 AD (25.4%)      1014 AD - 1069 AD (68.2%)
     ## 1084 AD - 1126 AD (32.3%)      
     ## 1136 AD - 1151 AD (10.5%)      
     ## 
     ## two sigma                      two sigma
-    ## 996 AD - 1160 AD (95.4%)       1006 AD - 1127 AD (92.3%)
-    ##                                1136 AD - 1150 AD (3.1%)
+    ## 996 AD - 1160 AD (95.4%)       1006 AD - 1128 AD (91.5%)
+    ##                                1136 AD - 1151 AD (3.9%)
     ## 
     ## three sigma                    three sigma
-    ## 972 AD - 1212 AD (99.7%)       996 AD - 1179 AD (99.7%)
+    ## 972 AD - 1212 AD (99.7%)       996 AD - 1182 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5140,14 +5157,14 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1028 AD - 1052 AD (17.1%)      1020 AD - 1072 AD (68.2%)
+    ## 1028 AD - 1052 AD (17.1%)      1020 AD - 1074 AD (68.2%)
     ## 1082 AD - 1152 AD (51.1%)      
     ## 
     ## two sigma                      two sigma
-    ## 1016 AD - 1184 AD (95.4%)      1014 AD - 1151 AD (95.4%)
+    ## 1016 AD - 1184 AD (95.4%)      1016 AD - 1152 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 989 AD - 1215 AD (99.7%)       1000 AD - 1192 AD (99.7%)
+    ## 989 AD - 1215 AD (99.7%)       1000 AD - 1204 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5163,14 +5180,14 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1043 AD - 1106 AD (41.6%)      1028 AD - 1076 AD (68.2%)
+    ## 1043 AD - 1106 AD (41.6%)      1026 AD - 1080 AD (68.2%)
     ## 1118 AD - 1159 AD (26.6%)      
     ## 
     ## two sigma                      two sigma
-    ## 1026 AD - 1206 AD (95.4%)      1020 AD - 1162 AD (95.4%)
+    ## 1026 AD - 1206 AD (95.4%)      1019 AD - 1166 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1014 AD - 1250 AD (99.7%)      1010 AD - 1216 AD (99.7%)
+    ## 1014 AD - 1250 AD (99.7%)      1012 AD - 1216 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5186,14 +5203,14 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1043 AD - 1106 AD (39.6%)      1030 AD - 1076 AD (68.2%)
+    ## 1043 AD - 1106 AD (39.6%)      1028 AD - 1080 AD (68.2%)
     ## 1118 AD - 1165 AD (28.6%)      
     ## 
     ## two sigma                      two sigma
-    ## 1030 AD - 1210 AD (95.4%)      1020 AD - 1176 AD (95.4%)
+    ## 1030 AD - 1210 AD (95.4%)      1021 AD - 1180 AD (95.4%)
     ## 
     ## three sigma                    three sigma
-    ## 1018 AD - 1250 AD (99.7%)      1013 AD - 1220 AD (99.7%)
+    ## 1018 AD - 1250 AD (99.7%)      1013 AD - 1221 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5209,17 +5226,16 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1049 AD - 1086 AD (23.4%)      1033 AD - 1079 AD (68.2%)
+    ## 1049 AD - 1086 AD (23.4%)      1030 AD - 1084 AD (68.2%)
     ## 1124 AD - 1138 AD (7.2%)       
     ## 1150 AD - 1209 AD (37.5%)      
     ## 
     ## two sigma                      two sigma
-    ## 1034 AD - 1220 AD (95.4%)      1024 AD - 1106 AD (80.5%)
-    ##                                1120 AD - 1142 AD (3.8%)
-    ##                                1146 AD - 1206 AD (11.1%)
+    ## 1034 AD - 1220 AD (95.4%)      1024 AD - 1106 AD (77.8%)
+    ##                                1119 AD - 1206 AD (17.6%)
     ## 
     ## three sigma                    three sigma
-    ## 1024 AD - 1258 AD (99.7%)      1016 AD - 1240 AD (99.7%)
+    ## 1024 AD - 1258 AD (99.7%)      1017 AD - 1241 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5235,17 +5251,17 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1050 AD - 1083 AD (18.6%)      1034 AD - 1080 AD (68.2%)
+    ## 1050 AD - 1083 AD (18.6%)      1030 AD - 1086 AD (68.2%)
     ## 1127 AD - 1136 AD (4%)         
     ## 1152 AD - 1216 AD (45.6%)      
     ## 
     ## two sigma                      two sigma
-    ## 1036 AD - 1226 AD (93.3%)      1024 AD - 1104 AD (78.6%)
-    ## 1232 AD - 1245 AD (2.1%)       1120 AD - 1140 AD (3%)
-    ##                                1148 AD - 1214 AD (13.8%)
+    ## 1036 AD - 1226 AD (93.3%)      1026 AD - 1104 AD (75.7%)
+    ## 1232 AD - 1245 AD (2.1%)       1120 AD - 1141 AD (3.6%)
+    ##                                1148 AD - 1216 AD (16.2%)
     ## 
     ## three sigma                    three sigma
-    ## 1026 AD - 1262 AD (99.7%)      1018 AD - 1244 AD (99.7%)
+    ## 1026 AD - 1262 AD (99.7%)      1020 AD - 1245 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5261,17 +5277,17 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1058 AD - 1076 AD (7.9%)       1036 AD - 1082 AD (68.2%)
-    ## 1154 AD - 1224 AD (59.2%)      
+    ## 1058 AD - 1076 AD (7.9%)       1034 AD - 1083 AD (66.1%)
+    ## 1154 AD - 1224 AD (59.2%)      1167 AD - 1172 AD (2.1%)
     ## 1238 AD - 1241 AD (1%)         
     ## 
     ## two sigma                      two sigma
-    ## 1045 AD - 1098 AD (16.8%)      1026 AD - 1100 AD (75.3%)
-    ## 1120 AD - 1260 AD (78.6%)      1122 AD - 1138 AD (1.7%)
-    ##                                1149 AD - 1226 AD (18.4%)
+    ## 1045 AD - 1098 AD (16.8%)      1026 AD - 1102 AD (71.6%)
+    ## 1120 AD - 1260 AD (78.6%)      1121 AD - 1140 AD (2.3%)
+    ##                                1148 AD - 1228 AD (21.6%)
     ## 
     ## three sigma                    three sigma
-    ## 1030 AD - 1270 AD (99.7%)      1022 AD - 1254 AD (99.7%)
+    ## 1030 AD - 1270 AD (99.7%)      1022 AD - 1255 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5287,17 +5303,17 @@ gahaganmod2 <- 'Plot()
     ## unmodelled:                    posterior:
     ## 
     ## one sigma                      one sigma
-    ## 1262 AD - 1300 AD (60.5%)      1048 AD - 1078 AD (65.9%)
-    ## 1370 AD - 1380 AD (7.7%)       1224 AD - 1228 AD (2.3%)
+    ## 1262 AD - 1300 AD (60.5%)      1048 AD - 1079 AD (60.5%)
+    ## 1370 AD - 1380 AD (7.7%)       1221 AD - 1234 AD (7.7%)
     ## 
     ## two sigma                      two sigma
-    ## 1224 AD - 1316 AD (77.7%)      1048 AD - 1084 AD (68.4%)
-    ## 1356 AD - 1390 AD (17.7%)      1163 AD - 1198 AD (7.9%)
-    ##                                1212 AD - 1286 AD (19.1%)
+    ## 1224 AD - 1316 AD (77.7%)      1048 AD - 1084 AD (64.1%)
+    ## 1356 AD - 1390 AD (17.7%)      1163 AD - 1199 AD (8.8%)
+    ##                                1212 AD - 1285 AD (22.5%)
     ## 
     ## three sigma                    three sigma
-    ## 1211 AD - 1400 AD (99.7%)      1048 AD - 1088 AD (69.5%)
-    ##                                1155 AD - 1300 AD (30.2%)
+    ## 1211 AD - 1400 AD (99.7%)      1048 AD - 1088 AD (64.8%)
+    ##                                1156 AD - 1301 AD (34.9%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
@@ -5318,15 +5334,15 @@ gahaganmod2 <- 'Plot()
     ##                                posterior:
     ## 
     ##                                one sigma
-    ##                                1052 AD - 1100 AD (62.4%)
-    ##                                1226 AD - 1242 AD (5.8%)
+    ##                                1052 AD - 1100 AD (57.8%)
+    ##                                1224 AD - 1251 AD (10.4%)
     ## 
     ##                                two sigma
-    ##                                1048 AD - 1114 AD (67.4%)
-    ##                                1170 AD - 1300 AD (28%)
+    ##                                1050 AD - 1116 AD (62.6%)
+    ##                                1168 AD - 1302 AD (32.8%)
     ## 
     ##                                three sigma
-    ##                                1048 AD - 1335 AD (99.7%)
+    ##                                1048 AD - 1336 AD (99.7%)
     ## 
     ## Calibrated with:
     ##    IntCal13 atmospheric curve (Reimer et al 2013) 
