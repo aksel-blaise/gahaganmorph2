@@ -1,7 +1,7 @@
 ---
 title: "Geometric morphometric analysis of Gahagan bifaces"
 author: "Robert Z. Selden, Jr."
-date: "November 19, 2019"
+date: "February 19, 2020"
 output: github_document
 bibliography: gahagan.bib
 ---
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Introduction
 
-This document includes supplemental materials for the article, "Shape difference or shape change? Inter-regional variation in Gahagan biface morphology." The study represents the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape. This effort follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852]. The analysis builds upon previous discussions and analyses conducted by Shafer [-@RN3684;-@RN20701;-@RN4924]. A succinct overview of the analytical procedures used in the analysis is provided in the manuscript, and the analytical code provided in this document can be used to reproduce the results exactly.
+This document includes supplemental materials for the article, "A quantitative assessment of intraspecific morphological variation in Gahagan bifaces from the southern Caddo area and central Texas" This article is the first formal morphological analysis to assess inter-regional variability in Gahagan biface shape. This effort follows a recent 2D analysis of Gahagan biface shapes within the southern Caddo area [@RN11783], where Gahgagan bifaces were found to differ in shape across the same geography as the Smithport Plain and Hickory Engraved bottles [@RN11801;@RN11782;@RN11716;@RN20852]. The analysis builds upon previous discussions and analyses conducted by Shafer [-@RN3684;-@RN20701;-@RN4924]. A succinct overview of the analytical procedures used in the analysis is provided in the manuscript, and the analytical code provided in this document can be used to reproduce the results exactly.
 
 ```{r gahagan bifaces 2D}
 knitr::include_graphics('../images/fig02.png')
@@ -47,8 +47,6 @@ qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 ```{r gpa}
 Y.gpa<-gpagen(coords, PrinAxes = TRUE, print.progress = FALSE)
 # plot(Y.gpa)
-# quantify global integration relative to self-similarity (Bookstein 2015)
-globalIntegration(Y.gpa$coords)
 # geomorph data frame
 gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) 
 csz<-Y.gpa$Csize # attribute for boxplot

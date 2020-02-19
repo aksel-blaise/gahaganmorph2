@@ -1,21 +1,22 @@
 Geometric morphometric analysis of Gahagan bifaces
 ================
 Robert Z. Selden, Jr.
-November 19, 2019
+February 19, 2020
 
 ### Introduction
 
-This document includes supplemental materials for the article, “Shape
-difference or shape change? Inter-regional variation in Gahagan biface
-morphology.” The study represents the first formal morphological
-analysis to assess inter-regional variability in Gahagan biface shape.
-This effort follows a recent 2D analysis of Gahagan biface shapes within
-the southern Caddo area (Selden Jr., Dockall, and Shafer 2018), where
-Gahagan bifaces were found to differ in shape across the same geography
-as the Smithport Plain and Hickory Engraved bottles (Selden Jr. 2018a,
-2018b, 2019a, 2019b). The analysis builds upon previous discussions and
-analyses conducted by Shafer (1973, 1974, 2006). A succinct overview of
-the analytical procedures used in the analysis is provided in the
+This document includes supplemental materials for the article, “A
+quantitative assessment of intraspecific morphological variation in
+Gahagan bifaces from the southern Caddo area and central Texas” This
+article is the first formal morphological analysis to assess
+inter-regional variability in Gahagan biface shape. This effort follows
+a recent 2D analysis of Gahagan biface shapes within the southern Caddo
+area (Selden Jr., Dockall, and Shafer 2018), where Gahgagan bifaces were
+found to differ in shape across the same geography as the Smithport
+Plain and Hickory Engraved bottles (Selden Jr. 2018a, 2018b, 2019a,
+2019b). The analysis builds upon previous discussions and analyses
+conducted by Shafer (1973, 1974, 2006). A succinct overview of the
+analytical procedures used in the analysis is provided in the
 manuscript, and the analytical code provided in this document can be
 used to reproduce the results exactly.
 
@@ -23,7 +24,7 @@ used to reproduce the results exactly.
 knitr::include_graphics('../images/fig02.png')
 ```
 
-![](../images/fig02.png)<!-- -->
+<img src="../images/fig02.png" width="720" />
 
 ``` r
 fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Texas region (right)."
@@ -36,7 +37,7 @@ fig.cap="Gahagan bifaces from the southern Caddo area (left) and the central Tex
 devtools::install_github("geomorphR/geomorph", ref = "Stable", build_vignettes = TRUE)
 ```
 
-    ## Skipping install of 'geomorph' from a github remote, the SHA1 (e423f85f) has not changed since last install.
+    ## Skipping install of 'geomorph' from a github remote, the SHA1 (4b1f0507) has not changed since last install.
     ##   Use `force = TRUE` to force installation
 
 ``` r
@@ -68,16 +69,6 @@ qdata<-qdata[match(dimnames(coords)[[3]],rownames(qdata)),]
 ``` r
 Y.gpa<-gpagen(coords, PrinAxes = TRUE, print.progress = FALSE)
 # plot(Y.gpa)
-# quantify global integration relative to self-similarity (Bookstein 2015)
-globalIntegration(Y.gpa$coords)
-```
-
-![](base-analysis_files/figure-gfm/gpa-1.png)<!-- -->
-
-    ##     BEval 
-    ## -1.351334
-
-``` r
 # geomorph data frame
 gdf<-geomorph.data.frame(shape=Y.gpa$coords, size=Y.gpa$Csize, region=qdata$region) 
 csz<-Y.gpa$Csize # attribute for boxplot
@@ -92,7 +83,7 @@ boxplot(csz~rgn,
         )
 ```
 
-![](base-analysis_files/figure-gfm/gpa-2.png)<!-- -->
+![](base-analysis_files/figure-gfm/gpa-1.png)<!-- -->
 
 ``` r
 # plot consensus configuration in 2D to illustrate axial twisting
@@ -102,14 +93,14 @@ plot(Y.gpa$consensus[,c("Z", "X")], pch=20)
 plot(Y.gpa$consensus[,c("Z", "Y")], pch=20)
 ```
 
-![](base-analysis_files/figure-gfm/gpa-3.png)<!-- -->
+![](base-analysis_files/figure-gfm/gpa-2.png)<!-- -->
 
 ``` r
 # 3D GPA plot
 knitr::include_graphics('images/gpa3d.png')
 ```
 
-![](images/gpa3d.png)<!-- -->
+<img src="images/gpa3d.png" width="4768" />
 
 ``` r
 fig.cap="Results of generalized Procrustes analysis."
@@ -125,107 +116,107 @@ summary(PCA)
 
     ## Importance of components: 
     ##                                PC1          PC2          PC3          PC4
-    ## Eigenvalues            0.003456919 0.0008015115 0.0003561083 0.0002230682
+    ## Tips variance          0.003456919 0.0008015115 0.0003561083 0.0002230682
     ## Proportion of variance 0.624607819 0.1448198327 0.0643428572 0.0403047299
     ## Cumulative Proportion  0.624607819 0.7694276515 0.8337705087 0.8740752386
     ##                                 PC5          PC6          PC7          PC8
-    ## Eigenvalues            0.0002015882 9.695004e-05 8.436491e-05 5.604465e-05
+    ## Tips variance          0.0002015882 9.695004e-05 8.436491e-05 5.604465e-05
     ## Proportion of variance 0.0364236392 1.751726e-02 1.524334e-02 1.012634e-02
     ## Cumulative Proportion  0.9104988778 9.280161e-01 9.432595e-01 9.533858e-01
     ##                                 PC9         PC10         PC11         PC12
-    ## Eigenvalues            4.496636e-05 2.705188e-05 2.237267e-05 1.879107e-05
+    ## Tips variance          4.496636e-05 2.705188e-05 2.237267e-05 1.879107e-05
     ## Proportion of variance 8.124675e-03 4.887826e-03 4.042370e-03 3.395234e-03
     ## Cumulative Proportion  9.615105e-01 9.663983e-01 9.704407e-01 9.738359e-01
     ##                                PC13        PC14         PC15         PC16
-    ## Eigenvalues            1.540029e-05 1.10222e-05 1.040191e-05 8.987216e-06
+    ## Tips variance          1.540029e-05 1.10222e-05 1.040191e-05 8.987216e-06
     ## Proportion of variance 2.782577e-03 1.99153e-03 1.879453e-03 1.623841e-03
     ## Cumulative Proportion  9.766185e-01 9.78610e-01 9.804895e-01 9.821133e-01
     ##                                PC17         PC18         PC19         PC20
-    ## Eigenvalues            8.549231e-06 7.318255e-06 6.361364e-06 5.314827e-06
+    ## Tips variance          8.549231e-06 7.318255e-06 6.361364e-06 5.314827e-06
     ## Proportion of variance 1.544704e-03 1.322287e-03 1.149393e-03 9.603011e-04
     ## Cumulative Proportion  9.836580e-01 9.849803e-01 9.861297e-01 9.870900e-01
     ##                                PC21         PC22         PC23         PC24
-    ## Eigenvalues            0.0000048135 4.055466e-06 3.815912e-06 3.582330e-06
+    ## Tips variance          0.0000048135 4.055466e-06 3.815912e-06 3.582330e-06
     ## Proportion of variance 0.0008697197 7.327553e-04 6.894719e-04 6.472675e-04
     ## Cumulative Proportion  0.9879597279 9.886925e-01 9.893820e-01 9.900292e-01
     ##                                PC25         PC26         PC27         PC28
-    ## Eigenvalues            3.502677e-06 3.217001e-06 2.912249e-06 2.824778e-06
+    ## Tips variance          3.502677e-06 3.217001e-06 2.912249e-06 2.824778e-06
     ## Proportion of variance 6.328756e-04 5.812587e-04 5.261950e-04 5.103905e-04
     ## Cumulative Proportion  9.906621e-01 9.912434e-01 9.917696e-01 9.922799e-01
     ##                                PC29         PC30         PC31         PC32
-    ## Eigenvalues            2.501451e-06 2.338948e-06 2.179895e-06 2.054475e-06
+    ## Tips variance          2.501451e-06 2.338948e-06 2.179895e-06 2.054475e-06
     ## Proportion of variance 4.519707e-04 4.226092e-04 3.938709e-04 3.712096e-04
     ## Cumulative Proportion  9.927319e-01 9.931545e-01 9.935484e-01 9.939196e-01
     ##                                PC33         PC34         PC35         PC36
-    ## Eigenvalues            1.939460e-06 1.886723e-06 1.825971e-06 1.778283e-06
+    ## Tips variance          1.939460e-06 1.886723e-06 1.825971e-06 1.778283e-06
     ## Proportion of variance 3.504282e-04 3.408994e-04 3.299226e-04 3.213063e-04
     ## Cumulative Proportion  9.942700e-01 9.946109e-01 9.949409e-01 9.952622e-01
     ##                                PC37         PC38         PC39         PC40
-    ## Eigenvalues            1.590082e-06 1.514771e-06 1.397118e-06 1.310930e-06
+    ## Tips variance          1.590082e-06 1.514771e-06 1.397118e-06 1.310930e-06
     ## Proportion of variance 2.873014e-04 2.736940e-04 2.524360e-04 2.368633e-04
     ## Cumulative Proportion  9.955495e-01 9.958232e-01 9.960756e-01 9.963125e-01
     ##                                PC41         PC42         PC43         PC44
-    ## Eigenvalues            1.194399e-06 1.143650e-06 1.084226e-06 9.552894e-07
+    ## Tips variance          1.194399e-06 1.143650e-06 1.084226e-06 9.552894e-07
     ## Proportion of variance 2.158081e-04 2.066386e-04 1.959016e-04 1.726049e-04
     ## Cumulative Proportion  9.965283e-01 9.967349e-01 9.969308e-01 9.971034e-01
     ##                                PC45         PC46         PC47         PC48
-    ## Eigenvalues            9.315217e-07 9.195995e-07 8.443341e-07 8.158839e-07
+    ## Tips variance          9.315217e-07 9.195995e-07 8.443341e-07 8.158839e-07
     ## Proportion of variance 1.683105e-04 1.661564e-04 1.525572e-04 1.474167e-04
     ## Cumulative Proportion  9.972717e-01 9.974379e-01 9.975904e-01 9.977378e-01
     ##                                PC49         PC50         PC51         PC52
-    ## Eigenvalues            7.740278e-07 7.409568e-07 7.274802e-07 6.601754e-07
+    ## Tips variance          7.740278e-07 7.409568e-07 7.274802e-07 6.601754e-07
     ## Proportion of variance 1.398540e-04 1.338786e-04 1.314436e-04 1.192827e-04
     ## Cumulative Proportion  9.978777e-01 9.980116e-01 9.981430e-01 9.982623e-01
     ##                                PC53         PC54         PC55         PC56
-    ## Eigenvalues            6.362967e-07 5.823384e-07 5.451563e-07 5.084281e-07
+    ## Tips variance          6.362967e-07 5.823384e-07 5.451563e-07 5.084281e-07
     ## Proportion of variance 1.149683e-04 1.052189e-04 9.850069e-05 9.186451e-05
     ## Cumulative Proportion  9.983773e-01 9.984825e-01 9.985810e-01 9.986729e-01
     ##                                PC57         PC58         PC59         PC60
-    ## Eigenvalues            4.730999e-07 4.693756e-07 4.137549e-07 4.029531e-07
+    ## Tips variance          4.730999e-07 4.693756e-07 4.137549e-07 4.029531e-07
     ## Proportion of variance 8.548130e-05 8.480838e-05 7.475865e-05 7.280693e-05
     ## Cumulative Proportion  9.987583e-01 9.988431e-01 9.989179e-01 9.989907e-01
     ##                                PC61         PC62         PC63         PC64
-    ## Eigenvalues            3.896934e-07 3.640047e-07 3.513582e-07 3.214590e-07
+    ## Tips variance          3.896934e-07 3.640047e-07 3.513582e-07 3.214590e-07
     ## Proportion of variance 7.041113e-05 6.576961e-05 6.348460e-05 5.808231e-05
     ## Cumulative Proportion  9.990611e-01 9.991269e-01 9.991904e-01 9.992485e-01
     ##                                PC65         PC66         PC67         PC68
-    ## Eigenvalues            3.109272e-07 2.829565e-07 2.726509e-07 2.535682e-07
+    ## Tips variance          3.109272e-07 2.829565e-07 2.726509e-07 2.535682e-07
     ## Proportion of variance 5.617939e-05 5.112555e-05 4.926348e-05 4.581557e-05
     ## Cumulative Proportion  9.993046e-01 9.993558e-01 9.994050e-01 9.994508e-01
     ##                                PC69         PC70         PC71         PC72
-    ## Eigenvalues            2.451162e-07 2.208437e-07 2.048010e-07 1.939748e-07
+    ## Tips variance          2.451162e-07 2.208437e-07 2.048010e-07 1.939748e-07
     ## Proportion of variance 4.428842e-05 3.990279e-05 3.700415e-05 3.504803e-05
     ## Cumulative Proportion  9.994951e-01 9.995350e-01 9.995720e-01 9.996071e-01
     ##                                PC73         PC74         PC75         PC76
-    ## Eigenvalues            1.799088e-07 1.686135e-07 1.565266e-07 1.511512e-07
+    ## Tips variance          1.799088e-07 1.686135e-07 1.565266e-07 1.511512e-07
     ## Proportion of variance 3.250653e-05 3.046566e-05 2.828176e-05 2.731052e-05
     ## Cumulative Proportion  9.996396e-01 9.996701e-01 9.996983e-01 9.997257e-01
     ##                                PC77         PC78         PC79         PC80
-    ## Eigenvalues            1.390248e-07 1.261566e-07 1.193091e-07 1.061959e-07
+    ## Tips variance          1.390248e-07 1.261566e-07 1.193091e-07 1.061959e-07
     ## Proportion of variance 2.511947e-05 2.279441e-05 2.155718e-05 1.918784e-05
     ## Cumulative Proportion  9.997508e-01 9.997736e-01 9.997951e-01 9.998143e-01
     ##                                PC81         PC82         PC83         PC84
-    ## Eigenvalues            1.003169e-07 9.211420e-08 8.807852e-08 8.202944e-08
+    ## Tips variance          1.003169e-07 9.211420e-08 8.807852e-08 8.202944e-08
     ## Proportion of variance 1.812560e-05 1.664351e-05 1.591433e-05 1.482136e-05
     ## Cumulative Proportion  9.998324e-01 9.998491e-01 9.998650e-01 9.998798e-01
     ##                                PC85         PC86         PC87         PC88
-    ## Eigenvalues            7.747428e-08 7.308202e-08 6.540498e-08 6.143040e-08
+    ## Tips variance          7.747428e-08 7.308202e-08 6.540498e-08 6.143040e-08
     ## Proportion of variance 1.399832e-05 1.320471e-05 1.181760e-05 1.109945e-05
     ## Cumulative Proportion  9.998938e-01 9.999070e-01 9.999188e-01 9.999299e-01
     ##                                PC89         PC90         PC91         PC92
-    ## Eigenvalues            5.377298e-08 4.885162e-08 4.717929e-08 4.032719e-08
+    ## Tips variance          5.377298e-08 4.885162e-08 4.717929e-08 4.032719e-08
     ## Proportion of variance 9.715885e-06 8.826677e-06 8.524515e-06 7.286454e-06
     ## Cumulative Proportion  9.999397e-01 9.999485e-01 9.999570e-01 9.999643e-01
     ##                                PC93         PC94         PC95         PC96
-    ## Eigenvalues            3.837790e-08 3.371702e-08 2.560840e-08 2.370383e-08
+    ## Tips variance          3.837790e-08 3.371702e-08 2.560840e-08 2.370383e-08
     ## Proportion of variance 6.934250e-06 6.092106e-06 4.627013e-06 4.282890e-06
     ## Cumulative Proportion  9.999712e-01 9.999773e-01 9.999819e-01 9.999862e-01
     ##                                PC97         PC98         PC99        PC100
-    ## Eigenvalues            2.025422e-08 1.983573e-08 1.544332e-08 1.290993e-08
+    ## Tips variance          2.025422e-08 1.983573e-08 1.544332e-08 1.290993e-08
     ## Proportion of variance 3.659602e-06 3.583987e-06 2.790352e-06 2.332610e-06
     ## Cumulative Proportion  9.999899e-01 9.999935e-01 9.999963e-01 9.999986e-01
     ##                               PC101
-    ## Eigenvalues            7.781498e-09
+    ## Tips variance          7.781498e-09
     ## Proportion of variance 1.405988e-06
     ## Cumulative Proportion  1.000000e+00
 
@@ -245,7 +236,7 @@ PCAplot<-plot(PCA, col = colors, pch = shapes)
 knitr::include_graphics('images/pca-warp-ref.png')
 ```
 
-![](images/pca-warp-ref.png)<!-- -->
+<img src="images/pca-warp-ref.png" width="5490" />
 
 ``` r
 fig.cap="Results of PCA with central Texas sample in blue triangles, and southern Caddo area in red X's. Reference shapes include the consensus configuration (gray) and the shape at the extreme of each PC in black. Reference shapes do not articulate with any specimens used in this analysis."
@@ -386,7 +377,7 @@ anova(fit.common, fit.unique, print.progress = FALSE)
 knitr::include_graphics('images/gbiface-allom-form.png')
 ```
 
-![](images/gbiface-allom-form.png)<!-- -->
+<img src="images/gbiface-allom-form.png" width="5276" />
 
 ``` r
 fig.cap="Measures of Gahagan biface morphology as a function of size for bifaces from both regions, where small and large specimens from each region (black spheres) are contrasted with the consensus configuration (gray spheres)."
@@ -521,7 +512,7 @@ mean<-lapply(new.coords, mshape)
 knitr::include_graphics('images/mshape-region.png')
 ```
 
-![](images/mshape-region.png)<!-- -->
+<img src="images/mshape-region.png" width="6000" />
 
 ``` r
 fig.cap="Mean shapes for Gahagan bifaces from the southern Caddo area (left) and central Texas region (center). In the comparison of the two (right), the southern Caddo area is represented by gray spheres, and the central Texas region by linear vectors."
