@@ -17,7 +17,7 @@ This investigation aggregates intact and reconstructed [Gahagan bifaces](https:/
 
 While true that many biface types may not warrant the time and labour investment associated with 3D data collection and analysis, 3D is necessary for the study of Gahagan bifaces. To ensure uniformity across the scan data, a [batch process](analysis/Rvcgbatch.R) was used that enlisted the [_Rvcg package_](https://github.com/zarquon42b/Rvcg) to perform a uniform remesh as well as the decimation needed for _auto3dgm_.
 
-![](./gahagan-flow.png)
+![](./images/gahagan-flow.png)
 
 Morphological attributes associated with axial twisting and beveling hold substantive analytical value beyond the current study, and a [novel landmarking protocol](analysis/landmarking-protocol.md) was developed in _Geomagic Design X_ that includes characteristics associated with axial twisting. Due to the amount of beveling across the sample, other geometric morphometric approaches&mdash;like those aimed at discriminating among flaking patterns using EFA&mdash;do not work for Gahagan bifaces. As a means of expanding upon these efforts, the next iteration of the analysis will build upon the current landmark constellation, and will include landmarks that articulate with a series of latitudinal cross-sections placed between the equidistant semilandmarks on the lateral edges.
 
@@ -25,7 +25,7 @@ Morphological attributes associated with axial twisting and beveling hold substa
 
 Chronometric dates were aggregated, where available, from contexts where Gahagan bifaces have been found. These dates were [recalibrated and modeled](analysis/gahagan14c.md) using the [_oxcAAR package_](https://github.com/ISAAKiel/oxcAAR). Due to recovery from a dated context that does not directly articulate with the Gahagan biface at the Baker site, two models were produced. One (top) includes the Baker site dates, and the other (bottom) does not.
 
-![](/fig03.png)
+![](./images/fig03.png)
 
 Although not a component of the current analysis, it is thought that attributes associated with retouch may also articulate with beveling. Previously published methods of codifying and analysing retouch are being integrated into this analytical programme, and another measure is under active development. Further work is needed to refine the latter approach; however, the measure is introduced here as it may hold value for studies that are currently planned or underway.
 
