@@ -37,7 +37,7 @@ Enlisting the reference geometry used in the development of the current [landmar
 
 ### Foundations and Development
 
-The preprint of the manuscript associated with this project can be viewed on [Overleaf](https://www.overleaf.com/read/xkmbhpyfjvvk) and [SocArXiv](https://doi.org/10.31235/osf.io/fyw2d), and this repository is digitally curated in the [Open Science Framework](https://osf.io/hm3q7/). The project builds upon a [recent geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080) that was published in _Digital Applications in Archaeology and Cultural Heritage_ in 2018. The preprint for that study is available on [_SocArXiv_](https://doi.org/10.31235/osf.io/u7qfr), and the supplementary materials are digitally curated in the [Open Science Framework](https://osf.io/jkxe3/).
+The preprint of the manuscript associated with this project can be viewed on [Overleaf](https://www.overleaf.com/read/xkmbhpyfjvvk) and [SocArXiv](https://doi.org/10.31235/osf.io/fyw2d), and the version of record was published in [_Southeastern Archaeology_](https://doi.org/10.1080/0734578X.2020.1744416). This repository is digitally curated in the [Open Science Framework](https://osf.io/hm3q7/). The project builds upon a [recent geometric morphometric analysis of Gahagan bifaces](https://doi.org/10.1016/j.daach.2018.e00080) that was published in [_Digital Applications in Archaeology and Cultural Heritage_]((https://doi.org/10.1016/j.daach.2018.e00080) in 2018. The preprint for that study is also available on [_SocArXiv_](https://doi.org/10.31235/osf.io/u7qfr), and the supplementary materials are digitally curated in the [Open Science Framework](https://osf.io/jkxe3/).
 
 ### Contributions
 
